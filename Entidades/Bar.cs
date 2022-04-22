@@ -91,19 +91,23 @@ namespace Entidades
         public static Dictionary<Producto,short> VentaEnMesa(Sitio unSitio, Producto producto,
             Dictionary<Producto, short> inventario)
         {
-            unSitio.consumicion.Add(producto);
-            
-            for (int i = 0; i <inventario.Count; i++)
+            if (ControlarSiHayStock(producto) == true)
             {
-                inventario[producto]--;
+                unSitio.consumicion.Add(producto);
+
+                for (int i = 0; i < inventario.Count; i++)
+                {
+                    inventario[producto]--;
+                }
             }
+            
             return inventario;
         }
 
         public static Dictionary<Producto, short> VentaEnBarra(Sitio unSitio, Producto producto,
             Dictionary<Producto, short> inventario)
         {
-            if(producto.EsBebida == true)
+            if(producto.EsBebida == true && ControlarSiHayStock(producto) == true)
             {
                unSitio.consumicion.Add(producto);
                 for (int i = 0; i < inventario.Count; i++)
@@ -179,6 +183,20 @@ namespace Entidades
                 sb.AppendLine($"Precio $ {item.Key.Precio}  ");
             }
             return sb.ToString();
+        }
+
+        private static bool ControlarSiHayStock(Producto unProducto)
+        {
+            bool resultado = false;
+            foreach (KeyValuePair<Producto, short> item in inventario)
+            {
+                if(item.Key == unProducto)
+                {
+                    resultado = true;
+                }
+
+            }
+            return resultado;
         }
 
     }
