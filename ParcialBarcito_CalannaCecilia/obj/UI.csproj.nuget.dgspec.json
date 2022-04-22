@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\ParcialBarcito_CalannaCecilia\\UI.csproj": {}
+    "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\ParcialBarcito_CalannaCecilia\\UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\ParcialBarcito_CalannaCecilia\\UI.csproj": {
+    "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\ParcialBarcito_CalannaCecilia\\UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\ParcialBarcito_CalannaCecilia\\UI.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\ParcialBarcito_CalannaCecilia\\UI.csproj",
         "projectName": "UI",
-        "projectPath": "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\ParcialBarcito_CalannaCecilia\\UI.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\ParcialBarcito_CalannaCecilia\\UI.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\ParcialBarcito_CalannaCecilia\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\ParcialBarcito_CalannaCecilia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\parcial labo\\ParcialBarcito_CalannaCecilia\\Entidades\\Entidades.csproj"
+              "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\repoParcial\\ParcialLaboratorioBarcito\\Entidades\\Entidades.csproj"
               }
             }
           }

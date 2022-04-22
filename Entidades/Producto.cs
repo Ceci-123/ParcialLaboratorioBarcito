@@ -10,8 +10,9 @@ namespace Entidades
     {
         protected string nombre;
         protected bool esBebida;
+        protected float precio;
 
-        public Producto(string nombre, bool esBebida)
+        public Producto(string nombre, bool esBebida, float precio)
         {
             this.nombre = nombre;
             this.esBebida = esBebida;
@@ -23,6 +24,23 @@ namespace Entidades
             {
                 return esBebida;
             }
+        }
+        public float Precio
+        {
+            get
+            {
+                return precio;
+            }
+        }
+
+        internal string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"  {nombre}  ");
+            sb.AppendLine($" $ {precio}  ");
+            sb.AppendLine($"------------------------");
+            return sb.ToString();
+            
         }
     }
 }

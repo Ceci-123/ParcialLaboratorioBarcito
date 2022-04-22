@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Entidades
 {
@@ -9,7 +10,9 @@ namespace Entidades
         public static List<Persona> personal;
         public static Dictionary<Producto, short> inventario;
         public static List<Sitio> puestosDeVenta;
-        
+
+        public static List<Sitio> PuestosDeVenta{ get { return Bar.puestosDeVenta; } }
+
         static Bar()
         {
             personal = new List<Persona>();
@@ -31,16 +34,16 @@ namespace Entidades
             personal.Add(v4);
             //harcodeo productos
             inventario = new Dictionary<Producto, short>();
-            inventario.Add(new Producto("Cerveza", true),100);
-            inventario.Add(new Producto("Coca cola", true),100);
-            inventario.Add(new Producto("Fernet con coca", true),100);
-            inventario.Add(new Producto("Daiquiri de frutilla", true),100);
-            inventario.Add(new Producto("Manaos de uva", true),100);
-            inventario.Add(new Producto("Tequeños de queso", false),50);
-            inventario.Add(new Producto("Papas fritas con cheddar", false),50);
-            inventario.Add(new Producto("Hamburguesa de soja con tomate,lechuga y queso", false),50);
-            inventario.Add(new Producto("Empanadas", false), 50);
-            inventario.Add(new Producto("Picadita", false), 50);
+            inventario.Add(new Producto("Cerveza", true, 120),100);
+            inventario.Add(new Producto("Coca cola", true, 150), 100);
+            inventario.Add(new Producto("Fernet con coca", true, 200),100);
+            inventario.Add(new Producto("Daiquiri de frutilla", true, 250),100);
+            inventario.Add(new Producto("Manaos de uva", true, 80),100);
+            inventario.Add(new Producto("Tequeños de queso", false, 20),50);
+            inventario.Add(new Producto("Papas fritas con cheddar", false, 180),50);
+            inventario.Add(new Producto("Hamburguesa de soja con tomate,lechuga y queso", false, 250),50);
+            inventario.Add(new Producto("Empanadas", false, 80), 50);
+            inventario.Add(new Producto("Picadita", false,300), 50);
             //abro las mesas y barras
             Mesa mesa1 = new Mesa(true, "Mesa 1");
             Mesa mesa2 = new Mesa(true, "Mesa 2");
@@ -85,7 +88,7 @@ namespace Entidades
 
         }
 
-        public static Dictionary<Producto,short> Venta(Sitio unSitio, Producto producto,
+        public static Dictionary<Producto,short> VentaEnMesa(Sitio unSitio, Producto producto,
             Dictionary<Producto, short> inventario)
         {
             unSitio.consumicion.Add(producto);
@@ -94,6 +97,22 @@ namespace Entidades
             {
                 inventario[producto]--;
             }
+            return inventario;
+        }
+
+        public static Dictionary<Producto, short> VentaEnBarra(Sitio unSitio, Producto producto,
+            Dictionary<Producto, short> inventario)
+        {
+            if(producto.EsBebida == true)
+            {
+               unSitio.consumicion.Add(producto);
+                for (int i = 0; i < inventario.Count; i++)
+                {
+                    inventario[producto]--;
+                }
+
+            }
+
             return inventario;
         }
         public static string BuscarSitioLibre()
@@ -108,6 +127,58 @@ namespace Entidades
                 }
             }
             return retorno;
+        }
+
+        public static void MostrarConsumiciones(Sitio unSitio)
+        {
+            foreach (Producto item in unSitio.consumicion)
+            {
+                item.Mostrar();
+            }
+            
+        }
+        
+        public static float SumarConsumicion(Sitio unSitio)
+        {
+            float suma = 0f;
+            foreach (Producto item in unSitio.consumicion)
+            {
+               suma += item.Precio;
+            }
+            return suma;
+        }
+       
+        public static float CalcularTarjeta(float costo)
+        {
+            return costo * 0.10F;
+        }
+        public static void AgregarEstacionamiento(Sitio unSitio)
+        {
+            unSitio.consumicion.Add(new Producto("Estacionamiento", false, 200));
+        }
+
+        public static float FacturacionDelDia()
+        {
+            float suma = 0f;
+            foreach (Sitio item in PuestosDeVenta)
+            {
+                suma += item.Precio;
+            }
+            return suma;
+        }
+        public static string MostrarInventario()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("-----------------------");
+            sb.AppendLine("-----INVENTARIO--------");
+            sb.AppendLine("-----------------------");
+            foreach (KeyValuePair<Producto, short> item in inventario)
+            {
+                sb.AppendLine($"Producto {item.Key}  ");
+
+                sb.AppendLine($"Precio $ {item.Key.Precio}  ");
+            }
+            return sb.ToString();
         }
 
     }
