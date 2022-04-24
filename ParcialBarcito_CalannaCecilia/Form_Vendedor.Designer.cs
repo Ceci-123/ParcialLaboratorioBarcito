@@ -58,6 +58,8 @@
             this.btn_Stock = new System.Windows.Forms.Button();
             this.btn_BusquedaMesa = new System.Windows.Forms.Button();
             this.btn_Ticket = new System.Windows.Forms.Button();
+            this.btn_VerNomina = new System.Windows.Forms.Button();
+            this.btn_AgregarMercaderia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).BeginInit();
             this.groupBox_Sitios.SuspendLayout();
             this.SuspendLayout();
@@ -150,6 +152,7 @@
             this.btn_Barra3.TabIndex = 19;
             this.btn_Barra3.Text = "Barra 3";
             this.btn_Barra3.UseVisualStyleBackColor = true;
+            this.btn_Barra3.Click += new System.EventHandler(this.btn_Barra3_Click);
             // 
             // btn_Barra2
             // 
@@ -159,6 +162,7 @@
             this.btn_Barra2.TabIndex = 18;
             this.btn_Barra2.Text = "Barra 2";
             this.btn_Barra2.UseVisualStyleBackColor = true;
+            this.btn_Barra2.Click += new System.EventHandler(this.btn_Barra2_Click);
             // 
             // btn_Barra5
             // 
@@ -168,6 +172,7 @@
             this.btn_Barra5.TabIndex = 17;
             this.btn_Barra5.Text = "Barra 5";
             this.btn_Barra5.UseVisualStyleBackColor = true;
+            this.btn_Barra5.Click += new System.EventHandler(this.btn_Barra5_Click);
             // 
             // btn_Barra4
             // 
@@ -177,6 +182,7 @@
             this.btn_Barra4.TabIndex = 16;
             this.btn_Barra4.Text = "Barra 4";
             this.btn_Barra4.UseVisualStyleBackColor = true;
+            this.btn_Barra4.Click += new System.EventHandler(this.btn_Barra4_Click);
             // 
             // btn_Barra1
             // 
@@ -186,6 +192,7 @@
             this.btn_Barra1.TabIndex = 15;
             this.btn_Barra1.Text = "Barra 1";
             this.btn_Barra1.UseVisualStyleBackColor = true;
+            this.btn_Barra1.Click += new System.EventHandler(this.btn_Barra1_Click);
             // 
             // btn_Mesa15
             // 
@@ -195,6 +202,7 @@
             this.btn_Mesa15.TabIndex = 14;
             this.btn_Mesa15.Text = "Mesa 15";
             this.btn_Mesa15.UseVisualStyleBackColor = true;
+            this.btn_Mesa15.Click += new System.EventHandler(this.btn_Mesa15_Click);
             // 
             // btn_Mesa14
             // 
@@ -204,6 +212,7 @@
             this.btn_Mesa14.TabIndex = 13;
             this.btn_Mesa14.Text = "Mesa 14";
             this.btn_Mesa14.UseVisualStyleBackColor = true;
+            this.btn_Mesa14.Click += new System.EventHandler(this.btn_Mesa14_Click);
             // 
             // btn_Mesa13
             // 
@@ -213,6 +222,7 @@
             this.btn_Mesa13.TabIndex = 12;
             this.btn_Mesa13.Text = "Mesa 13";
             this.btn_Mesa13.UseVisualStyleBackColor = true;
+            this.btn_Mesa13.Click += new System.EventHandler(this.btn_Mesa13_Click);
             // 
             // btn_Mesa12
             // 
@@ -222,6 +232,7 @@
             this.btn_Mesa12.TabIndex = 11;
             this.btn_Mesa12.Text = "Mesa 12";
             this.btn_Mesa12.UseVisualStyleBackColor = true;
+            this.btn_Mesa12.Click += new System.EventHandler(this.btn_Mesa12_Click);
             // 
             // btn_Mesa11
             // 
@@ -231,6 +242,7 @@
             this.btn_Mesa11.TabIndex = 10;
             this.btn_Mesa11.Text = "Mesa 11";
             this.btn_Mesa11.UseVisualStyleBackColor = true;
+            this.btn_Mesa11.Click += new System.EventHandler(this.btn_Mesa11_Click);
             // 
             // btn_Mesa10
             // 
@@ -240,6 +252,7 @@
             this.btn_Mesa10.TabIndex = 9;
             this.btn_Mesa10.Text = "Mesa 10";
             this.btn_Mesa10.UseVisualStyleBackColor = true;
+            this.btn_Mesa10.Click += new System.EventHandler(this.btn_Mesa10_Click);
             // 
             // btn_Mesa9
             // 
@@ -249,6 +262,7 @@
             this.btn_Mesa9.TabIndex = 8;
             this.btn_Mesa9.Text = "Mesa 9";
             this.btn_Mesa9.UseVisualStyleBackColor = true;
+            this.btn_Mesa9.Click += new System.EventHandler(this.btn_Mesa9_Click);
             // 
             // btn_Mesa8
             // 
@@ -258,6 +272,7 @@
             this.btn_Mesa8.TabIndex = 7;
             this.btn_Mesa8.Text = "Mesa 8";
             this.btn_Mesa8.UseVisualStyleBackColor = true;
+            this.btn_Mesa8.Click += new System.EventHandler(this.btn_Mesa8_Click);
             // 
             // btn_Mesa7
             // 
@@ -267,6 +282,7 @@
             this.btn_Mesa7.TabIndex = 6;
             this.btn_Mesa7.Text = "Mesa 7";
             this.btn_Mesa7.UseVisualStyleBackColor = true;
+            this.btn_Mesa7.Click += new System.EventHandler(this.btn_Mesa7_Click);
             // 
             // btn_Mesa6
             // 
@@ -276,6 +292,7 @@
             this.btn_Mesa6.TabIndex = 5;
             this.btn_Mesa6.Text = "Mesa 6";
             this.btn_Mesa6.UseVisualStyleBackColor = true;
+            this.btn_Mesa6.Click += new System.EventHandler(this.btn_Mesa6_Click);
             // 
             // btn_Mesa5
             // 
@@ -285,6 +302,7 @@
             this.btn_Mesa5.TabIndex = 4;
             this.btn_Mesa5.Text = "Mesa 5";
             this.btn_Mesa5.UseVisualStyleBackColor = true;
+            this.btn_Mesa5.Click += new System.EventHandler(this.btn_Mesa5_Click);
             // 
             // btn_Mesa4
             // 
@@ -294,6 +312,7 @@
             this.btn_Mesa4.TabIndex = 3;
             this.btn_Mesa4.Text = "Mesa 4";
             this.btn_Mesa4.UseVisualStyleBackColor = true;
+            this.btn_Mesa4.Click += new System.EventHandler(this.btn_Mesa4_Click);
             // 
             // btn_Mesa3
             // 
@@ -303,6 +322,7 @@
             this.btn_Mesa3.TabIndex = 2;
             this.btn_Mesa3.Text = "Mesa 3";
             this.btn_Mesa3.UseVisualStyleBackColor = true;
+            this.btn_Mesa3.Click += new System.EventHandler(this.btn_Mesa3_Click);
             // 
             // btn_Mesa2
             // 
@@ -312,6 +332,7 @@
             this.btn_Mesa2.TabIndex = 1;
             this.btn_Mesa2.Text = "Mesa 2";
             this.btn_Mesa2.UseVisualStyleBackColor = true;
+            this.btn_Mesa2.Click += new System.EventHandler(this.btn_Mesa2_Click);
             // 
             // btn_Mesa1
             // 
@@ -321,6 +342,7 @@
             this.btn_Mesa1.TabIndex = 0;
             this.btn_Mesa1.Text = "Mesa 1";
             this.btn_Mesa1.UseVisualStyleBackColor = true;
+            this.btn_Mesa1.Click += new System.EventHandler(this.btn_Mesa1_Click);
             // 
             // btn_Stock
             // 
@@ -331,6 +353,7 @@
             this.btn_Stock.TabIndex = 6;
             this.btn_Stock.Text = "Revisar Stock de Productos";
             this.btn_Stock.UseVisualStyleBackColor = true;
+            this.btn_Stock.Click += new System.EventHandler(this.btn_Stock_Click);
             // 
             // btn_BusquedaMesa
             // 
@@ -341,6 +364,7 @@
             this.btn_BusquedaMesa.TabIndex = 4;
             this.btn_BusquedaMesa.Text = "Buscar mesa libre";
             this.btn_BusquedaMesa.UseVisualStyleBackColor = true;
+            this.btn_BusquedaMesa.Click += new System.EventHandler(this.btn_BusquedaMesa_Click);
             // 
             // btn_Ticket
             // 
@@ -351,12 +375,37 @@
             this.btn_Ticket.TabIndex = 7;
             this.btn_Ticket.Text = "Generar Ticket";
             this.btn_Ticket.UseVisualStyleBackColor = true;
+            this.btn_Ticket.Click += new System.EventHandler(this.btn_Ticket_Click);
+            // 
+            // btn_VerNomina
+            // 
+            this.btn_VerNomina.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_VerNomina.Location = new System.Drawing.Point(999, 152);
+            this.btn_VerNomina.Name = "btn_VerNomina";
+            this.btn_VerNomina.Size = new System.Drawing.Size(126, 94);
+            this.btn_VerNomina.TabIndex = 8;
+            this.btn_VerNomina.Text = "Ver nomina de empleados";
+            this.btn_VerNomina.UseVisualStyleBackColor = true;
+            this.btn_VerNomina.Click += new System.EventHandler(this.btn_VerNomina_Click);
+            // 
+            // btn_AgregarMercaderia
+            // 
+            this.btn_AgregarMercaderia.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_AgregarMercaderia.Location = new System.Drawing.Point(999, 302);
+            this.btn_AgregarMercaderia.Name = "btn_AgregarMercaderia";
+            this.btn_AgregarMercaderia.Size = new System.Drawing.Size(126, 94);
+            this.btn_AgregarMercaderia.TabIndex = 9;
+            this.btn_AgregarMercaderia.Text = "Agregar mercaderia";
+            this.btn_AgregarMercaderia.UseVisualStyleBackColor = true;
+            this.btn_AgregarMercaderia.Click += new System.EventHandler(this.btn_AgregarMercaderia_Click);
             // 
             // Form_Vendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 575);
+            this.ClientSize = new System.Drawing.Size(1137, 575);
+            this.Controls.Add(this.btn_AgregarMercaderia);
+            this.Controls.Add(this.btn_VerNomina);
             this.Controls.Add(this.btn_Ticket);
             this.Controls.Add(this.btn_Stock);
             this.Controls.Add(this.btn_BusquedaMesa);
@@ -364,9 +413,13 @@
             this.Controls.Add(this.pictureBox_Logo);
             this.Controls.Add(this.lbl_Bar);
             this.Controls.Add(this.lbl_Saludo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Vendedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Que tengas un hermoso dia!";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Vendedor_FormClosing);
+            this.Load += new System.EventHandler(this.Form_Vendedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).EndInit();
             this.groupBox_Sitios.ResumeLayout(false);
             this.groupBox_Sitios.PerformLayout();
@@ -406,5 +459,7 @@
         private System.Windows.Forms.Button btn_Stock;
         private System.Windows.Forms.Button btn_BusquedaMesa;
         private System.Windows.Forms.Button btn_Ticket;
+        private System.Windows.Forms.Button btn_VerNomina;
+        private System.Windows.Forms.Button btn_AgregarMercaderia;
     }
 }

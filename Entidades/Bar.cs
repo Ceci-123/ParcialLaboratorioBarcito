@@ -29,7 +29,7 @@ namespace Entidades
             Vendedor v2 = new Vendedor("lautaro", "lauti123");
             Vendedor v3 = new Vendedor("cecilia", "ceci123");
             Vendedor v4 = new Vendedor("morena", "more123");
-            personal.Add(v2);
+            personal.Add(v1);
             personal.Add(v2);
             personal.Add(v3);
             personal.Add(v4);

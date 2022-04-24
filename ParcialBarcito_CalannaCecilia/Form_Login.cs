@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Entidades;
+using System;
 using System.Windows.Forms;
-using Entidades;
 using UI;
 
 namespace ParcialBarcito_CalannaCecilia
@@ -34,12 +27,26 @@ namespace ParcialBarcito_CalannaCecilia
             }
             else
             {
+
                 bool respuesta = Entidades.Persona.ValidarUser(Bar.personal, this.txtBox_Nombre.Text, txtbox_password.Text);
                 if (respuesta)
                 {
+                    int auxiliar = Persona.ValidarRango(Bar.personal, this.txtBox_Nombre.Text, txtbox_password.Text);
                     //abro segundo formulario
-                    Form frm = new Form_Vendedor();
-                    frm.Show();
+                    if ( auxiliar == 1)
+                    {
+                        // es admin
+                        Form frm = new Form_Vendedor(this.txtBox_Nombre.Text);
+                        frm.Show();
+                    }
+                    if (auxiliar == 2)
+                    {
+                        //es vendedor
+                        Form frm = new Form_Vendedor(this.txtBox_Nombre.Text);
+                        frm.Show();
+                    }
+                    
+                    this.Hide();
                 }
                 else
                 {
@@ -48,7 +55,7 @@ namespace ParcialBarcito_CalannaCecilia
                     MessageBox.Show("Datos incorrectos, proba de nuevo", "Error");
                 }
             }
-           
+
         }
 
         private void btn_Autocompleta_Vendedor_Click(object sender, EventArgs e)
