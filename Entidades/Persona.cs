@@ -22,7 +22,7 @@ namespace Entidades
             get { return this.password; }
         }
 
-        public bool ValidarUser(List<Persona> listado, string nombreIngresado, string passIngresado)
+        public static bool ValidarUser(List<Persona> listado, string nombreIngresado, string passIngresado)
         {
             bool retorno = false;
             passIngresado = passIngresado.Trim().ToLower();

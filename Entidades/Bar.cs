@@ -17,6 +17,7 @@ namespace Entidades
         {
             personal = new List<Persona>();
             puestosDeVenta = new List<Sitio>();
+            Harcodeo();
         }
 
         public static void Harcodeo()

@@ -92,6 +92,7 @@
             this.btn_Olvido.TabIndex = 5;
             this.btn_Olvido.Text = "Ups! Olvide mi contraseña";
             this.btn_Olvido.UseVisualStyleBackColor = true;
+            this.btn_Olvido.Click += new System.EventHandler(this.btn_Olvido_Click);
             // 
             // btn_Ingreso
             // 
@@ -101,6 +102,7 @@
             this.btn_Ingreso.TabIndex = 6;
             this.btn_Ingreso.Text = "Entrar";
             this.btn_Ingreso.UseVisualStyleBackColor = true;
+            this.btn_Ingreso.Click += new System.EventHandler(this.btn_Ingreso_Click);
             // 
             // btn_Autocompleta_Vendedor
             // 
@@ -110,6 +112,7 @@
             this.btn_Autocompleta_Vendedor.TabIndex = 7;
             this.btn_Autocompleta_Vendedor.Text = "Completar como vendedor";
             this.btn_Autocompleta_Vendedor.UseVisualStyleBackColor = true;
+            this.btn_Autocompleta_Vendedor.Click += new System.EventHandler(this.btn_Autocompleta_Vendedor_Click);
             // 
             // btn_Autocompleta_Admin
             // 
@@ -119,6 +122,7 @@
             this.btn_Autocompleta_Admin.TabIndex = 8;
             this.btn_Autocompleta_Admin.Text = "Completar como admin";
             this.btn_Autocompleta_Admin.UseVisualStyleBackColor = true;
+            this.btn_Autocompleta_Admin.Click += new System.EventHandler(this.btn_Autocompleta_Admin_Click);
             // 
             // Form_Login
             // 
@@ -141,6 +145,7 @@
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "✿ ❀ Bienvenid@ ✿ ❀";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Login_FormClosing_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
