@@ -37,16 +37,23 @@ namespace ParcialBarcito_CalannaCecilia
                     {
                         // es admin
                         Form frm = new Form_Vendedor(this.txtBox_Nombre.Text);
-                        frm.Show();
+                        this.Hide();
+                        if (frm.ShowDialog() == DialogResult.OK)
+                        {
+                            this.Close();
+                        }
                     }
                     if (auxiliar == 2)
                     {
                         //es vendedor
                         Form frm = new Form_Vendedor(this.txtBox_Nombre.Text);
-                        frm.Show();
+                        if (frm.ShowDialog() == DialogResult.OK)
+                        {
+                            this.Close();
+                        }
                     }
                     
-                    this.Hide();
+                    //this.Hide();
                 }
                 else
                 {

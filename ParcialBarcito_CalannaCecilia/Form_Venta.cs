@@ -12,9 +12,21 @@ namespace UI
 {
     public partial class Form_Venta : Form
     {
-        public Form_Venta()
+        string numero;
+        public Form_Venta(string numero)
         {
             InitializeComponent();
+            this.numero = numero;
+        }
+        private void Form_Venta_Load(object sender, EventArgs e)
+        {
+            this.lbl_titulo.Text = $"Mesa {this.numero} ";
+        }
+
+        private void btn_producto1_Click(object sender, EventArgs e)
+        {
+            //agrego a la mesa cerveza segun cuantos
+            
         }
     }
 }

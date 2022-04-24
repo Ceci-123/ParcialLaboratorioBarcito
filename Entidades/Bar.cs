@@ -9,9 +9,11 @@ namespace Entidades
         public static string Nombre { get { return "LES UTN"; }  }
         public static List<Persona> personal;
         public static Dictionary<Producto, short> inventario;
-        public static List<Sitio> puestosDeVenta;
+        private static List<Sitio> puestosDeVenta;
 
-        public static List<Sitio> PuestosDeVenta{ get { return Bar.puestosDeVenta; } }
+        public static List<Sitio> ListaDePuestosDeVenta{ get { return Bar.puestosDeVenta; } }
+
+        
 
         static Bar()
         {
@@ -127,7 +129,7 @@ namespace Entidades
             {
                 if(item.estaLibre == true)
                 {
-                    retorno = $"Tenemos disponible la {item.Nombre} ";
+                    retorno = $"Disponible la {item.Nombre} ";
                     
                 }
             }
@@ -165,7 +167,7 @@ namespace Entidades
         public static float FacturacionDelDia()
         {
             float suma = 0f;
-            foreach (Sitio item in PuestosDeVenta)
+            foreach (Sitio item in puestosDeVenta)
             {
                 suma += item.Precio;
             }
@@ -179,9 +181,9 @@ namespace Entidades
             sb.AppendLine("-----------------------");
             foreach (KeyValuePair<Producto, short> item in inventario)
             {
-                sb.AppendLine($"Producto {item.Key}  ");
+                sb.AppendLine($"Producto {item.Key.ToString()}  ");
 
-                sb.AppendLine($"Precio $ {item.Key.Precio}  ");
+                sb.AppendLine($"Precio $ {item.Key.Precio.ToString()}  ");
             }
             return sb.ToString();
         }
@@ -198,6 +200,23 @@ namespace Entidades
 
             }
             return resultado;
+        }
+        public static string MostrarPersonal()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (Persona item in personal)
+            {
+                sb.Append(item.Nombre);
+                if(item is Vendedor)
+                {
+                    sb.AppendLine(" - Vendedor");
+                }
+                if (item is Administrador)
+                {
+                    sb.AppendLine(" - Administrador");
+                }
+            }
+            return sb.ToString();
         }
 
     }

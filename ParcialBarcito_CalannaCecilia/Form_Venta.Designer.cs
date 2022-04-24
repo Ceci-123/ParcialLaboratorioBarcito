@@ -203,6 +203,7 @@
             this.btn_producto1.TabIndex = 11;
             this.btn_producto1.Text = "Agregar";
             this.btn_producto1.UseVisualStyleBackColor = true;
+            this.btn_producto1.Click += new System.EventHandler(this.btn_producto1_Click);
             // 
             // btn_producto2
             // 
@@ -378,10 +379,10 @@
             // 
             // num_producto10
             // 
-            this.num_producto10.Location = new System.Drawing.Point(470, 98);
+            this.num_producto10.Location = new System.Drawing.Point(450, 98);
             this.num_producto10.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_producto10.Name = "num_producto10";
-            this.num_producto10.Size = new System.Drawing.Size(88, 26);
+            this.num_producto10.Size = new System.Drawing.Size(108, 26);
             this.num_producto10.TabIndex = 31;
             // 
             // Form_Venta

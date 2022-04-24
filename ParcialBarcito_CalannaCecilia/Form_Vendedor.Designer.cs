@@ -362,7 +362,7 @@
             this.btn_BusquedaMesa.Name = "btn_BusquedaMesa";
             this.btn_BusquedaMesa.Size = new System.Drawing.Size(179, 94);
             this.btn_BusquedaMesa.TabIndex = 4;
-            this.btn_BusquedaMesa.Text = "Buscar mesa libre";
+            this.btn_BusquedaMesa.Text = "Buscar sitio disponible";
             this.btn_BusquedaMesa.UseVisualStyleBackColor = true;
             this.btn_BusquedaMesa.Click += new System.EventHandler(this.btn_BusquedaMesa_Click);
             // 
@@ -415,6 +415,8 @@
             this.Controls.Add(this.lbl_Saludo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Vendedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Que tengas un hermoso dia!";
