@@ -12,6 +12,12 @@ namespace Entidades
         public List<Producto> consumicion;
         public string nombre;
 
+        public Sitio(string nombre)
+        {
+            this.nombre = nombre;
+            this.estaLibre = true;
+        }
+
         public bool EstaLibre { get { return estaLibre; } }
         public string Nombre { get { return nombre; } }
 

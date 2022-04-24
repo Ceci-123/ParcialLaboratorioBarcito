@@ -16,6 +16,7 @@ namespace Entidades
         {
             this.nombre = nombre;
             this.esBebida = esBebida;
+            this.precio = precio;
         }
 
         public bool EsBebida
@@ -37,8 +38,7 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"  {nombre}  ");
-            sb.AppendLine($" $ {precio}  ");
-            sb.AppendLine($"------------------------");
+            sb.AppendLine($" $ {precio.ToString()}  ");
             return sb.ToString();
             
         }

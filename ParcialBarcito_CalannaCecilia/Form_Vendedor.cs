@@ -28,7 +28,7 @@ namespace UI
 
         private void Form_Vendedor_Load(object sender, EventArgs e)
         {
-            this.lbl_Saludo.Text = "Bienvenido " + nombre;
+            this.lbl_Saludo.Text = "Bienvenid@ " + nombre;
         }
 
         private void btn_Mesa2_Click(object sender, EventArgs e)

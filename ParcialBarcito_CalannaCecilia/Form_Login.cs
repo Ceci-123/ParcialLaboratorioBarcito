@@ -31,7 +31,7 @@ namespace ParcialBarcito_CalannaCecilia
                 bool respuesta = Entidades.Persona.ValidarUser(Bar.personal, this.txtBox_Nombre.Text, txtbox_password.Text);
                 if (respuesta)
                 {
-                    int auxiliar = Persona.ValidarRango(Bar.personal, this.txtBox_Nombre.Text, txtbox_password.Text);
+                    int auxiliar = Persona.ValidarRango(Bar.personal, this.txtBox_Nombre.Text);
                     //abro segundo formulario
                     if ( auxiliar == 1)
                     {
@@ -53,7 +53,6 @@ namespace ParcialBarcito_CalannaCecilia
                         }
                     }
                     
-                    //this.Hide();
                 }
                 else
                 {
@@ -68,7 +67,7 @@ namespace ParcialBarcito_CalannaCecilia
         private void btn_Autocompleta_Vendedor_Click(object sender, EventArgs e)
         {
             this.txtBox_Nombre.Text = "morena";
-            this.txtbox_password.Text = "morena123";
+            this.txtbox_password.Text = "more123";
         }
 
         private void btn_Autocompleta_Admin_Click(object sender, EventArgs e)

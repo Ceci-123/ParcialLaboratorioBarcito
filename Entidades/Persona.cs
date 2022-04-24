@@ -47,18 +47,16 @@ namespace Entidades
         /// 
         /// </summary>
         /// <returns>Devuelve un int en caso que haya mas rangos en el futuro</returns>
-        public static int ValidarRango(List<Persona> listado, string nombreIngresado, string passIngresado)
+        public static int ValidarRango(List<Persona> listado, string nombreIngresado)
         {
             int retorno = -1;
-            passIngresado = passIngresado.Trim().ToLower();
             nombreIngresado = nombreIngresado.Trim().ToLower();
 
-            if (listado is not null && !string.IsNullOrEmpty(nombreIngresado) &&
-                    !string.IsNullOrEmpty(passIngresado))
+            if (listado is not null && !string.IsNullOrEmpty(nombreIngresado))
             {
                 foreach (Persona item in listado)
                 {
-                    if (item.Nombre == nombreIngresado && item.Password == passIngresado)
+                    if (item.Nombre == nombreIngresado)
                     {
                         if (item is Vendedor)
                         {

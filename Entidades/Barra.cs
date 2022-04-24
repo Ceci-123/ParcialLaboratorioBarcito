@@ -8,10 +8,9 @@ namespace Entidades
 {
     public class Barra :Sitio
     {
-        public Barra(bool estado, string nombre) 
+        public Barra(string nombre) : base(nombre)
         {
             consumicion = new List<Producto>();
-            this.estaLibre = estado;
         }
         
     }
