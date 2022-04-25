@@ -169,7 +169,7 @@ namespace Entidades
             float suma = 0f;
             foreach (Sitio item in puestosDeVenta)
             {
-                suma += item.Precio;
+                suma += 2;
             }
             return suma;
         }

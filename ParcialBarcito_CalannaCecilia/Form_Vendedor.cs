@@ -14,10 +14,12 @@ namespace UI
     public partial class Form_Vendedor : Form
     {
         public string nombre;
-        public Form_Vendedor(string nombre)
+        public int rangoDelUsuarioLogueado;
+        public Form_Vendedor(string nombre, int rango)
         {
             InitializeComponent();
             this.nombre = nombre;
+            this.rangoDelUsuarioLogueado = rango;
         }
 
         private void btn_Mesa1_Click(object sender, EventArgs e)
@@ -29,6 +31,18 @@ namespace UI
         private void Form_Vendedor_Load(object sender, EventArgs e)
         {
             this.lbl_Saludo.Text = "Bienvenid@ " + nombre;
+            if(rangoDelUsuarioLogueado == 1)
+            {
+                // es admin si es 1 y vendedor es 2
+                this.BackColor = Color.DarkSalmon;
+            }
+            else if (rangoDelUsuarioLogueado == 2)
+            {
+                this.BackColor = Color.DarkCyan;
+                this.btn_AgregarMercaderia.Visible = false;
+                this.btn_FacturacionDiaria.Visible = false;
+                this.btn_VerNomina.Visible = false; 
+            }
         }
 
         private void btn_Mesa2_Click(object sender, EventArgs e)
@@ -183,6 +197,11 @@ namespace UI
                 this.DialogResult = DialogResult.OK;
                 e.Cancel = false;
             }
+        }
+
+        private void btn_FacturacionDiaria_Click(object sender, EventArgs e)
+        {
+            //sumar todas las mesas
         }
     }
 }

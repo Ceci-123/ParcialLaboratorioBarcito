@@ -60,6 +60,7 @@
             this.btn_Ticket = new System.Windows.Forms.Button();
             this.btn_VerNomina = new System.Windows.Forms.Button();
             this.btn_AgregarMercaderia = new System.Windows.Forms.Button();
+            this.btn_FacturacionDiaria = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).BeginInit();
             this.groupBox_Sitios.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +87,7 @@
             // 
             // pictureBox_Logo
             // 
+            this.pictureBox_Logo.Image = global::UI.Properties.Resources.Les_Utn_Logo;
             this.pictureBox_Logo.Location = new System.Drawing.Point(845, 29);
             this.pictureBox_Logo.Name = "pictureBox_Logo";
             this.pictureBox_Logo.Size = new System.Drawing.Size(100, 97);
@@ -399,11 +401,23 @@
             this.btn_AgregarMercaderia.UseVisualStyleBackColor = true;
             this.btn_AgregarMercaderia.Click += new System.EventHandler(this.btn_AgregarMercaderia_Click);
             // 
+            // btn_FacturacionDiaria
+            // 
+            this.btn_FacturacionDiaria.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_FacturacionDiaria.Location = new System.Drawing.Point(999, 445);
+            this.btn_FacturacionDiaria.Name = "btn_FacturacionDiaria";
+            this.btn_FacturacionDiaria.Size = new System.Drawing.Size(126, 94);
+            this.btn_FacturacionDiaria.TabIndex = 10;
+            this.btn_FacturacionDiaria.Text = "Facturacion del dia";
+            this.btn_FacturacionDiaria.UseVisualStyleBackColor = true;
+            this.btn_FacturacionDiaria.Click += new System.EventHandler(this.btn_FacturacionDiaria_Click);
+            // 
             // Form_Vendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 575);
+            this.Controls.Add(this.btn_FacturacionDiaria);
             this.Controls.Add(this.btn_AgregarMercaderia);
             this.Controls.Add(this.btn_VerNomina);
             this.Controls.Add(this.btn_Ticket);
@@ -463,5 +477,6 @@
         private System.Windows.Forms.Button btn_Ticket;
         private System.Windows.Forms.Button btn_VerNomina;
         private System.Windows.Forms.Button btn_AgregarMercaderia;
+        private System.Windows.Forms.Button btn_FacturacionDiaria;
     }
 }

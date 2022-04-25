@@ -33,25 +33,15 @@ namespace ParcialBarcito_CalannaCecilia
                 {
                     int auxiliar = Persona.ValidarRango(Bar.personal, this.txtBox_Nombre.Text);
                     //abro segundo formulario
-                    if ( auxiliar == 1)
-                    {
-                        // es admin
-                        Form frm = new Form_Vendedor(this.txtBox_Nombre.Text);
+                    // es admin si es 1 y vendedor es 2
+                        Form frm = new Form_Vendedor(this.txtBox_Nombre.Text, auxiliar);
                         this.Hide();
                         if (frm.ShowDialog() == DialogResult.OK)
                         {
                             this.Close();
                         }
-                    }
-                    if (auxiliar == 2)
-                    {
-                        //es vendedor
-                        Form frm = new Form_Vendedor(this.txtBox_Nombre.Text);
-                        if (frm.ShowDialog() == DialogResult.OK)
-                        {
-                            this.Close();
-                        }
-                    }
+                    
+                    
                     
                 }
                 else

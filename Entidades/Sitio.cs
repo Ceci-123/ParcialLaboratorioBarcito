@@ -21,6 +21,6 @@ namespace Entidades
         public bool EstaLibre { get { return estaLibre; } }
         public string Nombre { get { return nombre; } }
 
-        public float Precio { get; internal set; }
+        
     }
 }
