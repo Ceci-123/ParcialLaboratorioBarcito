@@ -20,7 +20,7 @@ namespace UI
 
         private void btn_OK_Click(object sender, EventArgs e)
         {
-            playSound();
+            PlaySound();
             //hacer la suma de la consumision, 
             this.lbl_TotalPesos.Text = "aca va el total";
             //Entidades.Bar.SumarConsumicion();
@@ -35,11 +35,12 @@ namespace UI
            // Entidades.Bar.totalVentaDelDia+= lock de este licket; 
         }
 
-        private void playSound()
+        private void PlaySound()
         {
             try
             {
-                SoundPlayer sonido = new SoundPlayer(@"..\sonido_corto.wav");
+                
+                SoundPlayer sonido = new SoundPlayer(Properties.Resources.sonido_largo);
                 sonido.Play();
             }
             catch (Exception)
