@@ -10,15 +10,17 @@ namespace Entidades
         public static List<Persona> personal;
         public static Dictionary<Producto, short> inventario;
         private static List<Sitio> puestosDeVenta;
+        public static float totalVentaDelDia;
 
         public static List<Sitio> ListaDePuestosDeVenta{ get { return Bar.puestosDeVenta; } }
 
-        
+        public static Dictionary<Producto, short> CosasEnElInventario { get { return Bar.inventario; } }
 
         static Bar()
         {
             personal = new List<Persona>();
             puestosDeVenta = new List<Sitio>();
+            totalVentaDelDia = 0;
             Harcodeo();
         }
 

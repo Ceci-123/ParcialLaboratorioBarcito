@@ -169,6 +169,7 @@
             this.btn_OK.TabIndex = 10;
             this.btn_OK.Text = "OK";
             this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // btn_imprimirTicket
             // 
@@ -197,6 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(848, 570);
             this.Controls.Add(this.radioBtn_MercadoPago);
             this.Controls.Add(this.btn_imprimirTicket);
@@ -219,6 +221,7 @@
             this.Name = "Form_Ticket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ticket cliente";
+            this.Load += new System.EventHandler(this.Form_Ticket_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

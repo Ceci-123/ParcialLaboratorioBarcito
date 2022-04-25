@@ -208,8 +208,18 @@ namespace UI
 
         private void playSound()
         {
-           //SoundPlayer sonido = new SoundPlayer(@"\sonido_largo.wav");
-           // sonido.Play();
+            try
+            {
+                SoundPlayer sonido = new SoundPlayer(@"..\sonido_largo.wav");
+                sonido.Play();
+            }
+            catch (Exception)
+            {
+                Console.Beep();
+            }
+
+           
+            
         }
     }
 }

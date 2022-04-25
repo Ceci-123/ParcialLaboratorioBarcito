@@ -57,7 +57,7 @@
             this.lbl_Usuario.Location = new System.Drawing.Point(23, 91);
             this.lbl_Usuario.Name = "lbl_Usuario";
             this.lbl_Usuario.Size = new System.Drawing.Size(249, 19);
-            this.lbl_Usuario.TabIndex = 1;
+            this.lbl_Usuario.TabIndex = 7;
             this.lbl_Usuario.Text = "Ingresa tu nombre de usuario";
             // 
             // txtBox_Nombre
@@ -65,7 +65,7 @@
             this.txtBox_Nombre.Location = new System.Drawing.Point(23, 130);
             this.txtBox_Nombre.Name = "txtBox_Nombre";
             this.txtBox_Nombre.Size = new System.Drawing.Size(498, 23);
-            this.txtBox_Nombre.TabIndex = 2;
+            this.txtBox_Nombre.TabIndex = 1;
             // 
             // lbl_Password
             // 
@@ -74,7 +74,7 @@
             this.lbl_Password.Location = new System.Drawing.Point(23, 196);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(186, 19);
-            this.lbl_Password.TabIndex = 3;
+            this.lbl_Password.TabIndex = 8;
             this.lbl_Password.Text = "Ingresa tu contraseña";
             // 
             // txtbox_password
@@ -82,14 +82,14 @@
             this.txtbox_password.Location = new System.Drawing.Point(23, 241);
             this.txtbox_password.Name = "txtbox_password";
             this.txtbox_password.Size = new System.Drawing.Size(498, 23);
-            this.txtbox_password.TabIndex = 4;
+            this.txtbox_password.TabIndex = 2;
             // 
             // btn_Olvido
             // 
             this.btn_Olvido.Location = new System.Drawing.Point(12, 297);
             this.btn_Olvido.Name = "btn_Olvido";
             this.btn_Olvido.Size = new System.Drawing.Size(157, 88);
-            this.btn_Olvido.TabIndex = 5;
+            this.btn_Olvido.TabIndex = 3;
             this.btn_Olvido.Text = "Ups! Olvide mi contraseña";
             this.btn_Olvido.UseVisualStyleBackColor = true;
             this.btn_Olvido.Click += new System.EventHandler(this.btn_Olvido_Click);
@@ -99,7 +99,7 @@
             this.btn_Ingreso.Location = new System.Drawing.Point(186, 297);
             this.btn_Ingreso.Name = "btn_Ingreso";
             this.btn_Ingreso.Size = new System.Drawing.Size(157, 88);
-            this.btn_Ingreso.TabIndex = 6;
+            this.btn_Ingreso.TabIndex = 4;
             this.btn_Ingreso.Text = "Entrar";
             this.btn_Ingreso.UseVisualStyleBackColor = true;
             this.btn_Ingreso.Click += new System.EventHandler(this.btn_Ingreso_Click);
@@ -109,7 +109,7 @@
             this.btn_Autocompleta_Vendedor.Location = new System.Drawing.Point(364, 297);
             this.btn_Autocompleta_Vendedor.Name = "btn_Autocompleta_Vendedor";
             this.btn_Autocompleta_Vendedor.Size = new System.Drawing.Size(157, 42);
-            this.btn_Autocompleta_Vendedor.TabIndex = 7;
+            this.btn_Autocompleta_Vendedor.TabIndex = 5;
             this.btn_Autocompleta_Vendedor.Text = "Completar como vendedor";
             this.btn_Autocompleta_Vendedor.UseVisualStyleBackColor = true;
             this.btn_Autocompleta_Vendedor.Click += new System.EventHandler(this.btn_Autocompleta_Vendedor_Click);
@@ -119,7 +119,7 @@
             this.btn_Autocompleta_Admin.Location = new System.Drawing.Point(364, 345);
             this.btn_Autocompleta_Admin.Name = "btn_Autocompleta_Admin";
             this.btn_Autocompleta_Admin.Size = new System.Drawing.Size(157, 42);
-            this.btn_Autocompleta_Admin.TabIndex = 8;
+            this.btn_Autocompleta_Admin.TabIndex = 6;
             this.btn_Autocompleta_Admin.Text = "Completar como admin";
             this.btn_Autocompleta_Admin.UseVisualStyleBackColor = true;
             this.btn_Autocompleta_Admin.Click += new System.EventHandler(this.btn_Autocompleta_Admin_Click);
@@ -128,6 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(533, 407);
             this.Controls.Add(this.btn_Autocompleta_Admin);
             this.Controls.Add(this.btn_Autocompleta_Vendedor);
@@ -144,7 +145,7 @@
             this.MinimizeBox = false;
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "✿ ❀ Bienvenid@ ✿ ❀";
+            this.Text = "✿ ❀ Bienvenid@ al Bar✿ ❀";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Login_FormClosing_1);
             this.ResumeLayout(false);
             this.PerformLayout();

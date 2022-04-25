@@ -27,16 +27,17 @@ namespace UI
 
         private void btn_AgregarProductos_Click(object sender, EventArgs e)
         {
-            //ver si hay stock
-            //agregar el producto a la lista de consumision de la mesa
-            //restar del stock
+            //Entidades.Bar.VentaEnMesa(Entidades.Bar.ListaDePuestosDeVenta[Int32.Parse(numero)],
+            //    Entidades.Bar.CosasEnElInventario, Entidades.Bar.ListaDePuestosDeVenta[Int32.Parse(numero)].consumicion);
+            
         }
 
 
 
         private void btn_cerrarMesa_Click(object sender, EventArgs e)
         {
-
+            Form frm_ticket = new Form_Ticket();
+            frm_ticket.ShowDialog();
         }
         //suma todo lo consumido y el estacionamiento y recargo tarjeta
 

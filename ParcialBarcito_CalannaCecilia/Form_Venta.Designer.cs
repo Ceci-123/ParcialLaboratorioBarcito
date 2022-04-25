@@ -72,7 +72,7 @@
             this.lbl_producto1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_producto1.Name = "lbl_producto1";
             this.lbl_producto1.Size = new System.Drawing.Size(208, 19);
-            this.lbl_producto1.TabIndex = 0;
+            this.lbl_producto1.TabIndex = 13;
             this.lbl_producto1.Text = "Cerveza Quilmes porron";
             // 
             // lbl_producto2
@@ -83,7 +83,7 @@
             this.lbl_producto2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_producto2.Name = "lbl_producto2";
             this.lbl_producto2.Size = new System.Drawing.Size(199, 19);
-            this.lbl_producto2.TabIndex = 1;
+            this.lbl_producto2.TabIndex = 14;
             this.lbl_producto2.Text = "Coca cola botella 500 cc";
             // 
             // lbl_producto3
@@ -94,7 +94,7 @@
             this.lbl_producto3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_producto3.Name = "lbl_producto3";
             this.lbl_producto3.Size = new System.Drawing.Size(135, 19);
-            this.lbl_producto3.TabIndex = 2;
+            this.lbl_producto3.TabIndex = 15;
             this.lbl_producto3.Text = "Fernet con coca";
             // 
             // lbl_producto4
@@ -105,7 +105,7 @@
             this.lbl_producto4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_producto4.Name = "lbl_producto4";
             this.lbl_producto4.Size = new System.Drawing.Size(166, 19);
-            this.lbl_producto4.TabIndex = 3;
+            this.lbl_producto4.TabIndex = 16;
             this.lbl_producto4.Text = "Daiquiri de frutilla";
             // 
             // lbl_producto5
@@ -116,7 +116,7 @@
             this.lbl_producto5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_producto5.Name = "lbl_producto5";
             this.lbl_producto5.Size = new System.Drawing.Size(165, 19);
-            this.lbl_producto5.TabIndex = 4;
+            this.lbl_producto5.TabIndex = 17;
             this.lbl_producto5.Text = "Manaos de uva lata ";
             // 
             // lbl_producto6
@@ -127,7 +127,7 @@
             this.lbl_producto6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_producto6.Name = "lbl_producto6";
             this.lbl_producto6.Size = new System.Drawing.Size(250, 19);
-            this.lbl_producto6.TabIndex = 5;
+            this.lbl_producto6.TabIndex = 18;
             this.lbl_producto6.Text = "Tequeños de queso 6 unidades";
             // 
             // lbl_producto7
@@ -138,7 +138,7 @@
             this.lbl_producto7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_producto7.Name = "lbl_producto7";
             this.lbl_producto7.Size = new System.Drawing.Size(282, 19);
-            this.lbl_producto7.TabIndex = 6;
+            this.lbl_producto7.TabIndex = 19;
             this.lbl_producto7.Text = "Papas fritas con cheddar y verdeo";
             // 
             // lbl_producto8
@@ -149,7 +149,7 @@
             this.lbl_producto8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_producto8.Name = "lbl_producto8";
             this.lbl_producto8.Size = new System.Drawing.Size(405, 19);
-            this.lbl_producto8.TabIndex = 7;
+            this.lbl_producto8.TabIndex = 20;
             this.lbl_producto8.Text = "Hamburguesa de soja con tomate,lechuga y queso";
             // 
             // lbl_producto9
@@ -160,7 +160,7 @@
             this.lbl_producto9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_producto9.Name = "lbl_producto9";
             this.lbl_producto9.Size = new System.Drawing.Size(289, 19);
-            this.lbl_producto9.TabIndex = 8;
+            this.lbl_producto9.TabIndex = 21;
             this.lbl_producto9.Text = "Empanadas de verdura por unidad";
             // 
             // lbl_producto10
@@ -171,7 +171,7 @@
             this.lbl_producto10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_producto10.Name = "lbl_producto10";
             this.lbl_producto10.Size = new System.Drawing.Size(205, 19);
-            this.lbl_producto10.TabIndex = 9;
+            this.lbl_producto10.TabIndex = 22;
             this.lbl_producto10.Text = "Picadita para compartir";
             // 
             // lbl_titulo
@@ -182,7 +182,7 @@
             this.lbl_titulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(80, 31);
-            this.lbl_titulo.TabIndex = 10;
+            this.lbl_titulo.TabIndex = 0;
             this.lbl_titulo.Text = "Mesa";
             // 
             // btn_AgregarProductos
@@ -202,7 +202,7 @@
             this.btn_cerrarMesa.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_cerrarMesa.Name = "btn_cerrarMesa";
             this.btn_cerrarMesa.Size = new System.Drawing.Size(118, 185);
-            this.btn_cerrarMesa.TabIndex = 21;
+            this.btn_cerrarMesa.TabIndex = 12;
             this.btn_cerrarMesa.Text = "Cerrar la mesa";
             this.btn_cerrarMesa.UseVisualStyleBackColor = true;
             this.btn_cerrarMesa.Click += new System.EventHandler(this.btn_cerrarMesa_Click);
@@ -213,7 +213,7 @@
             this.num_producto1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_producto1.Name = "num_producto1";
             this.num_producto1.Size = new System.Drawing.Size(108, 26);
-            this.num_producto1.TabIndex = 22;
+            this.num_producto1.TabIndex = 1;
             // 
             // num_producto2
             // 
@@ -221,7 +221,7 @@
             this.num_producto2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_producto2.Name = "num_producto2";
             this.num_producto2.Size = new System.Drawing.Size(108, 26);
-            this.num_producto2.TabIndex = 23;
+            this.num_producto2.TabIndex = 2;
             // 
             // num_producto3
             // 
@@ -229,7 +229,7 @@
             this.num_producto3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_producto3.Name = "num_producto3";
             this.num_producto3.Size = new System.Drawing.Size(108, 26);
-            this.num_producto3.TabIndex = 24;
+            this.num_producto3.TabIndex = 3;
             // 
             // num_producto4
             // 
@@ -237,7 +237,7 @@
             this.num_producto4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_producto4.Name = "num_producto4";
             this.num_producto4.Size = new System.Drawing.Size(108, 26);
-            this.num_producto4.TabIndex = 25;
+            this.num_producto4.TabIndex = 4;
             // 
             // num_producto5
             // 
@@ -245,7 +245,7 @@
             this.num_producto5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_producto5.Name = "num_producto5";
             this.num_producto5.Size = new System.Drawing.Size(108, 26);
-            this.num_producto5.TabIndex = 26;
+            this.num_producto5.TabIndex = 5;
             // 
             // num_producto6
             // 
@@ -253,7 +253,7 @@
             this.num_producto6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_producto6.Name = "num_producto6";
             this.num_producto6.Size = new System.Drawing.Size(108, 26);
-            this.num_producto6.TabIndex = 27;
+            this.num_producto6.TabIndex = 6;
             // 
             // num_producto7
             // 
@@ -261,7 +261,7 @@
             this.num_producto7.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_producto7.Name = "num_producto7";
             this.num_producto7.Size = new System.Drawing.Size(108, 26);
-            this.num_producto7.TabIndex = 28;
+            this.num_producto7.TabIndex = 7;
             // 
             // num_producto8
             // 
@@ -269,7 +269,7 @@
             this.num_producto8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_producto8.Name = "num_producto8";
             this.num_producto8.Size = new System.Drawing.Size(108, 26);
-            this.num_producto8.TabIndex = 29;
+            this.num_producto8.TabIndex = 8;
             // 
             // num_producto9
             // 
@@ -277,7 +277,7 @@
             this.num_producto9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_producto9.Name = "num_producto9";
             this.num_producto9.Size = new System.Drawing.Size(108, 26);
-            this.num_producto9.TabIndex = 30;
+            this.num_producto9.TabIndex = 9;
             // 
             // num_producto10
             // 
@@ -291,6 +291,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(769, 500);
             this.Controls.Add(this.num_producto10);
             this.Controls.Add(this.num_producto9);
