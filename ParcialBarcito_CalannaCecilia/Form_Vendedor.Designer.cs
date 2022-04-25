@@ -79,7 +79,7 @@
             // 
             this.lbl_Bar.AutoSize = true;
             this.lbl_Bar.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Bar.Location = new System.Drawing.Point(672, 29);
+            this.lbl_Bar.Location = new System.Drawing.Point(632, 27);
             this.lbl_Bar.Name = "lbl_Bar";
             this.lbl_Bar.Size = new System.Drawing.Size(118, 31);
             this.lbl_Bar.TabIndex = 1;
@@ -87,10 +87,10 @@
             // 
             // pictureBox_Logo
             // 
-            this.pictureBox_Logo.Image = global::UI.Properties.Resources.Les_Utn_Logo;
-            this.pictureBox_Logo.Location = new System.Drawing.Point(845, 29);
+            this.pictureBox_Logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Logo.Image")));
+            this.pictureBox_Logo.Location = new System.Drawing.Point(785, 12);
             this.pictureBox_Logo.Name = "pictureBox_Logo";
-            this.pictureBox_Logo.Size = new System.Drawing.Size(100, 97);
+            this.pictureBox_Logo.Size = new System.Drawing.Size(340, 114);
             this.pictureBox_Logo.TabIndex = 2;
             this.pictureBox_Logo.TabStop = false;
             // 
@@ -360,9 +360,9 @@
             // btn_BusquedaMesa
             // 
             this.btn_BusquedaMesa.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_BusquedaMesa.Location = new System.Drawing.Point(776, 152);
+            this.btn_BusquedaMesa.Location = new System.Drawing.Point(785, 152);
             this.btn_BusquedaMesa.Name = "btn_BusquedaMesa";
-            this.btn_BusquedaMesa.Size = new System.Drawing.Size(179, 94);
+            this.btn_BusquedaMesa.Size = new System.Drawing.Size(170, 94);
             this.btn_BusquedaMesa.TabIndex = 4;
             this.btn_BusquedaMesa.Text = "Buscar sitio disponible";
             this.btn_BusquedaMesa.UseVisualStyleBackColor = true;

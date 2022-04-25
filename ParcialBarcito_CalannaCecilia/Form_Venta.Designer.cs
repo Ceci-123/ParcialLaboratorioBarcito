@@ -40,17 +40,8 @@
             this.lbl_producto9 = new System.Windows.Forms.Label();
             this.lbl_producto10 = new System.Windows.Forms.Label();
             this.lbl_titulo = new System.Windows.Forms.Label();
-            this.btn_producto1 = new System.Windows.Forms.Button();
-            this.btn_producto2 = new System.Windows.Forms.Button();
-            this.btn_producto3 = new System.Windows.Forms.Button();
-            this.btn_producto4 = new System.Windows.Forms.Button();
-            this.btn_producto5 = new System.Windows.Forms.Button();
-            this.btn_producto6 = new System.Windows.Forms.Button();
-            this.btn_producto7 = new System.Windows.Forms.Button();
-            this.btn_producto8 = new System.Windows.Forms.Button();
-            this.btn_producto9 = new System.Windows.Forms.Button();
-            this.btn_producto10 = new System.Windows.Forms.Button();
-            this.btn_OK = new System.Windows.Forms.Button();
+            this.btn_AgregarProductos = new System.Windows.Forms.Button();
+            this.btn_cerrarMesa = new System.Windows.Forms.Button();
             this.num_producto1 = new System.Windows.Forms.NumericUpDown();
             this.num_producto2 = new System.Windows.Forms.NumericUpDown();
             this.num_producto3 = new System.Windows.Forms.NumericUpDown();
@@ -194,116 +185,27 @@
             this.lbl_titulo.TabIndex = 10;
             this.lbl_titulo.Text = "Mesa";
             // 
-            // btn_producto1
+            // btn_AgregarProductos
             // 
-            this.btn_producto1.Location = new System.Drawing.Point(605, 100);
-            this.btn_producto1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_producto1.Name = "btn_producto1";
-            this.btn_producto1.Size = new System.Drawing.Size(118, 29);
-            this.btn_producto1.TabIndex = 11;
-            this.btn_producto1.Text = "Agregar";
-            this.btn_producto1.UseVisualStyleBackColor = true;
-            this.btn_producto1.Click += new System.EventHandler(this.btn_producto1_Click);
+            this.btn_AgregarProductos.Location = new System.Drawing.Point(605, 100);
+            this.btn_AgregarProductos.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_AgregarProductos.Name = "btn_AgregarProductos";
+            this.btn_AgregarProductos.Size = new System.Drawing.Size(118, 185);
+            this.btn_AgregarProductos.TabIndex = 11;
+            this.btn_AgregarProductos.Text = "Agregar productos";
+            this.btn_AgregarProductos.UseVisualStyleBackColor = true;
+            this.btn_AgregarProductos.Click += new System.EventHandler(this.btn_AgregarProductos_Click);
             // 
-            // btn_producto2
+            // btn_cerrarMesa
             // 
-            this.btn_producto2.Location = new System.Drawing.Point(605, 139);
-            this.btn_producto2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_producto2.Name = "btn_producto2";
-            this.btn_producto2.Size = new System.Drawing.Size(118, 29);
-            this.btn_producto2.TabIndex = 12;
-            this.btn_producto2.Text = "Agregar";
-            this.btn_producto2.UseVisualStyleBackColor = true;
-            // 
-            // btn_producto3
-            // 
-            this.btn_producto3.Location = new System.Drawing.Point(605, 178);
-            this.btn_producto3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_producto3.Name = "btn_producto3";
-            this.btn_producto3.Size = new System.Drawing.Size(118, 29);
-            this.btn_producto3.TabIndex = 13;
-            this.btn_producto3.Text = "Agregar";
-            this.btn_producto3.UseVisualStyleBackColor = true;
-            // 
-            // btn_producto4
-            // 
-            this.btn_producto4.Location = new System.Drawing.Point(605, 218);
-            this.btn_producto4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_producto4.Name = "btn_producto4";
-            this.btn_producto4.Size = new System.Drawing.Size(118, 29);
-            this.btn_producto4.TabIndex = 14;
-            this.btn_producto4.Text = "Agregar";
-            this.btn_producto4.UseVisualStyleBackColor = true;
-            // 
-            // btn_producto5
-            // 
-            this.btn_producto5.Location = new System.Drawing.Point(605, 261);
-            this.btn_producto5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_producto5.Name = "btn_producto5";
-            this.btn_producto5.Size = new System.Drawing.Size(118, 29);
-            this.btn_producto5.TabIndex = 15;
-            this.btn_producto5.Text = "Agregar";
-            this.btn_producto5.UseVisualStyleBackColor = true;
-            // 
-            // btn_producto6
-            // 
-            this.btn_producto6.Location = new System.Drawing.Point(605, 301);
-            this.btn_producto6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_producto6.Name = "btn_producto6";
-            this.btn_producto6.Size = new System.Drawing.Size(118, 29);
-            this.btn_producto6.TabIndex = 16;
-            this.btn_producto6.Text = "Agregar";
-            this.btn_producto6.UseVisualStyleBackColor = true;
-            // 
-            // btn_producto7
-            // 
-            this.btn_producto7.Location = new System.Drawing.Point(605, 339);
-            this.btn_producto7.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_producto7.Name = "btn_producto7";
-            this.btn_producto7.Size = new System.Drawing.Size(118, 29);
-            this.btn_producto7.TabIndex = 17;
-            this.btn_producto7.Text = "Agregar";
-            this.btn_producto7.UseVisualStyleBackColor = true;
-            // 
-            // btn_producto8
-            // 
-            this.btn_producto8.Location = new System.Drawing.Point(605, 375);
-            this.btn_producto8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_producto8.Name = "btn_producto8";
-            this.btn_producto8.Size = new System.Drawing.Size(118, 29);
-            this.btn_producto8.TabIndex = 18;
-            this.btn_producto8.Text = "Agregar";
-            this.btn_producto8.UseVisualStyleBackColor = true;
-            // 
-            // btn_producto9
-            // 
-            this.btn_producto9.Location = new System.Drawing.Point(605, 412);
-            this.btn_producto9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_producto9.Name = "btn_producto9";
-            this.btn_producto9.Size = new System.Drawing.Size(118, 29);
-            this.btn_producto9.TabIndex = 19;
-            this.btn_producto9.Text = "Agergar";
-            this.btn_producto9.UseVisualStyleBackColor = true;
-            // 
-            // btn_producto10
-            // 
-            this.btn_producto10.Location = new System.Drawing.Point(605, 449);
-            this.btn_producto10.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_producto10.Name = "btn_producto10";
-            this.btn_producto10.Size = new System.Drawing.Size(118, 29);
-            this.btn_producto10.TabIndex = 20;
-            this.btn_producto10.Text = "Agregar";
-            this.btn_producto10.UseVisualStyleBackColor = true;
-            // 
-            // btn_OK
-            // 
-            this.btn_OK.Location = new System.Drawing.Point(107, 497);
-            this.btn_OK.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(506, 29);
-            this.btn_OK.TabIndex = 21;
-            this.btn_OK.Text = "Finalizar venta";
-            this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_cerrarMesa.Location = new System.Drawing.Point(605, 308);
+            this.btn_cerrarMesa.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btn_cerrarMesa.Name = "btn_cerrarMesa";
+            this.btn_cerrarMesa.Size = new System.Drawing.Size(118, 185);
+            this.btn_cerrarMesa.TabIndex = 21;
+            this.btn_cerrarMesa.Text = "Cerrar la mesa";
+            this.btn_cerrarMesa.UseVisualStyleBackColor = true;
+            this.btn_cerrarMesa.Click += new System.EventHandler(this.btn_cerrarMesa_Click);
             // 
             // num_producto1
             // 
@@ -389,7 +291,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 570);
+            this.ClientSize = new System.Drawing.Size(769, 500);
             this.Controls.Add(this.num_producto10);
             this.Controls.Add(this.num_producto9);
             this.Controls.Add(this.num_producto8);
@@ -400,17 +302,8 @@
             this.Controls.Add(this.num_producto3);
             this.Controls.Add(this.num_producto2);
             this.Controls.Add(this.num_producto1);
-            this.Controls.Add(this.btn_OK);
-            this.Controls.Add(this.btn_producto10);
-            this.Controls.Add(this.btn_producto9);
-            this.Controls.Add(this.btn_producto8);
-            this.Controls.Add(this.btn_producto7);
-            this.Controls.Add(this.btn_producto6);
-            this.Controls.Add(this.btn_producto5);
-            this.Controls.Add(this.btn_producto4);
-            this.Controls.Add(this.btn_producto3);
-            this.Controls.Add(this.btn_producto2);
-            this.Controls.Add(this.btn_producto1);
+            this.Controls.Add(this.btn_cerrarMesa);
+            this.Controls.Add(this.btn_AgregarProductos);
             this.Controls.Add(this.lbl_titulo);
             this.Controls.Add(this.lbl_producto10);
             this.Controls.Add(this.lbl_producto9);
@@ -459,17 +352,8 @@
         private System.Windows.Forms.Label lbl_producto9;
         private System.Windows.Forms.Label lbl_producto10;
         private System.Windows.Forms.Label lbl_titulo;
-        private System.Windows.Forms.Button btn_producto1;
-        private System.Windows.Forms.Button btn_producto2;
-        private System.Windows.Forms.Button btn_producto3;
-        private System.Windows.Forms.Button btn_producto4;
-        private System.Windows.Forms.Button btn_producto5;
-        private System.Windows.Forms.Button btn_producto6;
-        private System.Windows.Forms.Button btn_producto7;
-        private System.Windows.Forms.Button btn_producto8;
-        private System.Windows.Forms.Button btn_producto9;
-        private System.Windows.Forms.Button btn_producto10;
-        private System.Windows.Forms.Button btn_OK;
+        private System.Windows.Forms.Button btn_AgregarProductos;
+        private System.Windows.Forms.Button btn_cerrarMesa;
         private System.Windows.Forms.NumericUpDown num_producto1;
         private System.Windows.Forms.NumericUpDown num_producto2;
         private System.Windows.Forms.NumericUpDown num_producto3;

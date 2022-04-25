@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,7 +32,8 @@ namespace UI
         private void Form_Vendedor_Load(object sender, EventArgs e)
         {
             this.lbl_Saludo.Text = "Bienvenid@ " + nombre;
-            if(rangoDelUsuarioLogueado == 1)
+            playSound();
+            if (rangoDelUsuarioLogueado == 1)
             {
                 // es admin si es 1 y vendedor es 2
                 this.BackColor = Color.DarkSalmon;
@@ -202,6 +204,12 @@ namespace UI
         private void btn_FacturacionDiaria_Click(object sender, EventArgs e)
         {
             //sumar todas las mesas
+        }
+
+        private void playSound()
+        {
+           //SoundPlayer sonido = new SoundPlayer(@"\sonido_largo.wav");
+           // sonido.Play();
         }
     }
 }

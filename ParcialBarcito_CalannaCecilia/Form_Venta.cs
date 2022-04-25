@@ -23,10 +23,23 @@ namespace UI
             this.lbl_titulo.Text = $"Mesa {this.numero} ";
         }
 
-        private void btn_producto1_Click(object sender, EventArgs e)
+
+
+        private void btn_AgregarProductos_Click(object sender, EventArgs e)
         {
-            //agrego a la mesa cerveza segun cuantos
-            
+            //ver si hay stock
+            //agregar el producto a la lista de consumision de la mesa
+            //restar del stock
         }
+
+
+
+        private void btn_cerrarMesa_Click(object sender, EventArgs e)
+        {
+
+        }
+        //suma todo lo consumido y el estacionamiento y recargo tarjeta
+
     }
 }
+
