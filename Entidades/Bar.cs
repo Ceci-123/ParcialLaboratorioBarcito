@@ -7,19 +7,20 @@ namespace Entidades
     public static class Bar
     {
         public static string Nombre { get { return "LES UTN"; }  }
-        public static List<Persona> personal;
-        public static Dictionary<Producto, short> inventario;
-        private static List<Sitio> puestosDeVenta;
-        public static float totalVentaDelDia;
+        private static List<Persona> personal;
+        private static Dictionary<Producto, short> inventario;
+        private static List<PuestoDeVenta> puestosDeVenta;
+        private static float totalVentaDelDia;
 
-        public static List<Sitio> ListaDePuestosDeVenta{ get { return Bar.puestosDeVenta; } }
+        public static List<PuestoDeVenta> ListaDePuestosDeVenta{ get { return Bar.puestosDeVenta; } }
 
         public static Dictionary<Producto, short> CosasEnElInventario { get { return Bar.inventario; } }
 
         static Bar()
         {
             personal = new List<Persona>();
-            puestosDeVenta = new List<Sitio>();
+            puestosDeVenta = new List<PuestoDeVenta>();
+            inventario = new Dictionary<Producto, short>();
             totalVentaDelDia = 0;
             Harcodeo();
         }
@@ -38,7 +39,6 @@ namespace Entidades
             personal.Add(v3);
             personal.Add(v4);
             //harcodeo productos
-            inventario = new Dictionary<Producto, short>();
             inventario.Add(new Producto("Cerveza", true, 120F),100);
             inventario.Add(new Producto("Coca cola", true, 150F), 100);
             inventario.Add(new Producto("Fernet con coca", true, 200F),100);
@@ -50,84 +50,55 @@ namespace Entidades
             inventario.Add(new Producto("Empanadas", false, 80F), 50);
             inventario.Add(new Producto("Picadita", false,300F), 50);
             //abro las mesas y barras
-            Mesa mesa1 = new Mesa("Mesa 1");
-            Mesa mesa2 = new Mesa("Mesa 2");
-            Mesa mesa3 = new Mesa("Mesa 3");
-            Mesa mesa4 = new Mesa("Mesa 4");
-            Mesa mesa5 = new Mesa("Mesa 5");
-            Mesa mesa6 = new Mesa("Mesa 6");
-            Mesa mesa7 = new Mesa("Mesa 7");
-            Mesa mesa8 = new Mesa("Mesa 8");
-            Mesa mesa9 = new Mesa("Mesa 9");
-            Mesa mesa10 = new Mesa("Mesa 10");
-            Mesa mesa11 = new Mesa("Mesa 11");
-            Mesa mesa12 = new Mesa("Mesa 12");
-            Mesa mesa13 = new Mesa("Mesa 13");
-            Mesa mesa14 = new Mesa("Mesa 14");
-            Mesa mesa15 = new Mesa("Mesa 15");
-            Barra barra1 = new Barra("Barra 1");
-            Barra barra2 = new Barra("Barra 2");
-            Barra barra3 = new Barra("Barra 3");
-            Barra barra4 = new Barra("Barra 4");
-            Barra barra5 = new Barra("Barra 5");
-            puestosDeVenta.Add(mesa1);
-            puestosDeVenta.Add(mesa2);
-            puestosDeVenta.Add(mesa3);
-            puestosDeVenta.Add(mesa4);
-            puestosDeVenta.Add(mesa5);
-            puestosDeVenta.Add(mesa6);
-            puestosDeVenta.Add(mesa7);
-            puestosDeVenta.Add(mesa8);
-            puestosDeVenta.Add(mesa9);
-            puestosDeVenta.Add(mesa10);
-            puestosDeVenta.Add(mesa11);
-            puestosDeVenta.Add(mesa12);
-            puestosDeVenta.Add(mesa13);
-            puestosDeVenta.Add(mesa14);
-            puestosDeVenta.Add(mesa15);
-            puestosDeVenta.Add(barra1);
-            puestosDeVenta.Add(barra2);
-            puestosDeVenta.Add(barra3);
-            puestosDeVenta.Add(barra4);
-            puestosDeVenta.Add(barra5);
+            PuestoDeVenta puesto1 = new PuestoDeVenta("Mesa 1", false);
+            PuestoDeVenta puesto2 = new PuestoDeVenta("Mesa 2", false);
+            PuestoDeVenta puesto3 = new PuestoDeVenta("Mesa 3", false);
+            PuestoDeVenta puesto4 = new PuestoDeVenta("Mesa 4", false);
+            PuestoDeVenta puesto5 = new PuestoDeVenta("Mesa 5", false);
+            PuestoDeVenta puesto6 = new PuestoDeVenta("Mesa 6", false);
+            PuestoDeVenta puesto7 = new PuestoDeVenta("Mesa 7", false);
+            PuestoDeVenta puesto8 = new PuestoDeVenta("Mesa 8", false);
+            PuestoDeVenta puesto9 = new PuestoDeVenta("Mesa 9", false);
+            PuestoDeVenta puesto10 = new PuestoDeVenta("Mesa 10", false);
+            PuestoDeVenta puesto11 = new PuestoDeVenta("Mesa 11", false);
+            PuestoDeVenta puesto12 = new PuestoDeVenta("Mesa 12", false);
+            PuestoDeVenta puesto13 = new PuestoDeVenta("Mesa 13", false);
+            PuestoDeVenta puesto14 = new PuestoDeVenta("Mesa 14", false);
+            PuestoDeVenta puesto15 = new PuestoDeVenta("Mesa 15", false);
+            PuestoDeVenta puesto16 = new PuestoDeVenta("Barra 1", true);
+            PuestoDeVenta puesto17 = new PuestoDeVenta("Barra 2", true);
+            PuestoDeVenta puesto18 = new PuestoDeVenta("Barra 3", true);
+            PuestoDeVenta puesto19 = new PuestoDeVenta("Barra 4", true);
+            PuestoDeVenta puesto20 = new PuestoDeVenta("Barra 5", true);
+           
+            puestosDeVenta.Add(puesto1);
+            puestosDeVenta.Add(puesto2);
+            puestosDeVenta.Add(puesto3);
+            puestosDeVenta.Add(puesto4);
+            puestosDeVenta.Add(puesto5);
+            puestosDeVenta.Add(puesto6);
+            puestosDeVenta.Add(puesto7);
+            puestosDeVenta.Add(puesto8);
+            puestosDeVenta.Add(puesto9);
+            puestosDeVenta.Add(puesto10);
+            puestosDeVenta.Add(puesto11);
+            puestosDeVenta.Add(puesto12);
+            puestosDeVenta.Add(puesto13);
+            puestosDeVenta.Add(puesto14);
+            puestosDeVenta.Add(puesto15);
+            puestosDeVenta.Add(puesto16);
+            puestosDeVenta.Add(puesto17);
+            puestosDeVenta.Add(puesto18);
+            puestosDeVenta.Add(puesto19);
+            puestosDeVenta.Add(puesto20);
 
         }
 
-        public static Dictionary<Producto,short> VentaEnMesa(Sitio unSitio, Producto producto,
-            Dictionary<Producto, short> inventario)
-        {
-            if (ControlarSiHayStock(producto) == true)
-            {
-                unSitio.consumicion.Add(producto);
-
-                for (int i = 0; i < inventario.Count; i++)
-                {
-                    inventario[producto]--;
-                }
-            }
-            
-            return inventario;
-        }
-
-        public static Dictionary<Producto, short> VentaEnBarra(Sitio unSitio, Producto producto,
-            Dictionary<Producto, short> inventario)
-        {
-            if(producto.EsBebida == true && ControlarSiHayStock(producto) == true)
-            {
-               unSitio.consumicion.Add(producto);
-                for (int i = 0; i < inventario.Count; i++)
-                {
-                    inventario[producto]--;
-                }
-
-            }
-
-            return inventario;
-        }
+              
         public static string BuscarSitioLibre()
         {
             string retorno = "No hay lugares disponibles en el bar";
-            foreach (Sitio item in puestosDeVenta)
+            foreach (PuestoDeVenta item in puestosDeVenta)
             {
                 if(item.estaLibre == true)
                 {
@@ -138,42 +109,18 @@ namespace Entidades
             return retorno;
         }
 
-        public static void MostrarConsumiciones(Sitio unSitio)
-        {
-            foreach (Producto item in unSitio.consumicion)
-            {
-                item.Mostrar();
-            }
-            
-        }
         
-        public static float SumarConsumicion(Sitio unSitio)
-        {
-            float suma = 0f;
-            foreach (Producto item in unSitio.consumicion)
-            {
-               suma += item.Precio;
-            }
-            return suma;
-        }
-       
-        public static float CalcularTarjeta(float costo)
-        {
-            return costo * 0.10F;
-        }
-        public static void AgregarEstacionamiento(Sitio unSitio)
-        {
-            unSitio.consumicion.Add(new Producto("Estacionamiento", false, 200));
-        }
-
         public static float FacturacionDelDia()
         {
-            float suma = 0f;
-            foreach (Sitio item in puestosDeVenta)
+            short suma = 0;
+            foreach (PuestoDeVenta item in puestosDeVenta)
             {
-                suma += 2;
+                foreach (KeyValuePair<Producto, short> par in item.consumicion)
+                {
+                    suma += ((short)par.Value);
+                }
             }
-            return suma;
+            return (float)suma;
         }
         public static string MostrarInventario()
         {
@@ -189,12 +136,12 @@ namespace Entidades
             return sb.ToString();
         }
 
-        private static bool ControlarSiHayStock(Producto unProducto)
+        internal static bool ControlarSiHayStock(Producto unProducto)
         {
             bool resultado = false;
             foreach (KeyValuePair<Producto, short> item in inventario)
             {
-                if(item.Key == unProducto)
+                if(item.Key == unProducto && item.Value > 1)
                 {
                     resultado = true;
                 }
@@ -220,5 +167,9 @@ namespace Entidades
             return sb.ToString();
         }
 
+        public static void AgregarMercaderia(Producto unProducto, short cantidad)
+        {
+            inventario.Add(unProducto, cantidad);
+        }
     }
 }

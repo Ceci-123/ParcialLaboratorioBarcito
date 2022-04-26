@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Mesa :Sitio 
+    public class Venta
     {
-        public Mesa(string nombre) :base(nombre)
-        {
-            consumicion = new List<Producto>();
-        }
-
-       
     }
 }
