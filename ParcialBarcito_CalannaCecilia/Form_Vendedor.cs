@@ -221,5 +221,12 @@ namespace UI
            
             
         }
+
+        public void CambiarColorBoton(System.Windows.Forms.Button unBoton)
+        {
+            //if()
+            unBoton.BackColor = Color.Green;
+            unBoton.BackColor = Color.Red;
+        }
     }
 }
