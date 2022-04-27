@@ -11,12 +11,21 @@ namespace Entidades
         protected string nombre;
         protected bool esBebida;
         protected float precio;
+        protected bool esVegano;
+        protected bool esAptoCeliacos;
 
         public Producto(string nombre, bool esBebida, float precio)
         {
             this.nombre = nombre;
             this.esBebida = esBebida;
             this.precio = precio;
+        }
+
+        public Producto(string nombre, bool esBebida, float precio, bool esVegano, bool esAptoCeliacos)
+            :this(nombre, esBebida, precio)
+        {
+            this.esVegano = esVegano;
+            this.esAptoCeliacos = esAptoCeliacos;
         }
 
         public bool EsBebida

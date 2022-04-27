@@ -28,16 +28,11 @@ namespace Entidades
         public static void Harcodeo()
         {
             //harcodeo 1 admin y 4 vendedores
-            Administrador a1 = new Administrador("mauricio", "mauri123");
-            personal.Add(a1);
-            Vendedor v1 = new Vendedor("lucas", "lucas123");
-            Vendedor v2 = new Vendedor("lautaro", "lauti123");
-            Vendedor v3 = new Vendedor("cecilia", "ceci123");
-            Vendedor v4 = new Vendedor("morena", "more123");
-            personal.Add(v1);
-            personal.Add(v2);
-            personal.Add(v3);
-            personal.Add(v4);
+            personal.Add(new Administrador("mauricio", "mauri123"));
+            personal.Add(new Vendedor("lucas", "lucas123"));
+            personal.Add(new Vendedor("lautaro", "lauti123"));
+            personal.Add(new Vendedor("cecilia", "ceci123"));
+            personal.Add(new Vendedor("morena", "more123"));
             //harcodeo productos
             inventario.Add(new Producto("Cerveza", true, 120F),100);
             inventario.Add(new Producto("Coca cola", true, 150F), 100);
@@ -50,47 +45,27 @@ namespace Entidades
             inventario.Add(new Producto("Empanadas", false, 80F), 50);
             inventario.Add(new Producto("Picadita", false,300F), 50);
             //abro las mesas y barras
-            PuestoDeVenta puesto1 = new PuestoDeVenta("Mesa 1", false);
-            PuestoDeVenta puesto2 = new PuestoDeVenta("Mesa 2", false);
-            PuestoDeVenta puesto3 = new PuestoDeVenta("Mesa 3", false);
-            PuestoDeVenta puesto4 = new PuestoDeVenta("Mesa 4", false);
-            PuestoDeVenta puesto5 = new PuestoDeVenta("Mesa 5", false);
-            PuestoDeVenta puesto6 = new PuestoDeVenta("Mesa 6", false);
-            PuestoDeVenta puesto7 = new PuestoDeVenta("Mesa 7", false);
-            PuestoDeVenta puesto8 = new PuestoDeVenta("Mesa 8", false);
-            PuestoDeVenta puesto9 = new PuestoDeVenta("Mesa 9", false);
-            PuestoDeVenta puesto10 = new PuestoDeVenta("Mesa 10", false);
-            PuestoDeVenta puesto11 = new PuestoDeVenta("Mesa 11", false);
-            PuestoDeVenta puesto12 = new PuestoDeVenta("Mesa 12", false);
-            PuestoDeVenta puesto13 = new PuestoDeVenta("Mesa 13", false);
-            PuestoDeVenta puesto14 = new PuestoDeVenta("Mesa 14", false);
-            PuestoDeVenta puesto15 = new PuestoDeVenta("Mesa 15", false);
-            PuestoDeVenta puesto16 = new PuestoDeVenta("Barra 1", true);
-            PuestoDeVenta puesto17 = new PuestoDeVenta("Barra 2", true);
-            PuestoDeVenta puesto18 = new PuestoDeVenta("Barra 3", true);
-            PuestoDeVenta puesto19 = new PuestoDeVenta("Barra 4", true);
-            PuestoDeVenta puesto20 = new PuestoDeVenta("Barra 5", true);
            
-            puestosDeVenta.Add(puesto1);
-            puestosDeVenta.Add(puesto2);
-            puestosDeVenta.Add(puesto3);
-            puestosDeVenta.Add(puesto4);
-            puestosDeVenta.Add(puesto5);
-            puestosDeVenta.Add(puesto6);
-            puestosDeVenta.Add(puesto7);
-            puestosDeVenta.Add(puesto8);
-            puestosDeVenta.Add(puesto9);
-            puestosDeVenta.Add(puesto10);
-            puestosDeVenta.Add(puesto11);
-            puestosDeVenta.Add(puesto12);
-            puestosDeVenta.Add(puesto13);
-            puestosDeVenta.Add(puesto14);
-            puestosDeVenta.Add(puesto15);
-            puestosDeVenta.Add(puesto16);
-            puestosDeVenta.Add(puesto17);
-            puestosDeVenta.Add(puesto18);
-            puestosDeVenta.Add(puesto19);
-            puestosDeVenta.Add(puesto20);
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 1", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 2", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 3", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 4", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 5", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 6", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 7", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 8", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 9", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 10", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 11", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 12", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 13", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 14", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Mesa 15", false));
+            puestosDeVenta.Add(new PuestoDeVenta("Barra 1", true));
+            puestosDeVenta.Add(new PuestoDeVenta("Barra 2", true));
+            puestosDeVenta.Add(new PuestoDeVenta("Barra 3", true));
+            puestosDeVenta.Add(new PuestoDeVenta("Barra 4", true));
+            puestosDeVenta.Add(new PuestoDeVenta("Barra 5", true));
 
         }
 
@@ -169,6 +144,12 @@ namespace Entidades
 
         public static void AgregarMercaderia(Producto unProducto, short cantidad)
         {
+            inventario.Add(unProducto, cantidad);
+        }
+
+        public static void AgregarMercaderia(string nombre, bool esBebida, float precio, bool esVegan, bool esAptoCeliaquia, short cantidad)
+        {
+            Producto unProducto = new Producto(nombre,esBebida, precio,esVegan, esAptoCeliaquia)
             inventario.Add(unProducto, cantidad);
         }
     }
