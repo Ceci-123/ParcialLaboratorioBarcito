@@ -81,6 +81,7 @@
             // 
             this.txtbox_password.Location = new System.Drawing.Point(23, 241);
             this.txtbox_password.Name = "txtbox_password";
+            this.txtbox_password.PasswordChar = '*';
             this.txtbox_password.Size = new System.Drawing.Size(498, 23);
             this.txtbox_password.TabIndex = 2;
             // 
@@ -146,7 +147,6 @@
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "✿ ❀ Bienvenid@ al Bar✿ ❀";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Login_FormClosing_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

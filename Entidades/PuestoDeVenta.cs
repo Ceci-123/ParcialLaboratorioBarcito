@@ -22,7 +22,6 @@ namespace Entidades
         }
 
         public bool EstaLibre { get { return estaLibre; }
-                                set { estaLibre = value; }
         }
         public string Nombre { get { return nombre; } }
 
@@ -63,7 +62,10 @@ namespace Entidades
             this.consumicion.Add(new Producto("Estacionamiento",false, 200F),1);
             
         }
-
+        private void LiberarPuestoDeVenta()
+        {
+          this.estaLibre = true;
+        }
         
 
     }

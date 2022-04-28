@@ -7,6 +7,7 @@ El codigo que esta en este repo fue escrito con amor y dedicacion. Dare mighty t
 Se utilizan formularios que tienen dos colores diferentes segun ingrese un vendedor o un admin.
 El login cuenta con un boton para restablecimiento de la contraseña si el usuario la olvida, y dos botones para ingreso de datos rapidamente.
 La clase Vendedor y la clase Administrador ambas heredan de Persona, con lo cual se utiliza herencia.
+Persona es la encargada de validar la contraseña y el formulario de login nunca accede a ese dato.
 Se utiliza sobrecarga de constructores en la clase Producto, ya que el requisito minimo para instanciar un producto es su nombre, si es o no una bebida y su precio, pero tambien pueden crearse productos con los demas atributos de la clase.
 Sobrecarga de metodos se utiliza en la clase Bar para agregar un producto al stock utilizando un producto como tal, o sus atributos por separado.
 Propiedades: se usan para encapsulamiento de los atributos de las clases, y que las demas entidades que deban usarlos los reciban solo a traves de ellas.
@@ -19,4 +20,4 @@ Metodo abstracto
 Metodo virtual
 Hay dos buscadores, uno de mesas libres y otro (productos?)
 Hay un menu que muestra la facturacion del dia y la guarda en un archivo txt, llamado que se almacena en el Desktop
-Se utilizan dos sonidos diferentes, un beep corto y un beep largo
+Se utilizan dos sonidos diferentes, un beep corto y un beep largo, el primero cuando se hace una venta y el segundo cuando se muestra el formulario principal con la disposicion de las mesas.

@@ -28,10 +28,10 @@ namespace ParcialBarcito_CalannaCecilia
             else
             {
 
-                bool respuesta = Entidades.Persona.ValidarUser(Bar.personal, this.txtBox_Nombre.Text, txtbox_password.Text);
+                bool respuesta = Entidades.Persona.ValidarUser(Bar.ListadoDePersonal, this.txtBox_Nombre.Text, txtbox_password.Text);
                 if (respuesta)
                 {
-                    int auxiliar = Persona.ValidarRango(Bar.personal, this.txtBox_Nombre.Text);
+                    int auxiliar = Persona.ValidarRango(Bar.ListadoDePersonal, this.txtBox_Nombre.Text);
                     //abro segundo formulario
                     // es admin si es 1 y vendedor es 2
                         Form frm = new Form_Vendedor(this.txtBox_Nombre.Text, auxiliar);
@@ -66,13 +66,6 @@ namespace ParcialBarcito_CalannaCecilia
             this.txtbox_password.Text = "mauri123";
         }
 
-        private void Form_Login_FormClosing_1(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Seguro quiere salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
-                e.Cancel = true;
-
-            }
-        }
+       
     }
 }

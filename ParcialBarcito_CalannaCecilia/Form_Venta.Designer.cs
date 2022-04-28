@@ -47,7 +47,7 @@
             this.lbl_titulo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(80, 31);
-            this.lbl_titulo.TabIndex = 0;
+            this.lbl_titulo.TabIndex = 5;
             this.lbl_titulo.Text = "Mesa";
             // 
             // btn_AgregarProductos
@@ -56,7 +56,7 @@
             this.btn_AgregarProductos.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_AgregarProductos.Name = "btn_AgregarProductos";
             this.btn_AgregarProductos.Size = new System.Drawing.Size(289, 185);
-            this.btn_AgregarProductos.TabIndex = 11;
+            this.btn_AgregarProductos.TabIndex = 3;
             this.btn_AgregarProductos.Text = "Agregar productos";
             this.btn_AgregarProductos.UseVisualStyleBackColor = true;
             this.btn_AgregarProductos.Click += new System.EventHandler(this.btn_AgregarProductos_Click);
@@ -67,7 +67,7 @@
             this.btn_cerrarMesa.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_cerrarMesa.Name = "btn_cerrarMesa";
             this.btn_cerrarMesa.Size = new System.Drawing.Size(289, 185);
-            this.btn_cerrarMesa.TabIndex = 12;
+            this.btn_cerrarMesa.TabIndex = 4;
             this.btn_cerrarMesa.Text = "Cerrar la mesa";
             this.btn_cerrarMesa.UseVisualStyleBackColor = true;
             this.btn_cerrarMesa.Click += new System.EventHandler(this.btn_cerrarMesa_Click);
@@ -78,7 +78,7 @@
             this.num_cantidad.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_cantidad.Name = "num_cantidad";
             this.num_cantidad.Size = new System.Drawing.Size(108, 26);
-            this.num_cantidad.TabIndex = 31;
+            this.num_cantidad.TabIndex = 2;
             // 
             // cmbBx_producto
             // 
@@ -86,7 +86,7 @@
             this.cmbBx_producto.Location = new System.Drawing.Point(26, 123);
             this.cmbBx_producto.Name = "cmbBx_producto";
             this.cmbBx_producto.Size = new System.Drawing.Size(263, 27);
-            this.cmbBx_producto.TabIndex = 32;
+            this.cmbBx_producto.TabIndex = 1;
             // 
             // lbl_producto
             // 
@@ -94,7 +94,7 @@
             this.lbl_producto.Location = new System.Drawing.Point(26, 89);
             this.lbl_producto.Name = "lbl_producto";
             this.lbl_producto.Size = new System.Drawing.Size(89, 19);
-            this.lbl_producto.TabIndex = 33;
+            this.lbl_producto.TabIndex = 6;
             this.lbl_producto.Text = "Producto ";
             // 
             // lbl_cantidad
@@ -103,7 +103,7 @@
             this.lbl_cantidad.Location = new System.Drawing.Point(353, 89);
             this.lbl_cantidad.Name = "lbl_cantidad";
             this.lbl_cantidad.Size = new System.Drawing.Size(83, 19);
-            this.lbl_cantidad.TabIndex = 34;
+            this.lbl_cantidad.TabIndex = 7;
             this.lbl_cantidad.Text = "Cantidad";
             // 
             // Form_Venta

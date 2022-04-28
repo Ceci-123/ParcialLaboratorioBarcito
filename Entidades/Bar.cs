@@ -16,16 +16,17 @@ namespace Entidades
 
         public static Dictionary<Producto, short> CosasEnElInventario { get { return Bar.inventario; } }
 
+        public static List<Persona> ListadoDePersonal { get { return Bar.personal; } }
         static Bar()
         {
             personal = new List<Persona>();
             puestosDeVenta = new List<PuestoDeVenta>();
             inventario = new Dictionary<Producto, short>();
             totalVentaDelDia = 0;
-            Harcodeo();
+            Harcodear();
         }
 
-        public static void Harcodeo()
+        public static void Harcodear()
         {
             //harcodeo 1 admin y 4 vendedores
             personal.Add(new Administrador("mauricio", "mauri123"));
@@ -35,13 +36,13 @@ namespace Entidades
             personal.Add(new Vendedor("morena", "more123"));
             //harcodeo productos
             inventario.Add(new Producto("Cerveza", true, 120F),100);
-            inventario.Add(new Producto("Coca cola", true, 150F), 100);
-            inventario.Add(new Producto("Fernet con coca", true, 200F),100);
-            inventario.Add(new Producto("Daiquiri de frutilla", true, 250F),100);
-            inventario.Add(new Producto("Manaos de uva", true, 80F),100);
-            inventario.Add(new Producto("Tequeños de queso", false, 20F),50);
-            inventario.Add(new Producto("Papas fritas con cheddar", false, 180F),50);
-            inventario.Add(new Producto("Hamburguesa de soja con tomate,lechuga y queso", false, 250F),50);
+            inventario.Add(new Producto("Cocacola", true, 150F), 100);
+            inventario.Add(new Producto("Fernet", true, 200F),100);
+            inventario.Add(new Producto("Daiquiri", true, 250F),100);
+            inventario.Add(new Producto("Manaos", true, 80F),100);
+            inventario.Add(new Producto("Tequeños", false, 20F),50);
+            inventario.Add(new Producto("Papasfritas", false, 180F),50);
+            inventario.Add(new Producto("Hamburguesa", false, 250F),50);
             inventario.Add(new Producto("Empanadas", false, 80F), 50);
             inventario.Add(new Producto("Picadita", false,300F), 50);
             //abro las mesas y barras
@@ -85,7 +86,7 @@ namespace Entidades
         }
 
         
-        public static float FacturacionDelDia()
+        public static float CalcularFacturacionDelDia()
         {
             short suma = 0;
             foreach (PuestoDeVenta item in puestosDeVenta)
@@ -95,7 +96,7 @@ namespace Entidades
                     suma += ((short)par.Value);
                 }
             }
-            return (float)suma;
+           return (float)suma;
         }
         public static string MostrarInventario()
         {
@@ -149,8 +150,10 @@ namespace Entidades
 
         public static void AgregarMercaderia(string nombre, bool esBebida, float precio, bool esVegan, bool esAptoCeliaquia, short cantidad)
         {
-            Producto unProducto = new Producto(nombre,esBebida, precio,esVegan, esAptoCeliaquia)
+            Producto unProducto = new Producto(nombre, esBebida, precio, esVegan, esAptoCeliaquia);
             inventario.Add(unProducto, cantidad);
         }
+
+        
     }
 }

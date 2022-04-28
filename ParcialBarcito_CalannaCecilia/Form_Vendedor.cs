@@ -23,16 +23,13 @@ namespace UI
             this.rangoDelUsuarioLogueado = rango;
         }
 
-        private void btn_Mesa1_Click(object sender, EventArgs e)
-        {
-            Form frm_venta = new Form_Venta("1");
-            frm_venta.ShowDialog();
-        }
+        
 
         private void Form_Vendedor_Load(object sender, EventArgs e)
         {
             this.lbl_Saludo.Text = "Bienvenid@ " + nombre;
-            playSound();
+            ColocarMesasEnVerde();
+            PlaySound();
             if (rangoDelUsuarioLogueado == 1)
             {
                 // es admin si es 1 y vendedor es 2
@@ -47,116 +44,142 @@ namespace UI
             }
         }
 
+        private void btn_Mesa1_Click(object sender, EventArgs e)
+        {
+            CambiarColorBoton((Button)sender, true);
+            Form frm_venta = new Form_Venta("1");
+            frm_venta.ShowDialog();
+        }
+
         private void btn_Mesa2_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("2");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa3_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("3");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa4_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("4");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa5_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("5");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa6_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("6");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa7_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("7");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa8_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("8");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa9_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("9");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa10_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("10");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa11_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("11");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa12_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("12");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa13_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("13");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa14_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("14");
             frm_venta.ShowDialog();
         }
 
         private void btn_Mesa15_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("15");
             frm_venta.ShowDialog();
         }
 
         private void btn_Barra1_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("b1");
             frm_venta.ShowDialog();
         }
 
         private void btn_Barra2_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("b2");
             frm_venta.ShowDialog();
         }
 
         private void btn_Barra3_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("b3");
             frm_venta.ShowDialog();
         }
 
         private void btn_Barra4_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("b4");
             frm_venta.ShowDialog();
         }
 
         private void btn_Barra5_Click(object sender, EventArgs e)
         {
+            CambiarColorBoton((Button)sender, true);
             Form frm_venta = new Form_Venta("b5");
             frm_venta.ShowDialog();
         }
@@ -206,7 +229,7 @@ namespace UI
             //sumar todas las mesas
         }
 
-        private void playSound()
+        private void PlaySound()
         {
             try
             {
@@ -218,15 +241,30 @@ namespace UI
                 Console.Beep();
             }
 
-           
-            
         }
 
-        public void CambiarColorBoton(System.Windows.Forms.Button unBoton)
+        private void CambiarColorBoton(System.Windows.Forms.Button unBoton, bool ocupacion)
         {
-            //if()
-            unBoton.BackColor = Color.Green;
+            if(ocupacion == true)
+            {
             unBoton.BackColor = Color.Red;
+
+            }
+            else
+            {
+            unBoton.BackColor = Color.Green;
+
+            }
         }
+        private void ColocarMesasEnVerde()
+        {
+            this.btn_Barra1.BackColor = Color.Red;
+            this.btn_Barra2.BackColor = Color.Red;
+            this.btn_Barra3.BackColor = Color.Red;
+            this.btn_Barra4.BackColor = Color.Red;
+            this.btn_Barra5.BackColor = Color.Red;
+        }
+
+        
     }
 }

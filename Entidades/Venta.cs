@@ -8,5 +8,15 @@ namespace Entidades
 {
     public class Venta
     {
+        public string aDonde;
+        public Producto queCosa;
+        public short cantidad;
+
+        public Venta(string aDonde, Producto queCosa, short cantidad)
+        {
+            this.aDonde = aDonde;
+            this.queCosa = queCosa;
+            this.cantidad = cantidad;
+        }
     }
 }
