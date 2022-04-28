@@ -14,5 +14,10 @@ namespace Entidades
         }
 
         public bool EsVendedor { get { return true; } }
+
+        public override float DescontarPromo(float valor)
+        {
+            return valor - (valor * 0.10F);
+        }
     }  
 }

@@ -52,28 +52,31 @@
             // 
             // btn_AgregarProductos
             // 
+            this.btn_AgregarProductos.BackColor = System.Drawing.Color.Plum;
             this.btn_AgregarProductos.Location = new System.Drawing.Point(26, 167);
             this.btn_AgregarProductos.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_AgregarProductos.Name = "btn_AgregarProductos";
             this.btn_AgregarProductos.Size = new System.Drawing.Size(289, 185);
             this.btn_AgregarProductos.TabIndex = 3;
             this.btn_AgregarProductos.Text = "Agregar productos";
-            this.btn_AgregarProductos.UseVisualStyleBackColor = true;
+            this.btn_AgregarProductos.UseVisualStyleBackColor = false;
             this.btn_AgregarProductos.Click += new System.EventHandler(this.btn_AgregarProductos_Click);
             // 
             // btn_cerrarMesa
             // 
+            this.btn_cerrarMesa.BackColor = System.Drawing.Color.Plum;
             this.btn_cerrarMesa.Location = new System.Drawing.Point(347, 167);
             this.btn_cerrarMesa.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_cerrarMesa.Name = "btn_cerrarMesa";
             this.btn_cerrarMesa.Size = new System.Drawing.Size(289, 185);
             this.btn_cerrarMesa.TabIndex = 4;
             this.btn_cerrarMesa.Text = "Cerrar la mesa";
-            this.btn_cerrarMesa.UseVisualStyleBackColor = true;
+            this.btn_cerrarMesa.UseVisualStyleBackColor = false;
             this.btn_cerrarMesa.Click += new System.EventHandler(this.btn_cerrarMesa_Click);
             // 
             // num_cantidad
             // 
+            this.num_cantidad.BackColor = System.Drawing.Color.Plum;
             this.num_cantidad.Location = new System.Drawing.Point(353, 123);
             this.num_cantidad.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.num_cantidad.Name = "num_cantidad";
@@ -82,6 +85,7 @@
             // 
             // cmbBx_producto
             // 
+            this.cmbBx_producto.BackColor = System.Drawing.Color.Plum;
             this.cmbBx_producto.FormattingEnabled = true;
             this.cmbBx_producto.Location = new System.Drawing.Point(26, 123);
             this.cmbBx_producto.Name = "cmbBx_producto";
@@ -110,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.HotPink;
             this.ClientSize = new System.Drawing.Size(680, 381);
             this.Controls.Add(this.lbl_cantidad);
             this.Controls.Add(this.lbl_producto);

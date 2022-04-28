@@ -16,8 +16,8 @@ Enumerados
 Formularios modales, se utilizan varios, por ejemplo para mostrar el stock y el listado de empleados.
 Hay una clase estatica (la clase Bar no se instancia).
 Hay una clase abstracta (la clase Persona no acepta la creacion de personas sino de sus derivadas).
-Metodo abstracto
-Metodo virtual
+Metodo abstracto DescontarPromo, en la clase Persona, obliga a sus derivadas a implementar como sea necesario. La clase admin realiza un descuento del 20 % mientras la clase Vendedor solo puede aplicar descuentos del 10%.
+Metodo virtual DescontarHappyHour, en la clase Persona, para que cada clase derivada implemente el metodo o lo cambie si lo considera correcto
 Hay dos buscadores, uno de mesas libres y otro (productos?)
 Hay un menu que muestra la facturacion del dia y la guarda en un archivo txt, llamado que se almacena en el Desktop
 Se utilizan dos sonidos diferentes, un beep corto y un beep largo, el primero cuando se hace una venta y el segundo cuando se muestra el formulario principal con la disposicion de las mesas.

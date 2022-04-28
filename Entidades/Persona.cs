@@ -43,6 +43,12 @@ namespace Entidades
             }
             return retorno;
         }
+        public abstract float DescontarPromo(float valor);
+
+        public virtual float DescontarHappyHour(float valor)
+        {
+            return valor / 2;
+        }
         /// <summary>
         /// 
         /// </summary>

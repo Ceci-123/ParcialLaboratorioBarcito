@@ -33,11 +33,11 @@ namespace UI
             if (rangoDelUsuarioLogueado == 1)
             {
                 // es admin si es 1 y vendedor es 2
-                this.BackColor = Color.DarkSalmon;
+                this.BackColor = Color.PaleVioletRed;
             }
             else if (rangoDelUsuarioLogueado == 2)
             {
-                this.BackColor = Color.DarkCyan;
+                this.BackColor = Color.Plum;
                 this.btn_AgregarMercaderia.Visible = false;
                 this.btn_FacturacionDiaria.Visible = false;
                 this.btn_VerNomina.Visible = false; 
@@ -258,11 +258,26 @@ namespace UI
         }
         private void ColocarMesasEnVerde()
         {
-            this.btn_Barra1.BackColor = Color.Red;
-            this.btn_Barra2.BackColor = Color.Red;
-            this.btn_Barra3.BackColor = Color.Red;
-            this.btn_Barra4.BackColor = Color.Red;
-            this.btn_Barra5.BackColor = Color.Red;
+            this.btn_Barra1.BackColor = Color.LimeGreen;
+            this.btn_Barra2.BackColor = Color.LimeGreen;
+            this.btn_Barra3.BackColor = Color.LimeGreen;
+            this.btn_Barra4.BackColor = Color.LimeGreen;
+            this.btn_Barra5.BackColor = Color.LimeGreen;
+            this.btn_Mesa1.BackColor = Color.LimeGreen;
+            this.btn_Mesa2.BackColor = Color.LimeGreen;
+            this.btn_Mesa3.BackColor = Color.LimeGreen;
+            this.btn_Mesa4.BackColor = Color.LimeGreen;
+            this.btn_Mesa5.BackColor = Color.LimeGreen;
+            this.btn_Mesa6.BackColor = Color.LimeGreen;
+            this.btn_Mesa7.BackColor = Color.LimeGreen;
+            this.btn_Mesa8.BackColor = Color.LimeGreen;
+            this.btn_Mesa9.BackColor = Color.LimeGreen;
+            this.btn_Mesa10.BackColor = Color.LimeGreen;
+            this.btn_Mesa11.BackColor = Color.LimeGreen;
+            this.btn_Mesa12.BackColor = Color.LimeGreen;
+            this.btn_Mesa13.BackColor = Color.LimeGreen;
+            this.btn_Mesa14.BackColor = Color.LimeGreen;
+            this.btn_Mesa15.BackColor = Color.LimeGreen;
         }
 
         

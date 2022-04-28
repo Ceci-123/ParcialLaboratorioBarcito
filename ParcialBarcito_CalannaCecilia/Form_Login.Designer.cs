@@ -62,6 +62,7 @@
             // 
             // txtBox_Nombre
             // 
+            this.txtBox_Nombre.BackColor = System.Drawing.Color.Plum;
             this.txtBox_Nombre.Location = new System.Drawing.Point(23, 130);
             this.txtBox_Nombre.Name = "txtBox_Nombre";
             this.txtBox_Nombre.Size = new System.Drawing.Size(498, 23);
@@ -79,6 +80,7 @@
             // 
             // txtbox_password
             // 
+            this.txtbox_password.BackColor = System.Drawing.Color.Plum;
             this.txtbox_password.Location = new System.Drawing.Point(23, 241);
             this.txtbox_password.Name = "txtbox_password";
             this.txtbox_password.PasswordChar = '*';
@@ -87,49 +89,53 @@
             // 
             // btn_Olvido
             // 
+            this.btn_Olvido.BackColor = System.Drawing.Color.Plum;
             this.btn_Olvido.Location = new System.Drawing.Point(12, 297);
             this.btn_Olvido.Name = "btn_Olvido";
             this.btn_Olvido.Size = new System.Drawing.Size(157, 88);
             this.btn_Olvido.TabIndex = 3;
             this.btn_Olvido.Text = "Ups! Olvide mi contraseña";
-            this.btn_Olvido.UseVisualStyleBackColor = true;
+            this.btn_Olvido.UseVisualStyleBackColor = false;
             this.btn_Olvido.Click += new System.EventHandler(this.btn_Olvido_Click);
             // 
             // btn_Ingreso
             // 
+            this.btn_Ingreso.BackColor = System.Drawing.Color.Plum;
             this.btn_Ingreso.Location = new System.Drawing.Point(186, 297);
             this.btn_Ingreso.Name = "btn_Ingreso";
             this.btn_Ingreso.Size = new System.Drawing.Size(157, 88);
             this.btn_Ingreso.TabIndex = 4;
             this.btn_Ingreso.Text = "Entrar";
-            this.btn_Ingreso.UseVisualStyleBackColor = true;
+            this.btn_Ingreso.UseVisualStyleBackColor = false;
             this.btn_Ingreso.Click += new System.EventHandler(this.btn_Ingreso_Click);
             // 
             // btn_Autocompleta_Vendedor
             // 
+            this.btn_Autocompleta_Vendedor.BackColor = System.Drawing.Color.Plum;
             this.btn_Autocompleta_Vendedor.Location = new System.Drawing.Point(364, 297);
             this.btn_Autocompleta_Vendedor.Name = "btn_Autocompleta_Vendedor";
             this.btn_Autocompleta_Vendedor.Size = new System.Drawing.Size(157, 42);
             this.btn_Autocompleta_Vendedor.TabIndex = 5;
             this.btn_Autocompleta_Vendedor.Text = "Completar como vendedor";
-            this.btn_Autocompleta_Vendedor.UseVisualStyleBackColor = true;
+            this.btn_Autocompleta_Vendedor.UseVisualStyleBackColor = false;
             this.btn_Autocompleta_Vendedor.Click += new System.EventHandler(this.btn_Autocompleta_Vendedor_Click);
             // 
             // btn_Autocompleta_Admin
             // 
+            this.btn_Autocompleta_Admin.BackColor = System.Drawing.Color.Plum;
             this.btn_Autocompleta_Admin.Location = new System.Drawing.Point(364, 345);
             this.btn_Autocompleta_Admin.Name = "btn_Autocompleta_Admin";
             this.btn_Autocompleta_Admin.Size = new System.Drawing.Size(157, 42);
             this.btn_Autocompleta_Admin.TabIndex = 6;
             this.btn_Autocompleta_Admin.Text = "Completar como admin";
-            this.btn_Autocompleta_Admin.UseVisualStyleBackColor = true;
+            this.btn_Autocompleta_Admin.UseVisualStyleBackColor = false;
             this.btn_Autocompleta_Admin.Click += new System.EventHandler(this.btn_Autocompleta_Admin_Click);
             // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.DeepPink;
             this.ClientSize = new System.Drawing.Size(533, 407);
             this.Controls.Add(this.btn_Autocompleta_Admin);
             this.Controls.Add(this.btn_Autocompleta_Vendedor);

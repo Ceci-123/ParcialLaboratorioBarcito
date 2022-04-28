@@ -171,7 +171,7 @@
             this.btn_Barra5.Location = new System.Drawing.Point(580, 408);
             this.btn_Barra5.Name = "btn_Barra5";
             this.btn_Barra5.Size = new System.Drawing.Size(110, 70);
-            this.btn_Barra5.TabIndex = 18;
+            this.btn_Barra5.TabIndex = 19;
             this.btn_Barra5.Text = "Barra 5";
             this.btn_Barra5.UseVisualStyleBackColor = true;
             this.btn_Barra5.Click += new System.EventHandler(this.btn_Barra5_Click);
@@ -181,7 +181,7 @@
             this.btn_Barra4.Location = new System.Drawing.Point(444, 408);
             this.btn_Barra4.Name = "btn_Barra4";
             this.btn_Barra4.Size = new System.Drawing.Size(110, 70);
-            this.btn_Barra4.TabIndex = 16;
+            this.btn_Barra4.TabIndex = 18;
             this.btn_Barra4.Text = "Barra 4";
             this.btn_Barra4.UseVisualStyleBackColor = true;
             this.btn_Barra4.Click += new System.EventHandler(this.btn_Barra4_Click);
@@ -268,7 +268,7 @@
             // 
             // btn_Mesa8
             // 
-            this.btn_Mesa8.Location = new System.Drawing.Point(303, 172);
+            this.btn_Mesa8.Location = new System.Drawing.Point(303, 168);
             this.btn_Mesa8.Name = "btn_Mesa8";
             this.btn_Mesa8.Size = new System.Drawing.Size(110, 70);
             this.btn_Mesa8.TabIndex = 7;
@@ -348,68 +348,74 @@
             // 
             // btn_Stock
             // 
+            this.btn_Stock.BackColor = System.Drawing.Color.Violet;
             this.btn_Stock.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_Stock.Location = new System.Drawing.Point(785, 445);
             this.btn_Stock.Name = "btn_Stock";
             this.btn_Stock.Size = new System.Drawing.Size(179, 94);
-            this.btn_Stock.TabIndex = 20;
+            this.btn_Stock.TabIndex = 22;
             this.btn_Stock.Text = "Revisar Stock de Productos";
-            this.btn_Stock.UseVisualStyleBackColor = true;
+            this.btn_Stock.UseVisualStyleBackColor = false;
             this.btn_Stock.Click += new System.EventHandler(this.btn_Stock_Click);
             // 
             // btn_BusquedaMesa
             // 
+            this.btn_BusquedaMesa.BackColor = System.Drawing.Color.Violet;
             this.btn_BusquedaMesa.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_BusquedaMesa.Location = new System.Drawing.Point(785, 152);
             this.btn_BusquedaMesa.Name = "btn_BusquedaMesa";
-            this.btn_BusquedaMesa.Size = new System.Drawing.Size(170, 94);
-            this.btn_BusquedaMesa.TabIndex = 18;
+            this.btn_BusquedaMesa.Size = new System.Drawing.Size(179, 94);
+            this.btn_BusquedaMesa.TabIndex = 20;
             this.btn_BusquedaMesa.Text = "Buscar sitio disponible";
-            this.btn_BusquedaMesa.UseVisualStyleBackColor = true;
+            this.btn_BusquedaMesa.UseVisualStyleBackColor = false;
             this.btn_BusquedaMesa.Click += new System.EventHandler(this.btn_BusquedaMesa_Click);
             // 
             // btn_Ticket
             // 
+            this.btn_Ticket.BackColor = System.Drawing.Color.Violet;
             this.btn_Ticket.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_Ticket.Location = new System.Drawing.Point(785, 302);
             this.btn_Ticket.Name = "btn_Ticket";
             this.btn_Ticket.Size = new System.Drawing.Size(179, 94);
-            this.btn_Ticket.TabIndex = 19;
+            this.btn_Ticket.TabIndex = 21;
             this.btn_Ticket.Text = "Generar Ticket";
-            this.btn_Ticket.UseVisualStyleBackColor = true;
+            this.btn_Ticket.UseVisualStyleBackColor = false;
             this.btn_Ticket.Click += new System.EventHandler(this.btn_Ticket_Click);
             // 
             // btn_VerNomina
             // 
+            this.btn_VerNomina.BackColor = System.Drawing.Color.Violet;
             this.btn_VerNomina.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_VerNomina.Location = new System.Drawing.Point(999, 152);
             this.btn_VerNomina.Name = "btn_VerNomina";
             this.btn_VerNomina.Size = new System.Drawing.Size(126, 94);
-            this.btn_VerNomina.TabIndex = 21;
+            this.btn_VerNomina.TabIndex = 23;
             this.btn_VerNomina.Text = "Ver nomina de empleados";
-            this.btn_VerNomina.UseVisualStyleBackColor = true;
+            this.btn_VerNomina.UseVisualStyleBackColor = false;
             this.btn_VerNomina.Click += new System.EventHandler(this.btn_VerNomina_Click);
             // 
             // btn_AgregarMercaderia
             // 
+            this.btn_AgregarMercaderia.BackColor = System.Drawing.Color.Violet;
             this.btn_AgregarMercaderia.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_AgregarMercaderia.Location = new System.Drawing.Point(999, 302);
             this.btn_AgregarMercaderia.Name = "btn_AgregarMercaderia";
             this.btn_AgregarMercaderia.Size = new System.Drawing.Size(126, 94);
-            this.btn_AgregarMercaderia.TabIndex = 22;
+            this.btn_AgregarMercaderia.TabIndex = 24;
             this.btn_AgregarMercaderia.Text = "Agregar mercaderia";
-            this.btn_AgregarMercaderia.UseVisualStyleBackColor = true;
+            this.btn_AgregarMercaderia.UseVisualStyleBackColor = false;
             this.btn_AgregarMercaderia.Click += new System.EventHandler(this.btn_AgregarMercaderia_Click);
             // 
             // btn_FacturacionDiaria
             // 
+            this.btn_FacturacionDiaria.BackColor = System.Drawing.Color.Violet;
             this.btn_FacturacionDiaria.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_FacturacionDiaria.Location = new System.Drawing.Point(999, 445);
             this.btn_FacturacionDiaria.Name = "btn_FacturacionDiaria";
             this.btn_FacturacionDiaria.Size = new System.Drawing.Size(126, 94);
-            this.btn_FacturacionDiaria.TabIndex = 23;
+            this.btn_FacturacionDiaria.TabIndex = 25;
             this.btn_FacturacionDiaria.Text = "Facturacion del dia";
-            this.btn_FacturacionDiaria.UseVisualStyleBackColor = true;
+            this.btn_FacturacionDiaria.UseVisualStyleBackColor = false;
             this.btn_FacturacionDiaria.Click += new System.EventHandler(this.btn_FacturacionDiaria_Click);
             // 
             // Form_Vendedor
