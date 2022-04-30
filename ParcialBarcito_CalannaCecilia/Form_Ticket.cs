@@ -63,14 +63,22 @@ namespace UI
         {
             this.lbl_fecha.Text = DateTime.Now.ToString();
             this.lbl_puestoVenta.Text = this.numeroPuesto;
-            this.text_Box.Text = Entidades.Bar.MostrarConsumiciones(numeroPuesto);
+            this.text_Box.Text = Bar.MostrarConsumiciones(numeroPuesto);
         }
 
         private void btn_imprimirTicket_Click(object sender, EventArgs e)
         {
             PlaySound();
-            Bar.ImprimirTicket(totalPesos, this.radioBtn_TarjetaCredito.Checked,
-                this.radioBtn_estacionamiento.Checked, this.chk_descuento.Checked);
+            if(Bar.ImprimirTicket(totalPesos, this.radioBtn_TarjetaCredito.Checked,
+                this.radioBtn_estacionamiento.Checked, this.chk_descuento.Checked))
+            {
+                MessageBox.Show("Ticket impreso");
+            }
+            else
+            {
+                MessageBox.Show("Error al imprimir ticket");
+            }
+            
         }
     }
 }

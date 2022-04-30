@@ -33,12 +33,7 @@ namespace UI
             InitializeComponent();
             this.numeroPuesto = numero;
         }
-        //private void Form_Venta_Load(object sender, EventArgs e)
-        //{
-        //    this.lbl_titulo.Text = $"Mesa {this.numeroPuesto} ";
-        //    this.cmbBx_producto.DataSource = Enum.GetNames(typeof(EMorfi));
-        //}
-
+       
         private void btn_AgregarProductos_Click(object sender, EventArgs e)
         {
             PlaySound();
@@ -47,7 +42,7 @@ namespace UI
                 && !String.IsNullOrEmpty(this.num_cantidad.ToString()))
             {
                 Bar.Venta(this.numeroPuesto, this.cmbBx_producto.SelectedItem.ToString(),this.num_cantidad.ToString());
-
+                MessageBox.Show("producto agregado");
             }
             else
             {
@@ -61,11 +56,9 @@ namespace UI
         private void btn_cerrarMesa_Click(object sender, EventArgs e)
         {
             PlaySound();
-            //liberar mesa con liberarpuestodeventa
             Form frm_ticket = new Form_Ticket(this.numeroPuesto);
             frm_ticket.ShowDialog();
         }
-        //suma todo lo consumido y el estacionamiento y recargo tarjeta
         private void PlaySound()
         {
             try
@@ -82,7 +75,7 @@ namespace UI
 
         private void Form_Venta_Load_1(object sender, EventArgs e)
         {
-            this.lbl_titulo.Text = $"Mesa {this.numeroPuesto} ";
+            this.lbl_titulo.Text = $"{this.numeroPuesto}";
             this.cmbBx_producto.DataSource = Enum.GetNames(typeof(EMorfi));
         }
     }

@@ -6,7 +6,7 @@ namespace Entidades
 {
     public static class Bar
     {
-        public static string Nombre { get { return "LES UTN"; } }
+        public static string Nombre { get { return "BAR UTN"; } }
         private static List<Persona> personal;
         private static Dictionary<Producto, short> inventario;
         private static List<PuestoDeVenta> puestosDeVenta;
@@ -32,24 +32,43 @@ namespace Entidades
 
         public static float SumarConsumicion(string cualPuesto)
         {
-            //TODO
-            return 10F;
+            float retorno = 0;
+            foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
+            {
+                if (item.Nombre == cualPuesto)
+                {
+                    item.EstaLibre = true;
+                    foreach (KeyValuePair<Producto, short> item2 in item.consumicion)
+                    {
+                      retorno +=  item2.Key.Precio;
+                    }
+                }
+            }
+            return retorno;
         }
 
         public static float CalcularTarjeta(float totalPesos)
         {
-            //TODO
-            return 10F;
+            return totalPesos + (totalPesos * 0.10F);
         }
 
         public static float CalcularEstacionamiento(float totalPesos)
         {
-            throw new NotImplementedException();
+            return totalPesos + 200F;
         }
 
-        public static float Descuentos(float totalPesos, int v)
+        public static float Descuentos(float totalPesos, int rango)
         {
-            throw new NotImplementedException();
+            float retorno = totalPesos;
+            if(rango == 1)
+            {
+                totalPesos = totalPesos + (totalPesos * 0.20F);
+            }
+            else
+            {
+                totalPesos = totalPesos + (totalPesos * 0.10F);
+            }
+            return retorno;
         }
 
 
@@ -74,7 +93,6 @@ namespace Entidades
             inventario.Add(new Producto("Empanadas", false, 80F), 50);
             inventario.Add(new Producto("Picadita", false, 300F), 50);
             //abro las mesas y barras
-
             puestosDeVenta.Add(new PuestoDeVenta("Mesa 1", false));
             puestosDeVenta.Add(new PuestoDeVenta("Mesa 2", false));
             puestosDeVenta.Add(new PuestoDeVenta("Mesa 3", false));
@@ -98,14 +116,27 @@ namespace Entidades
 
         }
 
-        public static void ImprimirTicket(float totalPesos, bool checked1, bool checked2, bool checked3)
+        public static bool ImprimirTicket(float totalPesos, bool checked1, bool checked2, bool checked3)
         {
-            throw new NotImplementedException();
+            //TODO
+            return true;
         }
 
         public static string MostrarConsumiciones(string numeroPuesto)
         {
-            return "listado aqui";
+            StringBuilder sb = new StringBuilder();
+            foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
+            {
+                if (item.Nombre == numeroPuesto)
+                {
+                    sb.AppendLine(item.consumicion.ToString()); 
+                }
+                else
+                {
+                    sb.Append("No hay consumisiones que mostrar");
+                }
+            }
+            return sb.ToString();
         }
 
         public static string BuscarSitioLibre()
@@ -195,6 +226,15 @@ namespace Entidades
         }
         public static void Venta(string aDonde, string queCosa, string cantidad)
         {
+            Producto prodParaAgregar = null;
+            foreach (KeyValuePair<Producto, short> item in inventario)
+            {
+                if(item.Key.Nombre == queCosa)
+                {
+                    prodParaAgregar = item.Key;
+                }
+            }
+
             if (!String.IsNullOrEmpty(aDonde))
             {
                 foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
@@ -202,7 +242,11 @@ namespace Entidades
                     if (item.Nombre == aDonde)
                     {
                         short.TryParse(cantidad, out short cantidadNumerica);
-                        //item.AgregarConsumicion(producto,cantidadNumerica,Bar.CosasEnElInventario);
+                        if(prodParaAgregar is not null && cantidadNumerica > 0)
+                        {
+                          item.AgregarConsumicion(prodParaAgregar,cantidadNumerica,Bar.CosasEnElInventario);
+
+                        }
                     }
                 }
             }

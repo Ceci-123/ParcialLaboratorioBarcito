@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using ParcialBarcito_CalannaCecilia;
 
 namespace UI
 {
@@ -214,16 +215,17 @@ namespace UI
             MessageBox.Show(Bar.MostrarPersonal(), "Listado de empleados");
         }
 
-        private void btn_Ticket_Click(object sender, EventArgs e)
-        {
-            //Form frm_ticket = new Form_Ticket();
-            //frm_ticket.ShowDialog();
-            MessageBox.Show("hacer otra cosa");
-        }
+        //private void btn_Ticket_Click(object sender, EventArgs e)
+        //{
+        //    //Form frm_ticket = new Form_Ticket();
+        //    //frm_ticket.ShowDialog();
+        //    MessageBox.Show("hacer Logout aca");
+        //}
 
         private void btn_AgregarMercaderia_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Agregar mercaderia");
+            Form frm = new Form_Agregar();
+            frm.Show();
         }
 
         private void btn_Stock_Click(object sender, EventArgs e)
@@ -312,6 +314,10 @@ namespace UI
             this.btn_Mesa15.BackColor = Color.LimeGreen;
         }
 
-        
+        private void btn_WhoAmI_Click(object sender, EventArgs e)
+        {
+            //Persona p = Form_Login.UsuarioLogueado;
+            MessageBox.Show($"Vos sos ");
+        }
     }
 }

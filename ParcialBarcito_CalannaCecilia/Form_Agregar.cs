@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class Form_Admin : Form
+    public partial class Form_Agregar : Form
     {
-        public Form_Admin()
+        public Form_Agregar()
         {
             InitializeComponent();
         }

@@ -57,7 +57,7 @@
             this.btn_Mesa1 = new System.Windows.Forms.Button();
             this.btn_Stock = new System.Windows.Forms.Button();
             this.btn_BusquedaMesa = new System.Windows.Forms.Button();
-            this.btn_Ticket = new System.Windows.Forms.Button();
+            this.btn_WhoAmI = new System.Windows.Forms.Button();
             this.btn_VerNomina = new System.Windows.Forms.Button();
             this.btn_AgregarMercaderia = new System.Windows.Forms.Button();
             this.btn_FacturacionDiaria = new System.Windows.Forms.Button();
@@ -370,17 +370,17 @@
             this.btn_BusquedaMesa.UseVisualStyleBackColor = false;
             this.btn_BusquedaMesa.Click += new System.EventHandler(this.btn_BusquedaMesa_Click);
             // 
-            // btn_Ticket
+            // btn_WhoAmI
             // 
-            this.btn_Ticket.BackColor = System.Drawing.Color.Violet;
-            this.btn_Ticket.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Ticket.Location = new System.Drawing.Point(785, 302);
-            this.btn_Ticket.Name = "btn_Ticket";
-            this.btn_Ticket.Size = new System.Drawing.Size(179, 94);
-            this.btn_Ticket.TabIndex = 21;
-            this.btn_Ticket.Text = "Generar Ticket";
-            this.btn_Ticket.UseVisualStyleBackColor = false;
-            this.btn_Ticket.Click += new System.EventHandler(this.btn_Ticket_Click);
+            this.btn_WhoAmI.BackColor = System.Drawing.Color.Violet;
+            this.btn_WhoAmI.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_WhoAmI.Location = new System.Drawing.Point(785, 302);
+            this.btn_WhoAmI.Name = "btn_WhoAmI";
+            this.btn_WhoAmI.Size = new System.Drawing.Size(179, 94);
+            this.btn_WhoAmI.TabIndex = 21;
+            this.btn_WhoAmI.Text = "Mostrar Usuario Logueado";
+            this.btn_WhoAmI.UseVisualStyleBackColor = false;
+            this.btn_WhoAmI.Click += new System.EventHandler(this.btn_WhoAmI_Click);
             // 
             // btn_VerNomina
             // 
@@ -426,7 +426,7 @@
             this.Controls.Add(this.btn_FacturacionDiaria);
             this.Controls.Add(this.btn_AgregarMercaderia);
             this.Controls.Add(this.btn_VerNomina);
-            this.Controls.Add(this.btn_Ticket);
+            this.Controls.Add(this.btn_WhoAmI);
             this.Controls.Add(this.btn_Stock);
             this.Controls.Add(this.btn_BusquedaMesa);
             this.Controls.Add(this.groupBox_Sitios);
@@ -480,7 +480,7 @@
         private System.Windows.Forms.Button btn_Mesa1;
         private System.Windows.Forms.Button btn_Stock;
         private System.Windows.Forms.Button btn_BusquedaMesa;
-        private System.Windows.Forms.Button btn_Ticket;
+        private System.Windows.Forms.Button btn_WhoAmI;
         private System.Windows.Forms.Button btn_VerNomina;
         private System.Windows.Forms.Button btn_AgregarMercaderia;
         private System.Windows.Forms.Button btn_FacturacionDiaria;

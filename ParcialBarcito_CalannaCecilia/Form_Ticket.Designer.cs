@@ -222,9 +222,8 @@
             this.chk_descuento.AutoSize = true;
             this.chk_descuento.Location = new System.Drawing.Point(641, 309);
             this.chk_descuento.Name = "chk_descuento";
-            this.chk_descuento.Size = new System.Drawing.Size(116, 23);
+            this.chk_descuento.Size = new System.Drawing.Size(15, 14);
             this.chk_descuento.TabIndex = 15;
-            this.chk_descuento.Text = "checkBox1";
             this.chk_descuento.UseVisualStyleBackColor = true;
             // 
             // lbl_descuento

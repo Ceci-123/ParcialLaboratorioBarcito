@@ -43,6 +43,8 @@ namespace Entidades
             }
         }
 
+        public string Nombre { get; }
+
         internal string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

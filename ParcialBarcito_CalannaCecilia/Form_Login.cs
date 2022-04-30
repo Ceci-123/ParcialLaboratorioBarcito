@@ -7,6 +7,10 @@ namespace ParcialBarcito_CalannaCecilia
 {
     public partial class Form_Login : Form
     {
+        private static Persona? usuarioLogueado;
+
+        public Persona UsuarioLogueado { get => usuarioLogueado; }
+
         public Form_Login()
         {
             InitializeComponent();
@@ -27,14 +31,24 @@ namespace ParcialBarcito_CalannaCecilia
             }
             else
             {
-
-                bool respuesta = Entidades.Persona.ValidarUser(Bar.ListadoDePersonal, this.txtBox_Nombre.Text, txtbox_password.Text);
+                
+                bool respuesta = Persona.ValidarUser(Bar.ListadoDePersonal, this.txtBox_Nombre.Text, txtbox_password.Text);
                 if (respuesta)
                 {
                     int auxiliar = Persona.ValidarRango(Bar.ListadoDePersonal, this.txtBox_Nombre.Text);
-                    //abro segundo formulario
-                    // es admin si es 1 y vendedor es 2
-                        Form frm = new Form_Vendedor(this.txtBox_Nombre.Text, auxiliar);
+                    if(auxiliar == 1)
+                    {
+                        // es admin si es 1
+                        usuarioLogueado = new Administrador(this.txtBox_Nombre.Text, txtbox_password.Text);
+                    }
+                    else
+                    {
+                        // es vendedor si es 2
+                        usuarioLogueado = new Vendedor(this.txtBox_Nombre.Text, txtbox_password.Text);
+                    }
+                    
+                    
+                    Form frm = new Form_Vendedor(this.txtBox_Nombre.Text, auxiliar);
                         this.Hide();
                         if (frm.ShowDialog() == DialogResult.OK)
                         {
