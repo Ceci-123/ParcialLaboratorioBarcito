@@ -8,31 +8,38 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace UI
 {
     public partial class Form_Ticket : Form
     {
-        public Form_Ticket()
+        string numeroPuesto;
+        float totalPesos;
+        public Form_Ticket(string numero)
         {
             InitializeComponent();
+            this.numeroPuesto = numero; 
         }
 
         private void btn_OK_Click(object sender, EventArgs e)
         {
             PlaySound();
-            //hacer la suma de la consumision, 
-            this.lbl_TotalPesos.Text = "aca va el total";
-            //Entidades.Bar.SumarConsumicion();
+            totalPesos = Bar.SumarConsumicion(numeroPuesto);
             if (this.radioBtn_TarjetaCredito.Checked)
             {
-               // Entidades.Bar.CalcularTarjeta(); 
+              totalPesos = Bar.CalcularTarjeta(totalPesos); 
             }
             if (this.radioBtn_estacionamiento.Checked)
             {
-                //AgregarEstacionamiento(Sitio unSitio)
+              totalPesos = Bar.CalcularEstacionamiento(totalPesos);
             }
-           // Entidades.Bar.totalVentaDelDia+= lock de este licket; 
+            if (this.chk_descuento.Checked)
+            {
+                totalPesos = Bar.Descuentos(totalPesos, 1);  
+            }
+            Bar.TotalVentaDelDia+= totalPesos; 
+            this.lbl_TotalPesos.Text = totalPesos.ToString();
         }
 
         private void PlaySound()
@@ -54,7 +61,16 @@ namespace UI
 
         private void Form_Ticket_Load(object sender, EventArgs e)
         {
-           // this.text_Box.Text = Entidades.Bar.MostrarConsumiciones(mesa1);
+            this.lbl_fecha.Text = DateTime.Now.ToString();
+            this.lbl_puestoVenta.Text = this.numeroPuesto;
+            this.text_Box.Text = Entidades.Bar.MostrarConsumiciones(numeroPuesto);
+        }
+
+        private void btn_imprimirTicket_Click(object sender, EventArgs e)
+        {
+            PlaySound();
+            Bar.ImprimirTicket(totalPesos, this.radioBtn_TarjetaCredito.Checked,
+                this.radioBtn_estacionamiento.Checked, this.chk_descuento.Checked);
         }
     }
 }

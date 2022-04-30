@@ -132,6 +132,7 @@
             this.Name = "Form_Venta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venta en Mesa";
+            this.Load += new System.EventHandler(this.Form_Venta_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.num_cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

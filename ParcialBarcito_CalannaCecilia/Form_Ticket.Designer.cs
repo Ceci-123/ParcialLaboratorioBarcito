@@ -42,6 +42,10 @@
             this.btn_OK = new System.Windows.Forms.Button();
             this.btn_imprimirTicket = new System.Windows.Forms.Button();
             this.radioBtn_MercadoPago = new System.Windows.Forms.RadioButton();
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.lbl_puestoVenta = new System.Windows.Forms.Label();
+            this.chk_descuento = new System.Windows.Forms.CheckBox();
+            this.lbl_descuento = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_titulo
@@ -180,6 +184,7 @@
             this.btn_imprimirTicket.TabIndex = 11;
             this.btn_imprimirTicket.Text = "Imprimir ticket";
             this.btn_imprimirTicket.UseVisualStyleBackColor = true;
+            this.btn_imprimirTicket.Click += new System.EventHandler(this.btn_imprimirTicket_Click);
             // 
             // radioBtn_MercadoPago
             // 
@@ -194,12 +199,53 @@
             this.radioBtn_MercadoPago.Text = "Mercado Pago";
             this.radioBtn_MercadoPago.UseVisualStyleBackColor = true;
             // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.Location = new System.Drawing.Point(37, 38);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(56, 19);
+            this.lbl_fecha.TabIndex = 13;
+            this.lbl_fecha.Text = "Fecha";
+            // 
+            // lbl_puestoVenta
+            // 
+            this.lbl_puestoVenta.AutoSize = true;
+            this.lbl_puestoVenta.Location = new System.Drawing.Point(460, 38);
+            this.lbl_puestoVenta.Name = "lbl_puestoVenta";
+            this.lbl_puestoVenta.Size = new System.Drawing.Size(138, 19);
+            this.lbl_puestoVenta.TabIndex = 14;
+            this.lbl_puestoVenta.Text = "Puesto de Venta";
+            // 
+            // chk_descuento
+            // 
+            this.chk_descuento.AutoSize = true;
+            this.chk_descuento.Location = new System.Drawing.Point(641, 309);
+            this.chk_descuento.Name = "chk_descuento";
+            this.chk_descuento.Size = new System.Drawing.Size(116, 23);
+            this.chk_descuento.TabIndex = 15;
+            this.chk_descuento.Text = "checkBox1";
+            this.chk_descuento.UseVisualStyleBackColor = true;
+            // 
+            // lbl_descuento
+            // 
+            this.lbl_descuento.AutoSize = true;
+            this.lbl_descuento.Location = new System.Drawing.Point(460, 310);
+            this.lbl_descuento.Name = "lbl_descuento";
+            this.lbl_descuento.Size = new System.Drawing.Size(150, 19);
+            this.lbl_descuento.TabIndex = 16;
+            this.lbl_descuento.Text = "Aplica Descuento";
+            // 
             // Form_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(848, 570);
+            this.Controls.Add(this.lbl_descuento);
+            this.Controls.Add(this.chk_descuento);
+            this.Controls.Add(this.lbl_puestoVenta);
+            this.Controls.Add(this.lbl_fecha);
             this.Controls.Add(this.radioBtn_MercadoPago);
             this.Controls.Add(this.btn_imprimirTicket);
             this.Controls.Add(this.btn_OK);
@@ -242,5 +288,9 @@
         private System.Windows.Forms.Button btn_OK;
         private System.Windows.Forms.Button btn_imprimirTicket;
         private System.Windows.Forms.RadioButton radioBtn_MercadoPago;
+        private System.Windows.Forms.Label lbl_fecha;
+        private System.Windows.Forms.Label lbl_puestoVenta;
+        private System.Windows.Forms.CheckBox chk_descuento;
+        private System.Windows.Forms.Label lbl_descuento;
     }
 }
