@@ -200,12 +200,12 @@ namespace Entidades
                 {
                     sb.AppendLine($"Disponible la {item.Nombre}\n");
                     flag = 1;
-                   
                 }
-                if(flag == 0)
-                {
-                    sb.Append("No hay lugares disponibles en el bar");
-                }
+               
+            }
+            if(flag == 0)
+            {
+                sb.AppendLine("No hay lugares disponibles en el bar");
             }
             return sb.ToString();
         }
