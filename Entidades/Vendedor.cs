@@ -22,7 +22,13 @@ namespace Entidades
         /// <returns>El precio promocional</returns>
         public override float DescontarPromo(float valor)
         {
-            return valor - (valor * 0.10F);
+            float retorno = 0;
+            if(valor > 0)
+            {
+               retorno = valor - (valor * 0.10F);
+
+            }
+            return retorno;
         }
     }  
 }

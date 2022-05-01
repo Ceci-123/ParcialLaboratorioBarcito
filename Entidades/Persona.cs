@@ -58,8 +58,15 @@ namespace Entidades
         /// <returns></returns>
         public virtual float DescontarHappyHour(float valor)
         {
-            return valor / 2;
+            float retorno = 0;
+            if(valor > 0)
+            {
+              retorno = valor / 2;
+
+            }
+            return retorno;
         }
+
         /// <summary>
         /// Devuelve un entero segun el rango del usuario
         /// </summary>

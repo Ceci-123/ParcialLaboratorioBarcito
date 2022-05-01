@@ -39,14 +39,17 @@ namespace Entidades
         public static float SumarConsumicion(string cualPuesto)
         {
             float retorno = 0;
-            foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
+            if (!String.IsNullOrEmpty(cualPuesto))
             {
-                if (item.Nombre == cualPuesto)
+                foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
                 {
-                    item.LiberarPuestoDeVenta();
-                    foreach (KeyValuePair<Producto, short> item2 in item.consumicion)
+                    if (item.Nombre == cualPuesto)
                     {
-                      retorno +=  item2.Key.Precio;
+                        item.LiberarPuestoDeVenta();
+                        foreach (KeyValuePair<Producto, short> item2 in item.consumicion)
+                        {
+                            retorno += item2.Key.Precio;
+                        }
                     }
                 }
             }
@@ -60,7 +63,12 @@ namespace Entidades
         /// <returns>Valor con el aumento agregado</returns>
         public static float CalcularTarjeta(float totalPesos)
         {
-            return totalPesos + (totalPesos * 0.10F);
+            float retorno = 0;
+            if(totalPesos > 0)
+            {
+              retorno = totalPesos + (totalPesos * 0.10F);
+            }
+            return retorno;
         }
 
         /// <summary>
@@ -69,13 +77,17 @@ namespace Entidades
         /// <param name="cualPuesto">Puesto al cual se le agrega el estacionamiento</param>
         public static void CalcularEstacionamiento(string cualPuesto)
         {
-            foreach (PuestoDeVenta item in ListaDePuestosDeVenta)
+            if (!String.IsNullOrEmpty(cualPuesto))
             {
-                if(item.Nombre == cualPuesto)
+                foreach (PuestoDeVenta item in ListaDePuestosDeVenta)
                 {
-                    item.AgregarEstacionamiento();
+                    if (item.Nombre == cualPuesto)
+                    {
+                        item.AgregarEstacionamiento();
+                    }
                 }
-            }
+            }    
+            
         }
 
         /// <summary>
@@ -153,24 +165,25 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
             int flag = 0;
-            foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
+            if (!String.IsNullOrEmpty(numeroPuesto))
             {
-                if (item.Nombre == numeroPuesto)
+                foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
                 {
-                    sb.AppendLine(item.MostrarConsumiciones());
-                    flag = 1;
-                }
-                
-            }
-            if(flag == 0)
-            {
-                return "No hay consumisiones para mostrar";
-            }
-            else
-            {
-              return sb.ToString();
+                    if (item.Nombre == numeroPuesto)
+                    {
+                        sb.AppendLine(item.MostrarConsumiciones());
+                        flag = 1;
+                    }
 
+                }
+                if (flag == 0)
+                {
+                    sb.Append("No hay consumisiones para mostrar");
+                }
+         
             }
+            return sb.ToString();
+
         }
 
         /// <summary>
@@ -180,18 +193,21 @@ namespace Entidades
         public static string BuscarSitioLibre()
         {
             StringBuilder sb = new StringBuilder();
-            string retorno = "No hay lugares disponibles en el bar";
+            int flag = 0;
             foreach (PuestoDeVenta item in puestosDeVenta)
             {
                 if (item.EstaLibre == true)
                 {
-                    sb.Append($"Disponible la {item.Nombre}\n");
-
-                    retorno = sb.ToString();
-
+                    sb.AppendLine($"Disponible la {item.Nombre}\n");
+                    flag = 1;
+                   
+                }
+                if(flag == 0)
+                {
+                    sb.Append("No hay lugares disponibles en el bar");
                 }
             }
-            return retorno;
+            return sb.ToString();
         }
 
         /// <summary>
@@ -238,14 +254,18 @@ namespace Entidades
         internal static bool ControlarSiHayStock(Producto unProducto)
         {
             bool resultado = false;
-            foreach (KeyValuePair<Producto, short> item in inventario)
+            if(unProducto is not null)
             {
-                if (item.Key == unProducto && item.Value > 1)
+                foreach (KeyValuePair<Producto, short> item in inventario)
                 {
-                    resultado = true;
-                }
+                    if (item.Key == unProducto && item.Value > 1)
+                    {
+                        resultado = true;
+                    }
 
+                }
             }
+            
             return resultado;
         }
 
@@ -278,7 +298,11 @@ namespace Entidades
         /// <param name="cantidad">Cantidad de ese producto</param>
         public static void AgregarMercaderia(Producto unProducto, short cantidad)
         {
-            inventario.Add(unProducto, cantidad);
+            if(unProducto is not null && cantidad > 0)
+            {
+               inventario.Add(unProducto, cantidad);
+
+            }  
         }
 
         /// <summary>
@@ -292,8 +316,11 @@ namespace Entidades
         /// <param name="cantidad">Cantidad de ese producto</param>
         public static void AgregarMercaderia(string nombre, bool esBebida, float precio, bool esVegan, bool esAptoCeliaquia, short cantidad)
         {
-            Producto unProducto = new Producto(nombre, esBebida, precio, esVegan, esAptoCeliaquia);
-            inventario.Add(unProducto, cantidad);
+            if (!String.IsNullOrEmpty(nombre) && cantidad > 0)
+            {
+                Producto unProducto = new Producto(nombre, esBebida, precio, esVegan, esAptoCeliaquia);
+                inventario.Add(unProducto, cantidad);
+            }
         }
 
         /// <summary>
@@ -304,30 +331,35 @@ namespace Entidades
         /// <param name="cantidad">Cantidad del producto</param>
         public static void Venta(string aDonde, string queCosa, string cantidad)
         {
-            Producto prodParaAgregar = null;
-            foreach (KeyValuePair<Producto, short> item in inventario)
+            if (!String.IsNullOrEmpty(aDonde) && !String.IsNullOrEmpty(queCosa) && !String.IsNullOrEmpty(cantidad))
             {
-                if(item.Key.Nombre == queCosa)
+                Producto prodParaAgregar = null;
+                foreach (KeyValuePair<Producto, short> item in inventario)
                 {
-                    prodParaAgregar = item.Key;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(aDonde))
-            {
-                foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
-                {
-                    if (item.Nombre == aDonde)
+                    if (item.Key.Nombre == queCosa)
                     {
-                        short.TryParse(cantidad, out short cantidadNumerica);
-                        if(prodParaAgregar is not null && cantidadNumerica > 0)
+                        prodParaAgregar = item.Key;
+                    }
+                }
+                if (!String.IsNullOrEmpty(aDonde))
+                {
+                    foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
+                    {
+                        if (item.Nombre == aDonde)
                         {
-                          item.AgregarConsumicion(prodParaAgregar,cantidadNumerica,Bar.CosasEnElInventario);
+                            short.TryParse(cantidad, out short cantidadNumerica);
+                            if (prodParaAgregar is not null && cantidadNumerica > 0)
+                            {
+                                item.AgregarConsumicion(prodParaAgregar, cantidadNumerica, Bar.CosasEnElInventario);
 
+                            }
                         }
                     }
                 }
             }
+            
+
+            
         }
 
         /// <summary>

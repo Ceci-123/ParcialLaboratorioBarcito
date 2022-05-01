@@ -18,9 +18,7 @@ namespace Entidades
             this.esBarra = esBarra;
         }
 
-        public bool EstaLibre { get { return estaLibre; }
-                                set { estaLibre = value; }
-                               }
+        public bool EstaLibre { get { return estaLibre; } set { estaLibre = value; }  }
         public string Nombre { get { return nombre; } }
 
         public bool EsBarra { get { return esBarra; } }
@@ -33,15 +31,19 @@ namespace Entidades
         /// <param name="inventario">Inventario de productos del bar</param>
         public void AgregarConsumicion(Producto producto, short cantidad, Dictionary<Producto, short> inventario)
         {
-            if ((this.EsBarra == true && producto.EsBebida == true) || this.EsBarra == false)
+            if (producto is not null && cantidad > 0 && inventario is not null)
             {
-                if (Bar.ControlarSiHayStock(producto) == true)
+                if ((this.EsBarra == true && producto.EsBebida == true) || this.EsBarra == false)
                 {
-                    this.consumicion.Add(producto, cantidad);
-                    inventario[producto]--;
-                    //TODO solo resta un producto
+                    if (Bar.ControlarSiHayStock(producto) == true)
+                    {
+                        this.consumicion.Add(producto, cantidad);
+                        inventario[producto]--;
+                        //TODO solo resta un producto
+                    }
                 }
             }
+            
         }
 
         /// <summary>
