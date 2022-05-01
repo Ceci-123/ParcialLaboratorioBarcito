@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace UI
 {
@@ -16,5 +17,23 @@ namespace UI
         {
             InitializeComponent();
         }
+      
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            if(String.IsNullOrEmpty(this.txtBx_nombre.Text) && String.IsNullOrEmpty(this.txtBx_precio.Text))
+            {
+                Bar.AgregarMercaderia(new Entidades.Producto(
+                this.txtBx_nombre.Text,
+                this.chk_bebida.Checked,
+                float.Parse(this.txtBx_precio.Text),
+                this.chk_vegano.Checked, this.chk_celiacos.Checked),
+                short.Parse(this.num_cantidad.ToString()));
+            }
+            else
+            {
+                MessageBox.Show("Debe completar los campos");
+            }    
+            
+        } 
     }
 }

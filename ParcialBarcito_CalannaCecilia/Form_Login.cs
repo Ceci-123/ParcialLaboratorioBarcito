@@ -48,7 +48,7 @@ namespace ParcialBarcito_CalannaCecilia
                     }
                     
                     
-                    Form frm = new Form_Vendedor(this.txtBox_Nombre.Text, auxiliar);
+                    Form frm = new Form_Vendedor(auxiliar, usuarioLogueado);
                         this.Hide();
                         if (frm.ShowDialog() == DialogResult.OK)
                         {

@@ -69,7 +69,7 @@ namespace UI
         private void btn_imprimirTicket_Click(object sender, EventArgs e)
         {
             PlaySound();
-            if(Bar.ImprimirTicket(totalPesos, this.radioBtn_TarjetaCredito.Checked,
+            if(Bar.ImprimirTicket(numeroPuesto,totalPesos, this.radioBtn_TarjetaCredito.Checked,
                 this.radioBtn_estacionamiento.Checked, this.chk_descuento.Checked))
             {
                 MessageBox.Show("Ticket impreso");

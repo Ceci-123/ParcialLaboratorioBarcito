@@ -166,24 +166,26 @@
             // 
             // btn_OK
             // 
+            this.btn_OK.BackColor = System.Drawing.Color.Plum;
             this.btn_OK.Location = new System.Drawing.Point(506, 372);
             this.btn_OK.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.Size = new System.Drawing.Size(118, 109);
             this.btn_OK.TabIndex = 10;
             this.btn_OK.Text = "OK";
-            this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.UseVisualStyleBackColor = false;
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // btn_imprimirTicket
             // 
+            this.btn_imprimirTicket.BackColor = System.Drawing.Color.Plum;
             this.btn_imprimirTicket.Location = new System.Drawing.Point(682, 372);
             this.btn_imprimirTicket.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_imprimirTicket.Name = "btn_imprimirTicket";
             this.btn_imprimirTicket.Size = new System.Drawing.Size(118, 109);
             this.btn_imprimirTicket.TabIndex = 11;
             this.btn_imprimirTicket.Text = "Imprimir ticket";
-            this.btn_imprimirTicket.UseVisualStyleBackColor = true;
+            this.btn_imprimirTicket.UseVisualStyleBackColor = false;
             this.btn_imprimirTicket.Click += new System.EventHandler(this.btn_imprimirTicket_Click);
             // 
             // radioBtn_MercadoPago
@@ -239,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.HotPink;
             this.ClientSize = new System.Drawing.Size(848, 570);
             this.Controls.Add(this.lbl_descuento);
             this.Controls.Add(this.chk_descuento);
@@ -259,6 +261,7 @@
             this.Controls.Add(this.text_Box);
             this.Controls.Add(this.lbl_titulo);
             this.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Entidades
@@ -116,27 +117,29 @@ namespace Entidades
 
         }
 
-        public static bool ImprimirTicket(float totalPesos, bool checked1, bool checked2, bool checked3)
-        {
-            //TODO
-            return true;
-        }
-
         public static string MostrarConsumiciones(string numeroPuesto)
         {
             StringBuilder sb = new StringBuilder();
+            int flag = 0;
             foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
             {
                 if (item.Nombre == numeroPuesto)
                 {
-                    sb.AppendLine(item.consumicion.ToString()); 
+                    sb.AppendLine(item.consumicion.Keys.ToString());
+                    sb.AppendLine(item.consumicion.Values.ToString());
+                    flag = 1;
                 }
-                else
-                {
-                    sb.Append("No hay consumisiones que mostrar");
-                }
+                
             }
-            return sb.ToString();
+            if(flag == 0)
+            {
+                return "No hay consumisiones para mostrar";
+            }
+            else
+            {
+              return sb.ToString();
+
+            }
         }
 
         public static string BuscarSitioLibre()
@@ -167,6 +170,7 @@ namespace Entidades
                     suma += ((short)par.Value);
                 }
             }
+            Bar.TotalVentaDelDia = suma;
             return (float)suma;
         }
         public static string MostrarInventario()
@@ -252,5 +256,71 @@ namespace Entidades
             }
         }
 
+                
+        public static bool ImprimirTicket(string nombrePuesto, float totalPesos,
+            bool checkedTarjeta, bool checkedEstacionamiento, bool checkedDescuento)
+        {
+            bool retorno = false;
+            string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            ruta += "\\carpetaDePrueba";
+            //
+            foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
+            {
+                if (item.Nombre == nombrePuesto)
+                {
+                    // encontre el puesto
+                    if (!Directory.Exists(ruta))
+                    {
+                        try
+                        {
+                            Directory.CreateDirectory(ruta);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                    }
+                    try
+                    {
+                        ruta += "\\" + DateTime.Now.ToString("HH_mm_ss") + ".txt";
+
+                        using (StreamWriter writer = new StreamWriter(ruta))
+                        {
+                            writer.WriteLine("Consumision de la " + item.Nombre);
+                            foreach (KeyValuePair<Producto, short> item2 in item.consumicion)
+                            {
+                                writer.WriteLine(item2.Value.ToString());
+                                writer.WriteLine(item2.Key.ToString());
+                                retorno = true;
+                            }
+                            writer.WriteLine("Total $ " + totalPesos);
+                            if (checkedTarjeta)
+                            {
+                                writer.WriteLine("Estas pagando con tarjeta de credito");
+                            }
+                            if (checkedEstacionamiento)
+                            {
+                                writer.WriteLine("Te agregamos el cargo de estacionamiento");
+                            }
+                            if (checkedDescuento)
+                            {
+                                writer.WriteLine("Tu descuento ya fue aplicado");
+                            }
+                        }
+                    }
+                    catch (Exception exp)
+                    {
+                        Console.Write(exp.Message);
+                    }
+
+                }
+            }
+
+            
+            
+
+            return retorno;
+        }
+       
     }
 }

@@ -15,20 +15,22 @@ namespace UI
 {
     public partial class Form_Vendedor : Form
     {
-        public string nombre;
+        //public string nombre;
         public int rangoDelUsuarioLogueado;
-        public Form_Vendedor(string nombre, int rango)
+        public Persona usuarioLogueado;
+        public Form_Vendedor(int rango, Persona quienSeLogueo)
         {
             InitializeComponent();
-            this.nombre = nombre;
+            //this.nombre = nombre;
             this.rangoDelUsuarioLogueado = rango;
+            this.usuarioLogueado = quienSeLogueo;
         }
 
         
 
         private void Form_Vendedor_Load(object sender, EventArgs e)
         {
-            this.lbl_Saludo.Text = "Bienvenid@ " + nombre;
+            this.lbl_Saludo.Text = "Bienvenid@ " + usuarioLogueado.Nombre;
             ColocarMesasEnVerde();
             PlaySound();
             if (rangoDelUsuarioLogueado == 1)
@@ -316,8 +318,7 @@ namespace UI
 
         private void btn_WhoAmI_Click(object sender, EventArgs e)
         {
-            //Persona p = Form_Login.UsuarioLogueado;
-            MessageBox.Show($"Vos sos ");
+            MessageBox.Show($"Vos sos {usuarioLogueado.Nombre}");
         }
     }
 }
