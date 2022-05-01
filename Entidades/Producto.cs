@@ -36,7 +36,7 @@ namespace Entidades
         /// Muestra un producto
         /// </summary>
         /// <returns></returns>
-        internal string Mostrar()
+        public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"  {nombre}  ");

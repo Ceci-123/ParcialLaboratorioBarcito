@@ -46,7 +46,7 @@ namespace Entidades
                     if (item.Nombre == cualPuesto)
                     {
                         item.LiberarPuestoDeVenta();
-                        foreach (KeyValuePair<Producto, short> item2 in item.consumicion)
+                        foreach (KeyValuePair<Producto, short> item2 in item.ListaConsumicion)
                         {
                             retorno += item2.Key.Precio;
                         }
@@ -171,8 +171,14 @@ namespace Entidades
                 {
                     if (item.Nombre == numeroPuesto)
                     {
-                        sb.AppendLine(item.MostrarConsumiciones());
-                        flag = 1;
+                        foreach (KeyValuePair<Producto,short> item2 in item.ListaConsumicion)
+                        {
+                            sb.AppendLine(item2.Key.Mostrar());
+                            sb.AppendLine(item2.Value.ToString());
+                            flag = 1;
+                        }
+
+                        
                     }
 
                 }
@@ -219,7 +225,7 @@ namespace Entidades
             short suma = 0;
             foreach (PuestoDeVenta item in puestosDeVenta)
             {
-                foreach (KeyValuePair<Producto, short> par in item.consumicion)
+                foreach (KeyValuePair<Producto, short> par in item.ListaConsumicion)
                 {
                     suma += ((short)par.Value);
                 }
@@ -376,7 +382,7 @@ namespace Entidades
         {
             bool retorno = false;
             string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            ruta += "\\carpetaDePrueba";
+            ruta += "\\carpetaDeTickets";
             //
             foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
             {
@@ -401,10 +407,12 @@ namespace Entidades
                         using (StreamWriter writer = new StreamWriter(ruta))
                         {
                             writer.WriteLine("Consumision de la " + item.Nombre);
-                            foreach (KeyValuePair<Producto, short> item2 in item.consumicion)
+                            writer.WriteLine(DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss"));
+                            writer.WriteLine("cantidad    producto   precio");
+                            foreach (KeyValuePair<Producto, short> item2 in item.ListaConsumicion)
                             {
-                                writer.WriteLine(item2.Value.ToString());
-                                writer.WriteLine(item2.Key.ToString());
+                                writer.Write(item2.Value.ToString());
+                                writer.WriteLine(item2.Key.Mostrar());
                                 retorno = true;
                             }
                             writer.WriteLine("Total $ " + totalPesos);

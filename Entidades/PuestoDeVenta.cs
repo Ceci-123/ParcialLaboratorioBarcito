@@ -6,7 +6,7 @@ namespace Entidades
     public class PuestoDeVenta
     {
         private bool estaLibre;
-        public Dictionary<Producto, short> consumicion;
+        private Dictionary<Producto, short> consumicion;
         private string nombre;
         private bool esBarra;
 
@@ -22,6 +22,8 @@ namespace Entidades
         public string Nombre { get { return nombre; } }
 
         public bool EsBarra { get { return esBarra; } }
+
+        public Dictionary<Producto, short> ListaConsumicion { get => consumicion; set => consumicion = value; }
 
         /// <summary>
         /// Agrega una consumicion al puesto de venta y la resta del inventario
