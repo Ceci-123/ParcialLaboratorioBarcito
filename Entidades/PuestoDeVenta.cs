@@ -5,10 +5,10 @@ namespace Entidades
 {
     public class PuestoDeVenta
     {
-        public bool estaLibre;
+        private bool estaLibre;
         public Dictionary<Producto, short> consumicion;
-        public string nombre;
-        public bool esBarra;
+        private string nombre;
+        private bool esBarra;
 
         public PuestoDeVenta(string nombre, bool esBarra)
         {
@@ -18,19 +18,19 @@ namespace Entidades
             this.esBarra = esBarra;
         }
 
-        public bool EstaLibre
-        {
-            get
-            {
-                return estaLibre;
-                
-            }
-            set { estaLibre = value; }
-        }
+        public bool EstaLibre { get { return estaLibre; }
+                                set { estaLibre = value; }
+                               }
         public string Nombre { get { return nombre; } }
 
         public bool EsBarra { get { return esBarra; } }
 
+        /// <summary>
+        /// Agrega una consumicion al puesto de venta y la resta del inventario
+        /// </summary>
+        /// <param name="producto">Producto vendido</param>
+        /// <param name="cantidad">Cantidad del producto</param>
+        /// <param name="inventario">Inventario de productos del bar</param>
         public void AgregarConsumicion(Producto producto, short cantidad, Dictionary<Producto, short> inventario)
         {
             if ((this.EsBarra == true && producto.EsBebida == true) || this.EsBarra == false)
@@ -42,31 +42,36 @@ namespace Entidades
                     //TODO solo resta un producto
                 }
             }
-
-
         }
 
-        public static string MostrarConsumiciones(PuestoDeVenta unPuesto)
+        /// <summary>
+        /// Muestra lo que lleva consumido un puesto de venta
+        /// </summary>
+        /// <param name="unPuesto">Puesto de venta</param>
+        /// <returns>Un string con los datos</returns>
+        public string MostrarConsumiciones()
         {
             StringBuilder sb = new StringBuilder();
-            foreach (KeyValuePair<Producto, short> item in unPuesto.consumicion)
+            foreach (KeyValuePair<Producto, short> item in this.consumicion)
             {
                 sb.AppendLine(item.Value.ToString() + item.Key.ToString());
             }
             return sb.ToString();
         }
 
-        private float CalcularTarjeta(float costo)
-        {
-            return costo * 0.10F;
-        }
-
-        private void AgregarEstacionamiento()
+        /// <summary>
+        /// Agrega al puesto de venta el item de estacionamiento en la consumision
+        /// </summary>
+        public void AgregarEstacionamiento()
         {
             this.consumicion.Add(new Producto("Estacionamiento", false, 200F), 1);
 
         }
-        private void LiberarPuestoDeVenta()
+
+        /// <summary>
+        /// Vuelve a colocar el puesto de venta como libre
+        /// </summary>
+        public void LiberarPuestoDeVenta()
         {
             this.estaLibre = true;
         }

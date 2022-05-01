@@ -27,12 +27,11 @@ namespace UI
         }
 
         
-
         private void Form_Vendedor_Load(object sender, EventArgs e)
         {
             this.lbl_Saludo.Text = "Bienvenid@ " + usuarioLogueado.Nombre;
             ColocarMesasEnVerde();
-            PlaySound();
+            PlaySound(1);
             if (rangoDelUsuarioLogueado == 1)
             {
                 // es admin si es 1 y vendedor es 2
@@ -209,29 +208,26 @@ namespace UI
 
         private void btn_BusquedaMesa_Click(object sender, EventArgs e)
         {
+            PlaySound(0);
             MessageBox.Show(Bar.BuscarSitioLibre(), "Busqueda de sitio libre");
         }
 
         private void btn_VerNomina_Click(object sender, EventArgs e)
         {
+            PlaySound(0);
             MessageBox.Show(Bar.MostrarPersonal(), "Listado de empleados");
         }
 
-        //private void btn_Ticket_Click(object sender, EventArgs e)
-        //{
-        //    //Form frm_ticket = new Form_Ticket();
-        //    //frm_ticket.ShowDialog();
-        //    MessageBox.Show("hacer Logout aca");
-        //}
-
         private void btn_AgregarMercaderia_Click(object sender, EventArgs e)
         {
+            PlaySound(0);
             Form frm = new Form_Agregar();
             frm.Show();
         }
 
         private void btn_Stock_Click(object sender, EventArgs e)
         {
+            PlaySound(0);
             MessageBox.Show("Stock" + Bar.MostrarInventario(), "Productos en stock");
         }
 
@@ -251,23 +247,47 @@ namespace UI
 
         private void btn_FacturacionDiaria_Click(object sender, EventArgs e)
         {
+            PlaySound(0);
             MessageBox.Show($" Facturacion de hoy $ {Bar.CalcularFacturacionDelDia().ToString()}");
         }
 
-        private void PlaySound()
+        private void btn_WhoAmI_Click(object sender, EventArgs e)
+        {
+            PlaySound(0);
+            MessageBox.Show($"Vos sos {usuarioLogueado.Nombre}");
+        }
+
+        /// <summary>
+        /// Reproduce sonidos
+        /// </summary>
+        /// <param name="duracion">Sonido a reproducir</param>
+        private void PlaySound(int duracion)
         {
             try
             {
-                SoundPlayer sonido = new SoundPlayer(@"..\sonido_largo.wav");
-                sonido.Play();
+                if (duracion == 1)
+                {
+                    SoundPlayer sonido = new SoundPlayer(@"..\sonido_largo.wav");
+                    sonido.Play();
+                }
+                else
+                {
+                    SoundPlayer sonido = new SoundPlayer(@"..\sonido_corto.wav");
+                    sonido.Play();
+
+                }
             }
             catch (Exception)
             {
                 Console.Beep();
             }
-
         }
-
+        
+        /// <summary>
+        /// Cambia el color de un boton de puesto de venta segun este libre o ocupado
+        /// </summary>
+        /// <param name="unBoton">Boton a modificar</param>
+        /// <param name="ocupacion">Si el puesto esta libre o ocupado</param>
         private void CambiarColorBoton(System.Windows.Forms.Button unBoton, bool ocupacion)
         {
             if(ocupacion == true)
@@ -277,48 +297,53 @@ namespace UI
             }
             else
             {
-            unBoton.BackColor = Color.Green;
+            unBoton.BackColor = Color.LimeGreen;
 
             }
         }
 
+        /// <summary>
+        /// Coloca un puesto de venta como ocupado
+        /// </summary>
+        /// <param name="cualMesa">Puesto de venta a ocupar</param>
         private void MarcarPuestoComoOcupado(string cualMesa)
         {
             foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
             {
                 if (item.Nombre == cualMesa)
                 {
-                    item.estaLibre = false;
+                    item.EstaLibre = false;
                 }
             }
         }
+
+        /// <summary>
+        /// Coloca todas los puestos de venta como libres
+        /// </summary>
         private void ColocarMesasEnVerde()
         {
-            this.btn_Barra1.BackColor = Color.LimeGreen;
-            this.btn_Barra2.BackColor = Color.LimeGreen;
-            this.btn_Barra3.BackColor = Color.LimeGreen;
-            this.btn_Barra4.BackColor = Color.LimeGreen;
-            this.btn_Barra5.BackColor = Color.LimeGreen;
-            this.btn_Mesa1.BackColor = Color.LimeGreen;
-            this.btn_Mesa2.BackColor = Color.LimeGreen;
-            this.btn_Mesa3.BackColor = Color.LimeGreen;
-            this.btn_Mesa4.BackColor = Color.LimeGreen;
-            this.btn_Mesa5.BackColor = Color.LimeGreen;
-            this.btn_Mesa6.BackColor = Color.LimeGreen;
-            this.btn_Mesa7.BackColor = Color.LimeGreen;
-            this.btn_Mesa8.BackColor = Color.LimeGreen;
-            this.btn_Mesa9.BackColor = Color.LimeGreen;
-            this.btn_Mesa10.BackColor = Color.LimeGreen;
-            this.btn_Mesa11.BackColor = Color.LimeGreen;
-            this.btn_Mesa12.BackColor = Color.LimeGreen;
-            this.btn_Mesa13.BackColor = Color.LimeGreen;
-            this.btn_Mesa14.BackColor = Color.LimeGreen;
-            this.btn_Mesa15.BackColor = Color.LimeGreen;
+            CambiarColorBoton(this.btn_Barra1, false);
+            CambiarColorBoton(this.btn_Barra2, false);
+            CambiarColorBoton(this.btn_Barra3, false);
+            CambiarColorBoton(this.btn_Barra4, false);
+            CambiarColorBoton(this.btn_Barra5, false);
+            CambiarColorBoton(this.btn_Mesa1, false);
+            CambiarColorBoton(this.btn_Mesa2, false);
+            CambiarColorBoton(this.btn_Mesa3, false);
+            CambiarColorBoton(this.btn_Mesa4, false);
+            CambiarColorBoton(this.btn_Mesa5, false);
+            CambiarColorBoton(this.btn_Mesa6, false);
+            CambiarColorBoton(this.btn_Mesa7, false);
+            CambiarColorBoton(this.btn_Mesa8, false);
+            CambiarColorBoton(this.btn_Mesa9, false);
+            CambiarColorBoton(this.btn_Mesa10, false);
+            CambiarColorBoton(this.btn_Mesa11, false);
+            CambiarColorBoton(this.btn_Mesa12, false);
+            CambiarColorBoton(this.btn_Mesa13, false);
+            CambiarColorBoton(this.btn_Mesa14, false);
+            CambiarColorBoton(this.btn_Mesa15, false);
+            
         }
 
-        private void btn_WhoAmI_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show($"Vos sos {usuarioLogueado.Nombre}");
-        }
     }
 }

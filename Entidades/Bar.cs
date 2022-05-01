@@ -31,6 +31,11 @@ namespace Entidades
             Harcodear();
         }
 
+        /// <summary>
+        /// Devuelve el total en $ de lo consumido en un puesto de venta (la "cuenta")
+        /// </summary>
+        /// <param name="cualPuesto">Puesto a cerrar la cuenta </param>
+        /// <returns>Total de lo consumido</returns>
         public static float SumarConsumicion(string cualPuesto)
         {
             float retorno = 0;
@@ -38,7 +43,7 @@ namespace Entidades
             {
                 if (item.Nombre == cualPuesto)
                 {
-                    item.EstaLibre = true;
+                    item.LiberarPuestoDeVenta();
                     foreach (KeyValuePair<Producto, short> item2 in item.consumicion)
                     {
                       retorno +=  item2.Key.Precio;
@@ -48,16 +53,37 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Agrega un 10 % de recargo por pagar con tarjeta de credito
+        /// </summary>
+        /// <param name="totalPesos">Valor sin el aumento</param>
+        /// <returns>Valor con el aumento agregado</returns>
         public static float CalcularTarjeta(float totalPesos)
         {
             return totalPesos + (totalPesos * 0.10F);
         }
 
-        public static float CalcularEstacionamiento(float totalPesos)
+        /// <summary>
+        /// Agrega el estacionamiento a la lista de productos consumidos por el puesto de venta
+        /// </summary>
+        /// <param name="cualPuesto">Puesto al cual se le agrega el estacionamiento</param>
+        public static void CalcularEstacionamiento(string cualPuesto)
         {
-            return totalPesos + 200F;
+            foreach (PuestoDeVenta item in ListaDePuestosDeVenta)
+            {
+                if(item.Nombre == cualPuesto)
+                {
+                    item.AgregarEstacionamiento();
+                }
+            }
         }
 
+        /// <summary>
+        /// Descuenta un valor segun el rango de la persona que lo aplica
+        /// </summary>
+        /// <param name="totalPesos">Valor sin descuento</param>
+        /// <param name="rango">Rango del empleado</param>
+        /// <returns>El valor con el descuento aplicado</returns>
         public static float Descuentos(float totalPesos, int rango)
         {
             float retorno = totalPesos;
@@ -72,8 +98,9 @@ namespace Entidades
             return retorno;
         }
 
-
-
+        /// <summary>
+        /// Hardcodea el bar con personal, puestos de venta y productos
+        /// </summary>
         public static void Harcodear()
         {
             //harcodeo 1 admin y 4 vendedores
@@ -117,6 +144,11 @@ namespace Entidades
 
         }
 
+        /// <summary>
+        /// Muestra las consumisiones de un puesto de venta
+        /// </summary>
+        /// <param name="numeroPuesto">Puesto a mostrar las consumisiones</param>
+        /// <returns>String con los datos</returns>
         public static string MostrarConsumiciones(string numeroPuesto)
         {
             StringBuilder sb = new StringBuilder();
@@ -125,8 +157,7 @@ namespace Entidades
             {
                 if (item.Nombre == numeroPuesto)
                 {
-                    sb.AppendLine(item.consumicion.Keys.ToString());
-                    sb.AppendLine(item.consumicion.Values.ToString());
+                    sb.AppendLine(item.MostrarConsumiciones());
                     flag = 1;
                 }
                 
@@ -142,13 +173,17 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Busca los puestos de venta disponibles en el bar
+        /// </summary>
+        /// <returns>El listado de lugares libres</returns>
         public static string BuscarSitioLibre()
         {
             StringBuilder sb = new StringBuilder();
             string retorno = "No hay lugares disponibles en el bar";
             foreach (PuestoDeVenta item in puestosDeVenta)
             {
-                if (item.estaLibre == true)
+                if (item.EstaLibre == true)
                 {
                     sb.Append($"Disponible la {item.Nombre}\n");
 
@@ -159,7 +194,10 @@ namespace Entidades
             return retorno;
         }
 
-
+        /// <summary>
+        /// Calcula el total facturado en el dia por el bar
+        /// </summary>
+        /// <returns>El total facturado en el dia por el bar</returns>
         public static float CalcularFacturacionDelDia()
         {
             short suma = 0;
@@ -173,6 +211,11 @@ namespace Entidades
             Bar.TotalVentaDelDia = suma;
             return (float)suma;
         }
+
+        /// <summary>
+        /// Muestra los productos existentes en el inventario del bar
+        /// </summary>
+        /// <returns>El listado de productos en el inventario del bar</returns>
         public static string MostrarInventario()
         {
             StringBuilder sb = new StringBuilder();
@@ -187,6 +230,11 @@ namespace Entidades
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Devuelve si hay o no stock de un producto en el bar
+        /// </summary>
+        /// <param name="unProducto">Producto a verificar</param>
+        /// <returns>Si el producto esta disponible</returns>
         internal static bool ControlarSiHayStock(Producto unProducto)
         {
             bool resultado = false;
@@ -200,6 +248,11 @@ namespace Entidades
             }
             return resultado;
         }
+
+        /// <summary>
+        /// Devuelve una lista del personal del bar
+        /// </summary>
+        /// <returns>Un string con la lista del personal del bar</returns>
         public static string MostrarPersonal()
         {
             StringBuilder sb = new StringBuilder();
@@ -218,16 +271,37 @@ namespace Entidades
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Agrega un producto al inventario del bar
+        /// </summary>
+        /// <param name="unProducto">Producto a agregar</param>
+        /// <param name="cantidad">Cantidad de ese producto</param>
         public static void AgregarMercaderia(Producto unProducto, short cantidad)
         {
             inventario.Add(unProducto, cantidad);
         }
 
+        /// <summary>
+        /// Agrega un producto al inventario del bar, creando dicho producto dentro del metodo
+        /// </summary>
+        /// <param name="nombre">Nombre del producto</param>
+        /// <param name="esBebida">Si el producto es una bebida</param>
+        /// <param name="precio">El precio del producto</param>
+        /// <param name="esVegan">Si el producto es vegano</param>
+        /// <param name="esAptoCeliaquia">Si el producto no tiene tacc</param>
+        /// <param name="cantidad">Cantidad de ese producto</param>
         public static void AgregarMercaderia(string nombre, bool esBebida, float precio, bool esVegan, bool esAptoCeliaquia, short cantidad)
         {
             Producto unProducto = new Producto(nombre, esBebida, precio, esVegan, esAptoCeliaquia);
             inventario.Add(unProducto, cantidad);
         }
+
+        /// <summary>
+        /// Agrega un producto a la consumision de un puesto de venta
+        /// </summary>
+        /// <param name="aDonde">Puesto de venta</param>
+        /// <param name="queCosa">Producto a agregar</param>
+        /// <param name="cantidad">Cantidad del producto</param>
         public static void Venta(string aDonde, string queCosa, string cantidad)
         {
             Producto prodParaAgregar = null;
@@ -256,7 +330,15 @@ namespace Entidades
             }
         }
 
-                
+        /// <summary>
+        /// Guarda el ticket de cobro en un archivo txt
+        /// </summary>
+        /// <param name="nombrePuesto">Puesto de venta del cual se requiere ticket</param>
+        /// <param name="totalPesos">Valor a cobrar</param>
+        /// <param name="checkedTarjeta">Si pago con tarjeta de credito</param>
+        /// <param name="checkedEstacionamiento">Si utilizo el estacionamiento</param>
+        /// <param name="checkedDescuento">Si le aplicaron descuento</param>
+        /// <returns></returns>
         public static bool ImprimirTicket(string nombrePuesto, float totalPesos,
             bool checkedTarjeta, bool checkedEstacionamiento, bool checkedDescuento)
         {
@@ -315,12 +397,9 @@ namespace Entidades
 
                 }
             }
-
-            
-            
-
             return retorno;
         }
-       
+
+        
     }
 }

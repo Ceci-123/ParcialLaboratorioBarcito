@@ -28,28 +28,27 @@ namespace Entidades
             this.esAptoCeliacos = esAptoCeliacos;
         }
 
-        public bool EsBebida
-        {
-            get
-            {
-                return esBebida;
-            }
-        }
-        public float Precio
-        {
-            get
-            {
-                return precio;
-            }
-        }
-
+        public bool EsBebida { get { return esBebida; } }
+        public float Precio  { get { return precio; } }
         public string Nombre { get; }
 
+        /// <summary>
+        /// Muestra un producto
+        /// </summary>
+        /// <returns></returns>
         internal string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"  {nombre}  ");
             sb.AppendLine($" $ {precio.ToString()}  ");
+            if (esVegano)
+            {
+                sb.AppendLine("Producto vegano");
+            }
+            if (esAptoCeliacos)
+            {
+                sb.AppendLine("Producto sin TACC");
+            }
             return sb.ToString();
             
         }

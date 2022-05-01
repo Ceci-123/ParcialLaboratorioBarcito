@@ -36,7 +36,7 @@ namespace UI
        
         private void btn_AgregarProductos_Click(object sender, EventArgs e)
         {
-            PlaySound();
+            PlaySound(0);
             if(!String.IsNullOrEmpty(cmbBx_producto.Text)
                 && !String.IsNullOrEmpty(this.numeroPuesto)
                 && !String.IsNullOrEmpty(this.num_cantidad.ToString()))
@@ -51,32 +51,45 @@ namespace UI
             
         }
 
-
-
         private void btn_cerrarMesa_Click(object sender, EventArgs e)
         {
-            PlaySound();
+            PlaySound(0);
             Form frm_ticket = new Form_Ticket(this.numeroPuesto);
             frm_ticket.ShowDialog();
         }
-        private void PlaySound()
+       
+        
+        private void Form_Venta_Load_1(object sender, EventArgs e)
+        {
+            this.lbl_titulo.Text = $"{this.numeroPuesto}";
+            this.cmbBx_producto.DataSource = Enum.GetNames(typeof(EMorfi));
+            PlaySound(1);
+        }
+
+        /// <summary>
+        /// Reproduce sonidos
+        /// </summary>
+        /// <param name="duracion">Duracion del sonido a reproducir</param>
+        private void PlaySound(int duracion)
         {
             try
             {
-                SoundPlayer sonido = new SoundPlayer(@"..\sonido_corto.wav");
-                sonido.Play();
+                if (duracion == 1)
+                {
+                    SoundPlayer sonido = new SoundPlayer(@"..\sonido_largo.wav");
+                    sonido.Play();
+                }
+                else
+                {
+                    SoundPlayer sonido = new SoundPlayer(@"..\sonido_corto.wav");
+                    sonido.Play();
+
+                }
             }
             catch (Exception)
             {
                 Console.Beep();
             }
-
-        }
-
-        private void Form_Venta_Load_1(object sender, EventArgs e)
-        {
-            this.lbl_titulo.Text = $"{this.numeroPuesto}";
-            this.cmbBx_producto.DataSource = Enum.GetNames(typeof(EMorfi));
         }
     }
 }

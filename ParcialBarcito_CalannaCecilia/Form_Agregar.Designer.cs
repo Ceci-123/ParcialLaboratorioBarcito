@@ -171,6 +171,7 @@
             this.MinimizeBox = false;
             this.Name = "Form_Agregar";
             this.Text = "Agregar un producto";
+            this.Load += new System.EventHandler(this.Form_Agregar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.num_cantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

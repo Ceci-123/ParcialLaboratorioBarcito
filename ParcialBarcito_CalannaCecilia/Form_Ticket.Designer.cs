@@ -32,7 +32,6 @@
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.text_Box = new System.Windows.Forms.RichTextBox();
             this.lbl_estacionamiento = new System.Windows.Forms.Label();
-            this.radioBtn_estacionamiento = new System.Windows.Forms.RadioButton();
             this.radioBtn_efectivo = new System.Windows.Forms.RadioButton();
             this.lbl_medioPago = new System.Windows.Forms.Label();
             this.radioBtn_TarjetaCredito = new System.Windows.Forms.RadioButton();
@@ -46,6 +45,7 @@
             this.lbl_puestoVenta = new System.Windows.Forms.Label();
             this.chk_descuento = new System.Windows.Forms.CheckBox();
             this.lbl_descuento = new System.Windows.Forms.Label();
+            this.chk_Estacionamiento = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lbl_titulo
@@ -78,19 +78,6 @@
             this.lbl_estacionamiento.Size = new System.Drawing.Size(145, 19);
             this.lbl_estacionamiento.TabIndex = 2;
             this.lbl_estacionamiento.Text = "Estacionamiento";
-            // 
-            // radioBtn_estacionamiento
-            // 
-            this.radioBtn_estacionamiento.AutoSize = true;
-            this.radioBtn_estacionamiento.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioBtn_estacionamiento.Location = new System.Drawing.Point(641, 98);
-            this.radioBtn_estacionamiento.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.radioBtn_estacionamiento.Name = "radioBtn_estacionamiento";
-            this.radioBtn_estacionamiento.Size = new System.Drawing.Size(193, 23);
-            this.radioBtn_estacionamiento.TabIndex = 3;
-            this.radioBtn_estacionamiento.TabStop = true;
-            this.radioBtn_estacionamiento.Text = "uso estacionamiento";
-            this.radioBtn_estacionamiento.UseVisualStyleBackColor = true;
             // 
             // radioBtn_efectivo
             // 
@@ -222,7 +209,7 @@
             // chk_descuento
             // 
             this.chk_descuento.AutoSize = true;
-            this.chk_descuento.Location = new System.Drawing.Point(641, 309);
+            this.chk_descuento.Location = new System.Drawing.Point(641, 313);
             this.chk_descuento.Name = "chk_descuento";
             this.chk_descuento.Size = new System.Drawing.Size(15, 14);
             this.chk_descuento.TabIndex = 15;
@@ -237,12 +224,23 @@
             this.lbl_descuento.TabIndex = 16;
             this.lbl_descuento.Text = "Aplica Descuento";
             // 
+            // chk_Estacionamiento
+            // 
+            this.chk_Estacionamiento.AutoSize = true;
+            this.chk_Estacionamiento.Location = new System.Drawing.Point(641, 94);
+            this.chk_Estacionamiento.Name = "chk_Estacionamiento";
+            this.chk_Estacionamiento.Size = new System.Drawing.Size(202, 23);
+            this.chk_Estacionamiento.TabIndex = 17;
+            this.chk_Estacionamiento.Text = "uso estacionamiento?";
+            this.chk_Estacionamiento.UseVisualStyleBackColor = true;
+            // 
             // Form_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.HotPink;
             this.ClientSize = new System.Drawing.Size(848, 570);
+            this.Controls.Add(this.chk_Estacionamiento);
             this.Controls.Add(this.lbl_descuento);
             this.Controls.Add(this.chk_descuento);
             this.Controls.Add(this.lbl_puestoVenta);
@@ -256,7 +254,6 @@
             this.Controls.Add(this.radioBtn_TarjetaCredito);
             this.Controls.Add(this.lbl_medioPago);
             this.Controls.Add(this.radioBtn_efectivo);
-            this.Controls.Add(this.radioBtn_estacionamiento);
             this.Controls.Add(this.lbl_estacionamiento);
             this.Controls.Add(this.text_Box);
             this.Controls.Add(this.lbl_titulo);
@@ -280,7 +277,6 @@
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.RichTextBox text_Box;
         private System.Windows.Forms.Label lbl_estacionamiento;
-        private System.Windows.Forms.RadioButton radioBtn_estacionamiento;
         private System.Windows.Forms.RadioButton radioBtn_efectivo;
         private System.Windows.Forms.Label lbl_medioPago;
         private System.Windows.Forms.RadioButton radioBtn_TarjetaCredito;
@@ -294,5 +290,6 @@
         private System.Windows.Forms.Label lbl_puestoVenta;
         private System.Windows.Forms.CheckBox chk_descuento;
         private System.Windows.Forms.Label lbl_descuento;
+        private System.Windows.Forms.CheckBox chk_Estacionamiento;
     }
 }

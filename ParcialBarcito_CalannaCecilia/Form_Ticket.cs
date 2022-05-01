@@ -22,18 +22,27 @@ namespace UI
             this.numeroPuesto = numero; 
         }
 
+        private void Form_Ticket_Load(object sender, EventArgs e)
+        {
+            this.lbl_fecha.Text = DateTime.Now.ToString();
+            this.lbl_puestoVenta.Text = this.numeroPuesto;
+            this.text_Box.Text = Bar.MostrarConsumiciones(numeroPuesto);
+            PlaySound(1);
+        }
+
         private void btn_OK_Click(object sender, EventArgs e)
         {
-            PlaySound();
+            PlaySound(0);
+            if (this.chk_Estacionamiento.Checked)
+            {
+                Bar.CalcularEstacionamiento(numeroPuesto);
+            }
             totalPesos = Bar.SumarConsumicion(numeroPuesto);
             if (this.radioBtn_TarjetaCredito.Checked)
             {
               totalPesos = Bar.CalcularTarjeta(totalPesos); 
             }
-            if (this.radioBtn_estacionamiento.Checked)
-            {
-              totalPesos = Bar.CalcularEstacionamiento(totalPesos);
-            }
+            
             if (this.chk_descuento.Checked)
             {
                 totalPesos = Bar.Descuentos(totalPesos, 1);  
@@ -42,35 +51,11 @@ namespace UI
             this.lbl_TotalPesos.Text = totalPesos.ToString();
         }
 
-        private void PlaySound()
-        {
-            try
-            {
-                
-                SoundPlayer sonido = new SoundPlayer(Properties.Resources.sonido_largo);
-                sonido.Play();
-            }
-            catch (Exception)
-            {
-                Console.Beep();
-            }
-
-
-
-        }
-
-        private void Form_Ticket_Load(object sender, EventArgs e)
-        {
-            this.lbl_fecha.Text = DateTime.Now.ToString();
-            this.lbl_puestoVenta.Text = this.numeroPuesto;
-            this.text_Box.Text = Bar.MostrarConsumiciones(numeroPuesto);
-        }
-
         private void btn_imprimirTicket_Click(object sender, EventArgs e)
         {
-            PlaySound();
-            if(Bar.ImprimirTicket(numeroPuesto,totalPesos, this.radioBtn_TarjetaCredito.Checked,
-                this.radioBtn_estacionamiento.Checked, this.chk_descuento.Checked))
+            PlaySound(0);
+            if (Bar.ImprimirTicket(numeroPuesto, totalPesos, this.radioBtn_TarjetaCredito.Checked,
+                this.chk_Estacionamiento.Checked, this.chk_descuento.Checked))
             {
                 MessageBox.Show("Ticket impreso");
             }
@@ -78,7 +63,34 @@ namespace UI
             {
                 MessageBox.Show("Error al imprimir ticket");
             }
-            
+
         }
+
+        /// <summary>
+        /// Reproduce sonidos 
+        /// </summary>
+        /// <param name="duracion">Sonido a reproducir</param>
+        private void PlaySound(int duracion)
+        {
+            try
+            {
+                if (duracion == 1)
+                {
+                    SoundPlayer sonido = new SoundPlayer(@"..\sonido_largo.wav");
+                    sonido.Play();
+                }
+                else
+                {
+                    SoundPlayer sonido = new SoundPlayer(@"..\sonido_corto.wav");
+                    sonido.Play();
+
+                }
+            }
+            catch (Exception)
+            {
+                Console.Beep();
+            }
+        }
+        
     }
 }
