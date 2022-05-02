@@ -24,3 +24,4 @@ C:\Users\user\Desktop\repoParcial\ParcialLaboratorioBarcito\ParcialBarcito_Calan
 C:\Users\user\Desktop\repoParcial\ParcialLaboratorioBarcito\ParcialBarcito_CalannaCecilia\obj\Debug\net5.0-windows\UI.Form_Venta.resources
 C:\Users\user\Desktop\repoParcial\ParcialLaboratorioBarcito\ParcialBarcito_CalannaCecilia\obj\Debug\net5.0-windows\UI.Properties.Resources.resources
 C:\Users\user\Desktop\repoParcial\ParcialLaboratorioBarcito\ParcialBarcito_CalannaCecilia\obj\Debug\net5.0-windows\UI.Form_Agregar.resources
+C:\Users\user\Desktop\repoParcial\ParcialLaboratorioBarcito\ParcialBarcito_CalannaCecilia\obj\Debug\net5.0-windows\UI.Form_Para_Mostrar_Resultados.resources

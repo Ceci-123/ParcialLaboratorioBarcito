@@ -207,13 +207,17 @@ namespace UI
         private void btn_BusquedaMesa_Click(object sender, EventArgs e)
         {
             PlaySound(0);
-            MessageBox.Show(Bar.BuscarSitioLibre(), "Busqueda de sitio libre");
+            //MessageBox.Show(Bar.BuscarSitioLibre(), "Busqueda de sitio libre");
+            Form frm = new Form_Para_Mostrar_Resultados(1);
+            frm.ShowDialog();
         }
 
         private void btn_VerNomina_Click(object sender, EventArgs e)
         {
             PlaySound(0);
-            MessageBox.Show(Bar.MostrarPersonal(), "Listado de empleados");
+            //MessageBox.Show(Bar.MostrarPersonal(), "Listado de empleados");
+            Form frm = new Form_Para_Mostrar_Resultados(2);
+            frm.ShowDialog();
         }
 
         private void btn_AgregarMercaderia_Click(object sender, EventArgs e)
@@ -226,7 +230,9 @@ namespace UI
         private void btn_Stock_Click(object sender, EventArgs e)
         {
             PlaySound(0);
-            MessageBox.Show("Stock" + Bar.MostrarInventario(), "Productos en stock");
+            //MessageBox.Show("Stock" + Bar.MostrarInventario(), "Productos en stock");
+            Form frm = new Form_Para_Mostrar_Resultados(3);
+            frm.ShowDialog();
         }
 
         private void Form_Vendedor_FormClosing(object sender, FormClosingEventArgs e)
