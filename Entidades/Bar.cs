@@ -48,7 +48,7 @@ namespace Entidades
                         item.LiberarPuestoDeVenta();
                         foreach (KeyValuePair<Producto, short> item2 in item.ListaConsumicion)
                         {
-                            retorno += item2.Key.Precio;
+                            retorno += (item2.Key.Precio)* item2.Value;
                         }
                     }
                 }

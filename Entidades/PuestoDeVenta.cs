@@ -40,8 +40,15 @@ namespace Entidades
                     if (Bar.ControlarSiHayStock(producto))
                     {
                         this.consumicion.Add(producto, cantidad);
-                        //inventario[producto]--;
-                        //TODO solo resta un producto
+                        foreach (KeyValuePair< Producto,short> item in inventario)
+                        {
+                            if(item.Key.Nombre == producto.Nombre)
+                            {
+                             // item[Key] = item.Value - cantidad ;
+                             
+                            }
+                        }
+                        
                     }
                 }
             }
