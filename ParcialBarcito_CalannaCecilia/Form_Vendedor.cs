@@ -15,13 +15,11 @@ namespace UI
 {
     public partial class Form_Vendedor : Form
     {
-        //public string nombre;
         public int rangoDelUsuarioLogueado;
         public Persona usuarioLogueado;
         public Form_Vendedor(int rango, Persona quienSeLogueo)
         {
             InitializeComponent();
-            //this.nombre = nombre;
             this.rangoDelUsuarioLogueado = rango;
             this.usuarioLogueado = quienSeLogueo;
         }

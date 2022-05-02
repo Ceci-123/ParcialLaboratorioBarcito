@@ -227,7 +227,7 @@ namespace Entidades
             {
                 foreach (KeyValuePair<Producto, short> par in item.ListaConsumicion)
                 {
-                    suma += ((short)par.Value);
+                    suma += ((short)par.Key.Precio);
                 }
             }
             Bar.TotalVentaDelDia = suma;
