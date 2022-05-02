@@ -41,11 +41,11 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
             sb.Append($"  {nombre}  ");
             sb.AppendLine($" $ {precio.ToString()}  ");
-            if (esVegano)
+            if (this.esVegano)
             {
                 sb.AppendLine("Producto vegano");
             }
-            if (esAptoCeliacos)
+            if (this.esAptoCeliacos)
             {
                 sb.AppendLine("Producto sin TACC");
             }

@@ -24,12 +24,17 @@ namespace UI
             PlaySound(0);
             if(!String.IsNullOrEmpty(this.txtBx_nombre.Text) && !String.IsNullOrEmpty(this.txtBx_precio.Text))
             {
-                Bar.AgregarMercaderia(new Entidades.Producto(
+                float auxiliarFloat;
+                float.TryParse(this.txtBx_precio.Text, out auxiliarFloat);
+                short auxiliarShort;
+                auxiliarShort = (((short)this.num_cantidad.Value));
+                Bar.AgregarMercaderia(new Producto(
                 this.txtBx_nombre.Text,
                 this.chk_bebida.Checked,
-                float.Parse(this.txtBx_precio.Text),
+                auxiliarFloat,
                 this.chk_vegano.Checked, this.chk_celiacos.Checked),
-                short.Parse(this.num_cantidad.ToString()));
+                auxiliarShort);
+                MessageBox.Show("Producto agregado");
             }
             else
             {

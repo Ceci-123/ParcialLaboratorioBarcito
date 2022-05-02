@@ -230,7 +230,6 @@ namespace UI
         private void btn_Stock_Click(object sender, EventArgs e)
         {
             PlaySound(0);
-            //MessageBox.Show("Stock" + Bar.MostrarInventario(), "Productos en stock");
             Form frm = new Form_Para_Mostrar_Resultados(3);
             frm.ShowDialog();
         }

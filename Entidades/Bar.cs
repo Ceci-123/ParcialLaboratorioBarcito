@@ -122,16 +122,16 @@ namespace Entidades
             personal.Add(new Vendedor("cecilia", "ceci123"));
             personal.Add(new Vendedor("morena", "more123"));
             //harcodeo productos
-            inventario.Add(new Producto("Cerveza", true, 120F), 100);
-            inventario.Add(new Producto("Cocacola", true, 150F), 100);
-            inventario.Add(new Producto("Fernet", true, 200F), 100);
-            inventario.Add(new Producto("Daiquiri", true, 250F), 100);
-            inventario.Add(new Producto("Manaos", true, 80F), 100);
-            inventario.Add(new Producto("Tequeños", false, 20F), 50);
-            inventario.Add(new Producto("Papasfritas", false, 180F), 50);
-            inventario.Add(new Producto("Hamburguesa", false, 250F), 50);
-            inventario.Add(new Producto("Empanadas", false, 80F), 50);
-            inventario.Add(new Producto("Picadita", false, 300F), 50);
+            inventario.Add(new Producto("Cerveza", true, 120F, true,false), 100);
+            inventario.Add(new Producto("Cocacola", true, 150F, true, true), 100);
+            inventario.Add(new Producto("Fernet", true, 200F, true, true), 100);
+            inventario.Add(new Producto("Daiquiri", true, 250F, true, true), 100);
+            inventario.Add(new Producto("Manaos", true, 80F, true, true), 100);
+            inventario.Add(new Producto("Tequeños", false, 20F, true, false), 50);
+            inventario.Add(new Producto("Papasfritas", false, 180F, true, true), 50);
+            inventario.Add(new Producto("Hamburguesa", false, 250F, false, false), 50);
+            inventario.Add(new Producto("Empanadas", false, 80F, false, false), 50);
+            inventario.Add(new Producto("Picadita", false, 300F, false, false), 50);
             //abro las mesas y barras
             puestosDeVenta.Add(new PuestoDeVenta("Mesa 1", false));
             puestosDeVenta.Add(new PuestoDeVenta("Mesa 2", false));
