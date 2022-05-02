@@ -41,7 +41,7 @@ namespace UI
                 && !String.IsNullOrEmpty(this.numeroPuesto)
                 && !String.IsNullOrEmpty(this.num_cantidad.ToString()))
             {
-                Bar.Venta(this.numeroPuesto, this.cmbBx_producto.SelectedItem.ToString(),this.num_cantidad.ToString());
+                Bar.Venta(this.numeroPuesto, this.cmbBx_producto.SelectedItem.ToString(),this.num_cantidad.Value.ToString());
                 MessageBox.Show("producto agregado");
             }
             else

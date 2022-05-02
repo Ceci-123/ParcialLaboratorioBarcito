@@ -64,9 +64,9 @@ namespace Entidades
         public static float CalcularTarjeta(float totalPesos)
         {
             float retorno = 0;
-            if(totalPesos > 0)
+            if (totalPesos > 0)
             {
-              retorno = totalPesos + (totalPesos * 0.10F);
+                retorno = totalPesos + (totalPesos * 0.10F);
             }
             return retorno;
         }
@@ -86,8 +86,8 @@ namespace Entidades
                         item.AgregarEstacionamiento();
                     }
                 }
-            }    
-            
+            }
+
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Entidades
         public static float Descuentos(float totalPesos, int rango)
         {
             float retorno = totalPesos;
-            if(rango == 1)
+            if (rango == 1)
             {
                 totalPesos = totalPesos + (totalPesos * 0.20F);
             }
@@ -171,14 +171,14 @@ namespace Entidades
                 {
                     if (item.Nombre == numeroPuesto)
                     {
-                        foreach (KeyValuePair<Producto,short> item2 in item.ListaConsumicion)
+                        foreach (KeyValuePair<Producto, short> item2 in item.ListaConsumicion)
                         {
                             sb.AppendLine(item2.Key.Mostrar());
                             sb.AppendLine(item2.Value.ToString());
                             flag = 1;
                         }
 
-                        
+
                     }
 
                 }
@@ -186,7 +186,7 @@ namespace Entidades
                 {
                     sb.Append("No hay consumisiones para mostrar");
                 }
-         
+
             }
             return sb.ToString();
 
@@ -207,9 +207,9 @@ namespace Entidades
                     sb.AppendLine($"Disponible la {item.Nombre}\n");
                     flag = 1;
                 }
-               
+
             }
-            if(flag == 0)
+            if (flag == 0)
             {
                 sb.AppendLine("No hay lugares disponibles en el bar");
             }
@@ -260,7 +260,7 @@ namespace Entidades
         internal static bool ControlarSiHayStock(Producto unProducto)
         {
             bool resultado = false;
-            if(unProducto is not null)
+            if (unProducto is not null)
             {
                 foreach (KeyValuePair<Producto, short> item in inventario)
                 {
@@ -271,10 +271,10 @@ namespace Entidades
 
                 }
             }
-            
+
             return resultado;
         }
-
+               
         /// <summary>
         /// Devuelve una lista del personal del bar
         /// </summary>
@@ -304,11 +304,11 @@ namespace Entidades
         /// <param name="cantidad">Cantidad de ese producto</param>
         public static void AgregarMercaderia(Producto unProducto, short cantidad)
         {
-            if(unProducto is not null && cantidad > 0)
+            if (unProducto is not null && cantidad > 0)
             {
-               inventario.Add(unProducto, cantidad);
+                inventario.Add(unProducto, cantidad);
 
-            }  
+            }
         }
 
         /// <summary>
@@ -339,33 +339,31 @@ namespace Entidades
         {
             if (!String.IsNullOrEmpty(aDonde) && !String.IsNullOrEmpty(queCosa) && !String.IsNullOrEmpty(cantidad))
             {
-                Producto prodParaAgregar = null;
+                Producto prodParaAgregar = null;  
                 foreach (KeyValuePair<Producto, short> item in inventario)
                 {
                     if (item.Key.Nombre == queCosa)
                     {
-                        prodParaAgregar = item.Key;
+                        prodParaAgregar = new Producto(item.Key.Nombre,item.Key.EsBebida, item.Key.Precio);
+                        break;
                     }
                 }
-                if (!String.IsNullOrEmpty(aDonde))
+
+                foreach (PuestoDeVenta item2 in Bar.ListaDePuestosDeVenta)
                 {
-                    foreach (PuestoDeVenta item in Bar.ListaDePuestosDeVenta)
+                    if (item2.Nombre == aDonde)
                     {
-                        if (item.Nombre == aDonde)
+                        short.TryParse(cantidad, out short cantidadNumerica);
+                        if (prodParaAgregar is not null && cantidadNumerica > 0)
                         {
-                            short.TryParse(cantidad, out short cantidadNumerica);
-                            if (prodParaAgregar is not null && cantidadNumerica > 0)
-                            {
-                                item.AgregarConsumicion(prodParaAgregar, cantidadNumerica, Bar.CosasEnElInventario);
+                        item2.AgregarConsumicion(prodParaAgregar, cantidadNumerica, Bar.CosasEnElInventario);
 
-                            }
-                        }
+                        } 
                     }
                 }
-            }
-            
 
-            
+            }
+
         }
 
         /// <summary>
@@ -440,6 +438,6 @@ namespace Entidades
             return retorno;
         }
 
-        
+
     }
 }

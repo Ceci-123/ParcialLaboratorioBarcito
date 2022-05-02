@@ -14,6 +14,7 @@ La clase Vendedor y la clase Administrador ambas heredan de Persona, con lo cual
 Persona es la encargada de validar la contraseña, el formulario de login nunca accede a ese dato.
 Se utiliza sobrecarga de constructores en la clase Producto, ya que el requisito minimo para instanciar un producto es su nombre, si es o no una bebida y su precio, pero tambien pueden crearse productos con los demas atributos de la clase.
 Sobrecarga de metodos se utiliza en la clase Bar para agregar un producto al stock utilizando un producto como tal, o sus atributos por separado.
+Se sobrecarga el operador == en la clase Producto para que compare por el nombre de producto.
 El ticket agrega un porcentaje por el pago con tarjeta, suma el valor del estacionamiento (si correspondiera) y aplica descuentos.
 Propiedades: se usan para encapsulamiento de los atributos de las clases, y que las demas entidades que deban usarlos los reciban solo a traves de ellas.
 Colecciones: hay una List de puestos de venta y un Dictionary con los productos en stock, para aprovechar la funcionalidad de almacenar juntos una clave y un valor.

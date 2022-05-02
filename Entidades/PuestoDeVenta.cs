@@ -31,16 +31,16 @@ namespace Entidades
         /// <param name="producto">Producto vendido</param>
         /// <param name="cantidad">Cantidad del producto</param>
         /// <param name="inventario">Inventario de productos del bar</param>
-        public void AgregarConsumicion(Producto producto, short cantidad, Dictionary<Producto, short> inventario)
+        public void AgregarConsumicion(Producto producto, short cantidad, Dictionary<Producto,short> inventario)
         {
             if (producto is not null && cantidad > 0 && inventario is not null)
             {
                 if ((this.EsBarra == true && producto.EsBebida == true) || this.EsBarra == false)
                 {
-                    if (Bar.ControlarSiHayStock(producto) == true)
+                    if (Bar.ControlarSiHayStock(producto))
                     {
                         this.consumicion.Add(producto, cantidad);
-                        inventario[producto]--;
+                        //inventario[producto]--;
                         //TODO solo resta un producto
                     }
                 }

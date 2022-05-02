@@ -30,7 +30,7 @@ namespace Entidades
 
         public bool EsBebida { get { return esBebida; } }
         public float Precio  { get { return precio; } }
-        public string Nombre { get; }
+        public string Nombre { get { return nombre; } }
 
         /// <summary>
         /// Muestra un producto
@@ -39,7 +39,7 @@ namespace Entidades
         public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"  {nombre}  ");
+            sb.Append($"  {nombre}  ");
             sb.AppendLine($" $ {precio.ToString()}  ");
             if (esVegano)
             {
@@ -51,6 +51,16 @@ namespace Entidades
             }
             return sb.ToString();
             
+        }
+
+        public static bool operator ==(Producto p1, Producto p2)
+        {
+           return p1.Nombre == p2.Nombre;
+        }
+
+        public static bool operator !=(Producto p1, Producto p2)
+        {
+            return !(p1 == p2);
         }
     }
 }
