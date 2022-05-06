@@ -64,14 +64,16 @@ namespace UI
                 }
                 else
                 {
-                    SoundPlayer sonido = new SoundPlayer(@"..\sonido_corto.wav");
+                    SoundPlayer sonido = new SoundPlayer(@"\Resources\sonido_corto.wav");
                     sonido.Play();
-
+                    
                 }
             }
             catch (Exception)
             {
-                Console.Beep();
+                //Console.Beep();
+                SystemSounds.Exclamation.Play();
+             
             }
         }
 

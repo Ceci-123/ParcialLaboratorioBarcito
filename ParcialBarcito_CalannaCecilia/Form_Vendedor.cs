@@ -282,7 +282,8 @@ namespace UI
             }
             catch (Exception)
             {
-                Console.Beep();
+                //Console.Beep();
+                SystemSounds.Exclamation.Play();
             }
         }
         

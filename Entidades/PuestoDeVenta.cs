@@ -44,11 +44,9 @@ namespace Entidades
                         {
                             if(item.Key.Nombre == producto.Nombre)
                             {
-                                //  item.Value = cantidad;
                                 inventario[item.Key] -= cantidad;  
                             }
                         }
-                       // item[Key] = item.Value - cantidad ;
                         
                     }
                 }
