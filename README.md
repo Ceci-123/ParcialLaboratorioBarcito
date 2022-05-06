@@ -43,6 +43,5 @@
 ✅ Metodo abstracto DescontarPromo, en la clase Persona, obliga a sus derivadas a implementar como sea necesario. La clase admin realiza un descuento del 20 % mientras la clase Vendedor solo puede aplicar descuentos del 10%. Cuando se aplica un descuento, este varia segun quien lo aplica.
 
 ✅ Metodo virtual DescontarHappyHour, en la clase Persona, para que cada clase derivada implemente el metodo o lo cambie si lo considera correcto
-(Aclaracion: esta promo no esta activa).
 
 ✅ Se utilizan dos sonidos diferentes, un beep corto y un beep largo, el primero cuando se cargan los formularios y el segundo al realizar algunas acciones, dentro de un bloque try catch por si hubiera alguna excepcion al utilizar los archivos de sonido.

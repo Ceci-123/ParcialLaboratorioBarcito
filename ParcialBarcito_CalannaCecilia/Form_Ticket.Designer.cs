@@ -46,6 +46,8 @@
             this.chk_descuento = new System.Windows.Forms.CheckBox();
             this.lbl_descuento = new System.Windows.Forms.Label();
             this.chk_Estacionamiento = new System.Windows.Forms.CheckBox();
+            this.lbl_HappyHour = new System.Windows.Forms.Label();
+            this.chk_HappyHour = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lbl_titulo
@@ -154,7 +156,7 @@
             // btn_OK
             // 
             this.btn_OK.BackColor = System.Drawing.Color.Plum;
-            this.btn_OK.Location = new System.Drawing.Point(506, 372);
+            this.btn_OK.Location = new System.Drawing.Point(487, 430);
             this.btn_OK.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.Size = new System.Drawing.Size(118, 109);
@@ -166,7 +168,7 @@
             // btn_imprimirTicket
             // 
             this.btn_imprimirTicket.BackColor = System.Drawing.Color.Plum;
-            this.btn_imprimirTicket.Location = new System.Drawing.Point(682, 372);
+            this.btn_imprimirTicket.Location = new System.Drawing.Point(686, 430);
             this.btn_imprimirTicket.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_imprimirTicket.Name = "btn_imprimirTicket";
             this.btn_imprimirTicket.Size = new System.Drawing.Size(118, 109);
@@ -234,12 +236,32 @@
             this.chk_Estacionamiento.Text = "uso estacionamiento?";
             this.chk_Estacionamiento.UseVisualStyleBackColor = true;
             // 
+            // lbl_HappyHour
+            // 
+            this.lbl_HappyHour.AutoSize = true;
+            this.lbl_HappyHour.Location = new System.Drawing.Point(460, 356);
+            this.lbl_HappyHour.Name = "lbl_HappyHour";
+            this.lbl_HappyHour.Size = new System.Drawing.Size(167, 19);
+            this.lbl_HappyHour.TabIndex = 18;
+            this.lbl_HappyHour.Text = "Aplica Happy Hour";
+            // 
+            // chk_HappyHour
+            // 
+            this.chk_HappyHour.AutoSize = true;
+            this.chk_HappyHour.Location = new System.Drawing.Point(641, 355);
+            this.chk_HappyHour.Name = "chk_HappyHour";
+            this.chk_HappyHour.Size = new System.Drawing.Size(15, 14);
+            this.chk_HappyHour.TabIndex = 19;
+            this.chk_HappyHour.UseVisualStyleBackColor = true;
+            // 
             // Form_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.HotPink;
             this.ClientSize = new System.Drawing.Size(848, 570);
+            this.Controls.Add(this.chk_HappyHour);
+            this.Controls.Add(this.lbl_HappyHour);
             this.Controls.Add(this.chk_Estacionamiento);
             this.Controls.Add(this.lbl_descuento);
             this.Controls.Add(this.chk_descuento);
@@ -291,5 +313,7 @@
         private System.Windows.Forms.CheckBox chk_descuento;
         private System.Windows.Forms.Label lbl_descuento;
         private System.Windows.Forms.CheckBox chk_Estacionamiento;
+        private System.Windows.Forms.Label lbl_HappyHour;
+        private System.Windows.Forms.CheckBox chk_HappyHour;
     }
 }
