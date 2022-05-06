@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using ParcialBarcito_CalannaCecilia;
 
 namespace UI
 {
@@ -45,7 +46,8 @@ namespace UI
             
             if (this.chk_descuento.Checked)
             {
-                totalPesos = Bar.Descuentos(totalPesos, 1);  
+                //totalPesos = Bar.Descuentos(totalPesos, 1);
+                totalPesos = Form_Vendedor.DevolverUsuarioLogueado.DescontarPromo(totalPesos);
             }
             Bar.TotalVentaDelDia+= totalPesos; 
             this.lbl_TotalPesos.Text = totalPesos.ToString();

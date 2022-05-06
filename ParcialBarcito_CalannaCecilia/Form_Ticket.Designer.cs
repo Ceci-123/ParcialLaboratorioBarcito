@@ -133,7 +133,7 @@
             // 
             this.lbl_TotalACobrar.AutoSize = true;
             this.lbl_TotalACobrar.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TotalACobrar.Location = new System.Drawing.Point(37, 429);
+            this.lbl_TotalACobrar.Location = new System.Drawing.Point(124, 419);
             this.lbl_TotalACobrar.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_TotalACobrar.Name = "lbl_TotalACobrar";
             this.lbl_TotalACobrar.Size = new System.Drawing.Size(185, 27);
@@ -144,12 +144,12 @@
             // 
             this.lbl_TotalPesos.AutoSize = true;
             this.lbl_TotalPesos.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_TotalPesos.Location = new System.Drawing.Point(257, 429);
+            this.lbl_TotalPesos.Location = new System.Drawing.Point(70, 468);
             this.lbl_TotalPesos.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_TotalPesos.Name = "lbl_TotalPesos";
-            this.lbl_TotalPesos.Size = new System.Drawing.Size(40, 27);
+            this.lbl_TotalPesos.Size = new System.Drawing.Size(333, 27);
             this.lbl_TotalPesos.TabIndex = 9;
-            this.lbl_TotalPesos.Text = "$$";
+            this.lbl_TotalPesos.Text = "Presiona OK para calcular";
             // 
             // btn_OK
             // 

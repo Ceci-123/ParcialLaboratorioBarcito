@@ -15,13 +15,18 @@ namespace UI
 {
     public partial class Form_Vendedor : Form
     {
-        public int rangoDelUsuarioLogueado;
-        public Persona usuarioLogueado;
+        private int rangoDelUsuarioLogueado;
+        public static Persona usuarioLogueado;
+
+        public static Persona DevolverUsuarioLogueado { get {return usuarioLogueado; } }
+
+        public int RangoDelUsuarioLogueado { get => rangoDelUsuarioLogueado; set => rangoDelUsuarioLogueado = value; }
+
         public Form_Vendedor(int rango, Persona quienSeLogueo)
         {
             InitializeComponent();
             this.rangoDelUsuarioLogueado = rango;
-            this.usuarioLogueado = quienSeLogueo;
+            usuarioLogueado = quienSeLogueo;
         }
 
         
