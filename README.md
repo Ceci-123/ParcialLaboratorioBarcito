@@ -45,3 +45,5 @@
 ✅ Metodo virtual DescontarHappyHour, en la clase Persona, para que cada clase derivada implemente el metodo o lo cambie si lo considera correcto
 
 ✅ Se utilizan dos sonidos diferentes, un beep corto y un beep largo, el primero cuando se cargan los formularios y el segundo al realizar algunas acciones, dentro de un bloque try catch por si hubiera alguna excepcion al utilizar los archivos de sonido.
+
+Proxima actualizacion: que el puesto de venta vuelva a cambiarse a verde cuando se desocupe.
