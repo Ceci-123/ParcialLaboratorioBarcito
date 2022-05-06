@@ -59,14 +59,13 @@ namespace UI
             {
                 if (duracion == 1)
                 {
-                    SoundPlayer sonido = new SoundPlayer(@"..\sonido_largo.wav");
+                    SoundPlayer sonido = new SoundPlayer(Properties.Resources.sonido_largo);
                     sonido.Play();
                 }
                 else
                 {
-                    SoundPlayer sonido = new SoundPlayer(@"\Resources\sonido_corto.wav");
+                    SoundPlayer sonido = new SoundPlayer(Properties.Resources.sonido_corto);
                     sonido.Play();
-                    
                 }
             }
             catch (Exception)
