@@ -1,14 +1,13 @@
 ![imagen](https://user-images.githubusercontent.com/78119165/160845077-e97f5cda-6dbb-476a-8dfa-8a8420b9d798.png)
 
-# Project title Primer parcial de Laboratorio 2 UTN - Mayo de 2022
+<h1 align="center">Primer parcial de Laboratorio 2 UTN - Mayo de 2022</h1>
 
-<h1 align="center">Project title</h1>
+# El codigo que esta en este repo fue escrito con ❤ amor y dedicacion. Dare mighty things!
 
-# Project Description
+---
 
-**El codigo que esta en este repo fue escrito con 🤝 ❤ amor y dedicacion. Dare mighty things!**
+⭐️ La aplicacion gestiona las ventas en un bar en sus 15 mesas y 5 barras. Muestra los lugares disponibles del bar en color verde y los lugares ocupados en color rojo. Segun si la persona que se loguea es un administrador o un vendedor, el color de fondo del formulario es diferente.
 
-⭐️ El bar realiza ventas en sus 15 mesas y 5 barras. Muestra las que estan vacias en verde y ocupadas en rojo.
 ✅ Tiene un boton que muestra quien es el usuario logueado en ese momento.
 Se utilizan formularios que tienen dos colores diferentes segun ingrese un vendedor o un admin.
 El administrador tiene botones extra para ver la lista de empleados, agregar mercaderia y ver la facturacion del dia.
