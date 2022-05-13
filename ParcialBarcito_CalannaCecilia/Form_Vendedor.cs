@@ -296,7 +296,7 @@ namespace UI
         /// </summary>
         /// <param name="unBoton">Boton a modificar</param>
         /// <param name="ocupacion">Si el puesto esta libre o ocupado</param>
-        private void CambiarColorBoton(System.Windows.Forms.Button unBoton, bool ocupacion)
+        public void CambiarColorBoton(System.Windows.Forms.Button unBoton, bool ocupacion)
         {
             if(ocupacion == true)
             {

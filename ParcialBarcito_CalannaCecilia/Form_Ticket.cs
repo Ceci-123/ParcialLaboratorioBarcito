@@ -55,6 +55,7 @@ namespace UI
             }
             Bar.TotalVentaDelDia+= totalPesos; 
             this.lbl_TotalPesos.Text = totalPesos.ToString();
+            
         }
 
         private void btn_imprimirTicket_Click(object sender, EventArgs e)
